@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8967237798598712862}
   m_Layer: 0
   m_Name: hinge
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 512677327195163169}
   m_Layer: 0
   m_Name: frame_1m
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 5181952517761408787}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 3290053541310710266}
   m_Layer: 0
   m_Name: door_handle_front
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,11 +258,11 @@ Transform:
   m_GameObject: {fileID: 5346629531061038343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.808, y: 1.106, z: 0.071}
+  m_LocalPosition: {x: 0.8079998, y: 1.106, z: 0.07099975}
   m_LocalScale: {x: 0.356118, y: 0.356118, z: 0.356118}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7488703462920684276}
+  m_Father: {fileID: 6855427026567309532}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!33 &463327493681741241
 MeshFilter:
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 7824839208033173508}
   m_Layer: 0
   m_Name: door_1m_left
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,10 +375,7 @@ Transform:
   m_LocalScale: {x: 2.0378978, y: 1.3536416, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1924851406139208324}
-  - {fileID: 4541451522726769810}
-  - {fileID: 3112238261697019870}
-  - {fileID: 8557125754350731768}
+  - {fileID: 6855427026567309532}
   m_Father: {fileID: 6433911495420416877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2668489527746498280
@@ -494,7 +491,7 @@ GameObject:
   - component: {fileID: 6063706336285395542}
   m_Layer: 0
   m_Name: hinge (1)
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,6 +568,41 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7981047630993927358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6855427026567309532}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6855427026567309532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981047630993927358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1924851406139208324}
+  - {fileID: 4541451522726769810}
+  - {fileID: 3112238261697019870}
+  - {fileID: 8557125754350731768}
+  m_Father: {fileID: 7488703462920684276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8483463793220082170
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +617,7 @@ GameObject:
   - component: {fileID: 4403039349317279311}
   m_Layer: 0
   m_Name: door_lock_long_back
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -598,12 +630,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8483463793220082170}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.804, y: 0.999, z: 0.003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.80400014, y: 0.999, z: 0.0029993802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7488703462920684276}
+  m_Father: {fileID: 6855427026567309532}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &273297577125437880
 MeshFilter:
@@ -698,7 +730,7 @@ GameObject:
   - component: {fileID: 3070421660026564064}
   m_Layer: 0
   m_Name: door_handle_back
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,12 +743,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8576102550346251274}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.808, y: 1.106, z: -0.003}
-  m_LocalScale: {x: 0.356118, y: 0.356118, z: 0.356118}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.8079998, y: 1.106, z: -0.0030004084}
+  m_LocalScale: {x: 0.356118, y: 0.35611802, z: 0.356118}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7488703462920684276}
+  m_Father: {fileID: 6855427026567309532}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &9000308134464008938
 MeshFilter:
@@ -810,7 +842,7 @@ GameObject:
   - component: {fileID: 4121877060821363415}
   m_Layer: 0
   m_Name: door_lock_long_front
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -823,12 +855,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8917326246398197426}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.804, y: 0.999, z: 0.05}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.80400014, y: 0.999, z: 0.049999457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7488703462920684276}
+  m_Father: {fileID: 6855427026567309532}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &5257139686323604082
 MeshFilter:
