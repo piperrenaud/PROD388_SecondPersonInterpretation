@@ -3,19 +3,32 @@ using UnityEngine;
 public class LevelOneInteractions : MonoBehaviour
 {
     [Header("Door Sounds")]
-    public AudioClip[] openDoorSounds;
-    public AudioClip[] closeDoorSounds;
+    [SerializeField] private AudioClip[] openDoorSounds;
+    [SerializeField] private AudioClip[] closeDoorSounds;
 
     [Header("Sound Effect Settings")]
-    [Range(0f, 1f)] public float volume = 1f;
-    public float minPitch = 0.95f;
-    public float maxPitch = 1.05f;
+    [SerializeField] [Range(0f, 1f)] private float volume = 1f;
+    [SerializeField] private float minPitch = 0.95f;
+    [SerializeField] private float maxPitch = 1.05f;
+
+    [Header("Dialogue")]
+    [SerializeField] private DialogueManager dialogueManager;
 
     public void HandleInteraction(GameObject interactedObject)
     {
         if (interactedObject.CompareTag("Door"))
         {
             HandleDoor(interactedObject);
+        }
+
+        if (interactedObject.CompareTag("LightSwitch"))
+        {
+            HandleLights(interactedObject);
+        }
+
+        if (interactedObject.CompareTag("DialogueProp"))
+        {
+            HandleDialogue(interactedObject);
         }
     }
 
@@ -62,4 +75,15 @@ public class LevelOneInteractions : MonoBehaviour
         source.PlayOneShot(clip, volume);
     }
 
+    private void HandleLights(GameObject interactedObject)
+    {
+        LightSwitch lightSwitch = interactedObject.GetComponent<LightSwitch>();
+
+        lightSwitch.ToggleLights();
+    }
+
+    private void HandleDialogue(GameObject interactedObject)
+    {
+        dialogueManager.SetText($"This is a {interactedObject.name}");
+    }
 }

@@ -6,6 +6,7 @@ public class FirstPersonMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private Animator animator;
 
     [Header("Mouse Look")]
     [SerializeField] private Transform playerCamera;
@@ -16,17 +17,27 @@ public class FirstPersonMovement : MonoBehaviour
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float groundedGravity = -2f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] footstepSounds;
+    [Range(0f, 1f)] private float volume = 1f;
+    [SerializeField] private float minPitch = 0.95f;
+    [SerializeField] private float maxPitch = 1.05f;
+    [SerializeField] private float footstepInterval = 0.4f;
+
     private CharacterController controller;
+    private AudioSource source;
 
     private Vector2 moveInput;
     private Vector2 lookInput;
 
     private float cameraPitch;
     private float verticalVelocity;
+    private float stepTimer;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        source = GetComponentInChildren<AudioSource>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -36,6 +47,8 @@ public class FirstPersonMovement : MonoBehaviour
     {
         HandleMovement();
         HandleMouseLook();
+        HandleAnimation();
+        HandleFootsteps();
     }
 
     private void HandleMovement()
@@ -77,6 +90,56 @@ public class FirstPersonMovement : MonoBehaviour
             cameraPitch,
             0f,
             0f);
+    }
+
+    private void HandleAnimation()
+    {
+        bool isRunning = moveInput.sqrMagnitude > 0.01f;
+        animator.SetBool("IsRunning", isRunning);
+    }
+
+    private void HandleFootsteps()
+    {
+        bool isMoving = moveInput.sqrMagnitude > 0.01f;
+        bool isGrounded = controller.isGrounded;
+
+        //no footsteps while still or in air
+        if (!isMoving || !isGrounded)
+        {
+            stepTimer = 0f;
+            return;
+        }
+
+        stepTimer += Time.deltaTime;
+
+        if (stepTimer >= footstepInterval)
+        {
+            PlayFootstep();
+            stepTimer = 0f;
+        }
+    }
+
+    private void PlayFootstep()
+    {
+        if (footstepSounds == null || footstepSounds.Length == 0 || source == null) return;
+
+        AudioClip clip = footstepSounds[Random.Range(0, footstepSounds.Length)];
+
+        if (clip == null) return;
+
+        source.pitch = Random.Range(minPitch, maxPitch);
+        source.spatialBlend = 1f;
+        source.rolloffMode = AudioRolloffMode.Logarithmic;
+        source.minDistance = 1.5f;
+        source.maxDistance = 12f;
+        source.dopplerLevel = 0f;
+
+        source.PlayOneShot(clip, volume);
+    }
+
+    public void Footstep()
+    {
+        HandleFootsteps();
     }
 
     public void OnLook(InputAction.CallbackContext context)

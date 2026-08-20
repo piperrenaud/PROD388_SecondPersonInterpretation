@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
 {
     [Header("Interaction")]
     [SerializeField] private float maxDistance = 100f;
+    [SerializeField] private LayerMask blockingLayers;
 
     [Header("Input")]
     [SerializeField] private InputActionReference interactAction;
@@ -59,16 +60,29 @@ public class Interactable : MonoBehaviour
         Vector2 mousePosition = Mouse.current.position.ReadValue();
         Ray ray = playerCamera.ScreenPointToRay(mousePosition);
 
-        bool newHoverState = false; 
+        bool newHoverState = false;
 
-        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance))
+        //everything ray hits, closest to furtheest
+        RaycastHit[] hits = Physics.RaycastAll(ray, maxDistance);
+        //closest to furthest
+        System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (RaycastHit hit in hits)
         {
+            //if hit a wall/obstacle first, stop checking
+            if (((1 << hit.transform.gameObject.layer) & blockingLayers) != 0)
+            {
+                break;
+            }
+
+            //if hit belongs to this interactable
             if (hit.transform == transform || hit.transform.IsChildOf(transform))
             {
                 newHoverState = true;
+                break;
             }
         }
-        
+
         if (newHoverState != isHovered)
         {
             isHovered = newHoverState;
