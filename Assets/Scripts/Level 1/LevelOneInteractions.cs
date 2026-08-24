@@ -14,6 +14,9 @@ public class LevelOneInteractions : MonoBehaviour
     [Header("Dialogue")]
     [SerializeField] private DialogueManager dialogueManager;
 
+    [Header("Narrator")]
+    [SerializeField] private NarratorManager narratorManager;
+
     public void HandleInteraction(GameObject interactedObject)
     {
         if (interactedObject.CompareTag("Door"))
@@ -45,16 +48,24 @@ public class LevelOneInteractions : MonoBehaviour
 
         bool isOpen = anim.GetBool("IsOpen");
 
+        DoorNarratorTracker tracker = door.GetComponentInParent<DoorNarratorTracker>();
+
         if (isOpen)
         {
             PlaySound(closeDoorSounds, source);
+
+            anim.SetBool("IsOpen", false);
+
+            if (tracker != null) tracker.DoorClosed();
         }
         else
         {
             PlaySound(openDoorSounds, source);
-        }
 
-        anim.SetBool("IsOpen", !isOpen);
+            anim.SetBool("IsOpen", true);
+
+            if (tracker != null) tracker.DoorOpened();
+        }
     }
 
     private void PlaySound(AudioClip[] clips, AudioSource source)

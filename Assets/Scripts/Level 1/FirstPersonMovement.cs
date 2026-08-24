@@ -24,6 +24,9 @@ public class FirstPersonMovement : MonoBehaviour
     [SerializeField] private float maxPitch = 1.05f;
     [SerializeField] private float footstepInterval = 0.4f;
 
+    [Header("Narrator")]
+    [SerializeField] private NarratorManager narratorManager;
+
     private CharacterController controller;
     private AudioSource source;
 
