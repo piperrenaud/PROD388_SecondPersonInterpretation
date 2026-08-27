@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: ErraticeMouseMovementTwo
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: ErraticMouseMovementTwo
+  dialogueLines:
+  - The player is still spinning their view around. Seriously, slow down.
+  - The player seems determined to look everywhere at once. This is getting ridiculous.
+  - The player is whipping the camera around again. The narrator is starting to get
+    annoyed.
+  - Must the player look in every direction simultaneously? Please, just pick one.
+  - The player is still frantically moving the camera. Enough already.
+  - The player appears to be testing the limits of the camera. The narrator is not
+    amused.
+  - "The player is spinning around again. At this point, they\u2019re just making
+    everyone dizzy."
+  - The player really needs to calm down with the camera. This is becoming rather
+    irritating.
+  - The player is looking around wildly again. The narrator would appreciate some
+    stability.
+  - The player refuses to stop spinning the camera. Fine. Keep it up and see what
+    happens.
+  canRepeat: 1

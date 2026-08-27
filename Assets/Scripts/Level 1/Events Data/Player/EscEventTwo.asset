@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: EscEventTwo
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: EscEventTwo
+  dialogueLines:
+  - "Why are you still pressing it? I just told you that doesn\u2019t do anything."
+  - "You\u2019re still pressing Escape? I thought I made myself clear."
+  - "The player pressed Escape again. Didn\u2019t I just say that wouldn\u2019t work?"
+  - Again? Really? Escape still does nothing.
+  - "Why keep pressing it? The narrator already explained that it\u2019s useless."
+  - "The player seems convinced Escape will eventually do something. It won\u2019t."
+  - You pressed it again. For what purpose? Nothing is going to happen.
+  - Still trying Escape? The narrator is starting to think this is deliberate.
+  - "The player has pressed Escape yet again. Apparently, one explanation wasn\u2019t
+    enough."
+  - "Escape does nothing. I\u2019ve said this already. Please stop pressing it."
+  canRepeat: 1

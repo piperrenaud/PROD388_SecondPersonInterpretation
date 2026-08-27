@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: PlayerStandingStillThree
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: PlayerStandingStillThree
+  dialogueLines:
+  - "The player still hasn\u2019t moved. Soon, the narrator may have to do something
+    about this."
+  - The player remains completely still. The narrator is starting to think intervention
+    may be necessary.
+  - Still no movement. The narrator is becoming genuinely concerned now.
+  - "The player hasn\u2019t moved for far too long. The narrator may need to step
+    in."
+  - "The player is still standing there. The narrator is beginning to run out of
+    patience\u2014and options."
+  - Not a single movement. The narrator is starting to think something needs to be
+    done.
+  - The player remains frozen in place. The narrator is seriously considering intervening.
+  - The player still refuses to move. The narrator is becoming rather concerned about
+    this.
+  - There has been no movement for quite some time. The narrator may have to take
+    matters into their own hands.
+  - The player is still completely motionless. The narrator is giving them a little
+    longer, but not much.
+  canRepeat: 1

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: ErraticeMouseMovementRespawn
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: ErraticMouseMovementRespawn
+  dialogueLines:
+  - "That\u2019s enough spinning. The narrator has had enough. Time for a reset."
+  - "The player has officially overdone it. Let\u2019s reset and try that again."
+  - Enough with the camera. The narrator is stepping in. Resetting now.
+  - "The player clearly isn\u2019t going to stop. Time for the narrator to intervene."
+  - "That\u2019s quite enough looking around. Back to the beginning we go."
+  - "The narrator\u2019s patience has run out. Let\u2019s reset the player."
+  - The player has pushed the camera too far. A reset seems appropriate.
+  - "Alright, that\u2019s enough. The narrator is taking control of the situation."
+  - The player refuses to slow down. Fine. The narrator will reset them.
+  - No more spinning. The narrator has made a decision. Time to start over.
+  canRepeat: 1

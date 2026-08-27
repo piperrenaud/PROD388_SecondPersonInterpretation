@@ -502,6 +502,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eaaceae3a705674449eeea3ed5436e4d, type: 2}
   - {fileID: 11400000, guid: 4e27b3ebc7e72164c9aef794b25a7504, type: 2}
   - {fileID: 11400000, guid: e4262070a1c1f4840a389b7cd81d009f, type: 2}
+  - {fileID: 11400000, guid: 4be95a532250adf468e62aaf53918dce, type: 2}
+  - {fileID: 11400000, guid: 912fca2af6016664ab79e6cd4011c13d, type: 2}
+  - {fileID: 11400000, guid: 749a5d49b92b45141b15c6b14287b155, type: 2}
+  - {fileID: 11400000, guid: 458867623be9b46408a1305a13bcd8be, type: 2}
+  - {fileID: 11400000, guid: 6a09cc6eb850e5c4eae6f21e10ac8322, type: 2}
+  - {fileID: 11400000, guid: b7ab4e56cebf82e42831c5b5f0ef3457, type: 2}
+  - {fileID: 11400000, guid: 9e9ebe85016b69d47a0d5dee90a4d13c, type: 2}
+  - {fileID: 11400000, guid: 931a20f9b6aba2542a50c0fe77e2fd4f, type: 2}
+  - {fileID: 11400000, guid: 97bef4e1cfc40984198689ad61a7f5cf, type: 2}
+  - {fileID: 11400000, guid: 0ace745d85c2e9d4b95da586076ace11, type: 2}
+  - {fileID: 11400000, guid: 2375aacb72334ea47b85655edaa9885e, type: 2}
+  - {fileID: 11400000, guid: b80f993022d57e442b916e160e39cb70, type: 2}
+  - {fileID: 11400000, guid: b8f4cf08dcf11d5409a53cd126d4c33d, type: 2}
 --- !u!4 &63123370
 Transform:
   m_ObjectHideFlags: 0
@@ -7049,9 +7062,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4487816468603528461, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
+      propertyPath: idleEventFour
+      value: PlayerStandingStillRespawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487816468603528461, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 4487816468603528461, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
       propertyPath: narratorManager
       value: 
       objectReference: {fileID: 63123369}
+    - target: {fileID: 4487816468603528461, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
+      propertyPath: erraticMouseEvent
+      value: ErraticMouseMovementOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487816468603528461, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
+      propertyPath: erraticMovementThreshold
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487816468603528461, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
+      propertyPath: erraticDirectionChangesRequired
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5052875541734884603, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
       propertyPath: m_Name
       value: Protagonist
@@ -7107,6 +7140,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5052875541734884603, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1061101529}
+    - targetCorrespondingSourceObject: {fileID: 5052875541734884603, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1061101534}
   m_SourcePrefab: {fileID: 100100000, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
 --- !u!1 &1061101528 stripped
 GameObject:
@@ -7132,6 +7168,29 @@ MonoBehaviour:
   doorsClosed: 0
   lightsTurnedOn: 0
   lightsTurnedOff: 0
+--- !u!114 &1061101534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061101528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975183a88f9ec3b45906a1f22c2e6106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyboardEventTracker
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  clickRestTime: 15
+  clicksUntilRespawn: 5
+  escEventOne: EscEventOne
+  escEventTwo: EscEventTwo
+  escEventRespawn: EscEventRespawn
+  postRespawnEvent: SecondRespawn
+  jumpEventOne: JumpEventOne
+  jumpEventTwo: JumpEventTwo
+  jumpEventRespawn: JumpEventRespawn
 --- !u!1 &1082044090 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}

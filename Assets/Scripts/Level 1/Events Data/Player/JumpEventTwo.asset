@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: JumpEventTwo
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: JumpEventTwo
+  dialogueLines:
+  - "Why are you still pressing Space? I just told you it doesn\u2019t do anything."
+  - "You\u2019re still trying to jump? I already explained that Space is useless
+    here."
+  - "The player pressed Space again. Didn\u2019t I just say that wouldn\u2019t work?"
+  - "Again with the Space key? There\u2019s still no jumping. Please stop."
+  - "Why keep pressing it? Space isn\u2019t suddenly going to start working."
+  - "The player seems convinced Space will eventually do something. It won\u2019t."
+  - "You pressed Space again. I\u2019m not sure how many more times I can explain
+    this."
+  - "Still trying to jump? The narrator has already made it quite clear that you
+    can\u2019t."
+  - "The player has pressed Space yet again. Apparently, one explanation wasn\u2019t
+    enough."
+  - "Space does nothing. I\u2019ve said this already. Please stop trying to jump."
+  canRepeat: 1

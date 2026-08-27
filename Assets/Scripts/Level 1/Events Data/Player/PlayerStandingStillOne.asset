@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: PlayerStandingStillOne
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: PlayerStandingStillOne
+  dialogueLines:
+  - "The player hasn\u2019t moved in a while. Perhaps they\u2019re taking a little
+    rest."
+  - "The player has been standing still for some time. Maybe they\u2019re having
+    a break."
+  - "The player doesn\u2019t seem to be going anywhere. Perhaps they\u2019re taking
+    a moment to relax."
+  - "The player has been stationary for a while. Maybe they\u2019ve decided to take
+    a breather."
+  - "The player hasn\u2019t moved for quite some time. Surely they have a reason
+    for this."
+  - "The player appears to have stopped. Perhaps they\u2019re taking a well-deserved
+    rest."
+  - "The player has been standing in the same spot for a while now. Maybe they\u2019re
+    just enjoying the view."
+  - "No movement from the player. Perhaps they\u2019re taking a moment to themselves."
+  - "The player seems to have taken a break. There\u2019s certainly no hurry."
+  - "The player hasn\u2019t moved in a while. The narrator wonders if they\u2019ve
+    simply decided to stand there."
+  canRepeat: 1

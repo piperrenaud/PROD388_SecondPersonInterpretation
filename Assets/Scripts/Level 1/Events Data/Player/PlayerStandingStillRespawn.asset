@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: PlayerStandingStillRespawn
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: PlayerStandingStillRespawn
+  dialogueLines:
+  - "Okay, I think something might be wrong. Let\u2019s reset the player and see
+    if that helps."
+  - "Alright, this doesn\u2019t seem normal. Perhaps a reset will sort things out."
+  - "Something may have gone wrong here. Let\u2019s restart and see if the player
+    moves again."
+  - "Okay, the player still isn\u2019t moving. Time for a reset."
+  - "This has gone on long enough. Let\u2019s reset the player and try again."
+  - "I\u2019m starting to think something is wrong. A quick reset might help."
+  - "The player is still completely still. Let\u2019s send them back and see if that
+    fixes things."
+  - "Something doesn\u2019t seem quite right. Perhaps starting over will do the trick."
+  - "Alright, I\u2019m officially concerned. Let\u2019s reset the player and see
+    what happens."
+  - "The player clearly isn\u2019t responding. Let\u2019s reset things and give them
+    another chance."
+  canRepeat: 1

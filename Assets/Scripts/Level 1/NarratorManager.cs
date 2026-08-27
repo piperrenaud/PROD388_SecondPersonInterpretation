@@ -106,7 +106,7 @@ public class NarratorManager : MonoBehaviour
 
         dialogueManager.SetText(dialogue);
 
-        if (eventID == "RespawnPlayer" || eventID == "SecondRespawn")
+        if (eventID.Contains("Respawn"))
         {
             StartCoroutine(RespawnPlayer());
         }
