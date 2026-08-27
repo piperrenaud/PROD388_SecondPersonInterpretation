@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: LabExited
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: LabExited
-  dialogue: The player must've been bored and so exited the lab almost immediately.
+  dialogueLines:
+  - The player immediately left the Lab. I guess it is kind of boring.
   canRepeat: 0

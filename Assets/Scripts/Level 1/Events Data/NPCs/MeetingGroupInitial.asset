@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: MeetingGroupInitial
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: MeetingGroupInitial
+  dialogueLines:
+  - "This man looks like he\u2019s in the middle of a meeting. I wonder what it\u2019s
+    about."
+  - "This worker appears to be talking in a meeting. Curious what they\u2019re discussing."
+  - "He seems to be having a rather serious conversation. I wonder what\u2019s being
+    discussed."
+  - "This man looks like he\u2019s in a meeting. Whatever they\u2019re talking about
+    must be important."
+  - It appears this worker is in the middle of a meeting. The narrator wonders what
+    it could be about.
+  - "This looks like some sort of meeting. Perhaps the player shouldn\u2019t interrupt."
+  - The man seems to be discussing something with his coworkers. I wonder what it
+    is.
+  - He looks rather busy talking with the others. This must be some kind of meeting.
+  - "The worker appears to be in a meeting. Whatever they\u2019re discussing, it
+    seems important."
+  - "This man is clearly having a meeting. The narrator is a little curious about
+    what they\u2019re talking about."
+  canRepeat: 1

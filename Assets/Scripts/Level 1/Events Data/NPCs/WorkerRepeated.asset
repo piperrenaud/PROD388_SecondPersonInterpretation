@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: WorkerRepeated
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: WorkerRepeated
+  dialogueLines:
+  - 'The worker looks busy. Perhaps now isn''t the best time to interrupt him. '
+  - He seems to have a lot on his plate. The player should probably leave him to
+    it.
+  - The worker is clearly in the middle of something. Best not to distract him.
+  - He looks rather occupied. Perhaps the player should come back later.
+  - Whatever he's doing, he seem to be taking it seriously. The player should leave
+    him alone.
+  - "The worker doesn\u2019t appear to have time for interruptions."
+  - "He\u2019s busy working. Surely the player has somewhere else to be."
+  - It seems this worker has enough to worry about without the player bothering him.
+  - "The worker is concentrating. Interrupting him probably wouldn\u2019t be very
+    helpful."
+  - He appears to be quite busy. This might not be the right moment to talk to him.
+  - The worker has work to do. The player should probably let him get on with it.
+  - "He doesn\u2019t look like he\u2019s waiting for company."
+  - The worker seems preoccupied. Perhaps it would be better to leave him alone.
+  - Judging by his expression, he has more important things to worry about.
+  - "He\u2019s clearly got his hands full. The player should probably move along."
+  - Whatever has his attention, it seems rather important.
+  - The worker appears to be deep in thought. Interrupting him might not be wise.
+  - He seems rather engrossed in his work. Best to let him be.
+  - This worker looks like he could use some peace and quiet.
+  - "There\u2019s work to be done, and apparently, the player isn\u2019t part of
+    it."
+  canRepeat: 1

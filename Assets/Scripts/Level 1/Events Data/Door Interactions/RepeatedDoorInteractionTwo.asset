@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: RepeatedDoorInteractionTwo
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedDoorInteractionTwo
-  dialogue: The player continued to waste time messing with doors.
+  dialogueLines:
+  - The player surely has something better to do.
   canRepeat: 0

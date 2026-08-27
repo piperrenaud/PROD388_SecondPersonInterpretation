@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: FacilityDuoInitial
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: FacilityDuoInitial
+  dialogueLines:
+  - "This man is talking to another employee. I wonder what they\u2019re discussing."
+  - "These two seem to be having a pretty involved conversation. Wonder what it\u2019s
+    about."
+  - "This guy appears to be catching up with a coworker. Curious what they\u2019re
+    talking about."
+  - "The two workers are deep in conversation. The narrator wonders what\u2019s being
+    discussed."
+  - This man is having a chat with one of his coworkers. It seems rather important.
+  - "These two are talking about something. The narrator is curious, but probably
+    shouldn\u2019t interrupt."
+  - "This guy seems to have found someone to talk to. Wonder what they\u2019re discussing."
+  - The workers appear to be discussing something together. Perhaps the player can
+    figure it out.
+  - This man is busy talking with another worker. The narrator wonders what could
+    be so interesting.
+  - "These two look like they\u2019re in the middle of a conversation. Whatever it
+    is, they seem rather focused on it."
+  canRepeat: 1

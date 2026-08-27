@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: RepeatedLightsInteractionOne
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedLightsInteractionOne
-  dialogue: The player begain to play with the lights
+  dialogueLines:
+  - The player is having fun with the lights.
   canRepeat: 0

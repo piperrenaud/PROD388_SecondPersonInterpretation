@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: SofaDuoInitial
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: SofaDuoInitial
+  dialogueLines:
+  - "This guy is having a conversation with another guy. I wonder what they\u2019re
+    talking about."
+  - "These two seem to be having a conversation. The narrator wonders what it\u2019s
+    about."
+  - "This man appears to be talking with someone else. Curious what they\u2019re
+    discussing."
+  - "He\u2019s having a conversation with another worker. I wonder what they could
+    be talking about."
+  - "These two look like they\u2019re in the middle of a conversation. Wonder what\u2019s
+    going on."
+  - "This guy is chatting with another employee. The narrator is curious what they\u2019re
+    discussing."
+  - It looks like these two have something to talk about. I wonder what it is.
+  - This man seems to be having a rather interesting conversation. Perhaps the player
+    should listen.
+  - "He\u2019s talking with another guy. Whatever they\u2019re discussing seems to
+    have their attention."
+  - "These two are clearly having a conversation. The narrator can\u2019t help but
+    wonder what it\u2019s about."
+  canRepeat: 1

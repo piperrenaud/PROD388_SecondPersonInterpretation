@@ -364,12 +364,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2104697629}
     - target: {fileID: 3601776454904980634, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 3601776454904980634, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     - target: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: m_Name
       value: Man01 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 9005232163109192899, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -418,6 +426,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 968405068}
+    - targetCorrespondingSourceObject: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 968405076}
   m_SourcePrefab: {fileID: 100100000, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
 --- !u!1 &63123368
 GameObject:
@@ -469,6 +480,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 139a728d708bb1146ae6994add8d0078, type: 2}
   - {fileID: 11400000, guid: 72776a26c510c934da286fca9d21de9b, type: 2}
   - {fileID: 11400000, guid: ed47bda28c91e0748891c49e8ecc2314, type: 2}
+  - {fileID: 11400000, guid: 31b9e5137c37c044b8f3db538f211024, type: 2}
+  - {fileID: 11400000, guid: fdad1158d01cc7542ad67ee66fb0eca5, type: 2}
+  - {fileID: 11400000, guid: 99f0cfa8837870942950edfa25a74f61, type: 2}
+  - {fileID: 11400000, guid: 6b48462a5e1ad2f4184505a981d13df5, type: 2}
+  - {fileID: 11400000, guid: dcbb01130961ded4183bba5041dbd25b, type: 2}
+  - {fileID: 11400000, guid: b228e4d14c7d16c4c96192e5c3510d3f, type: 2}
+  - {fileID: 11400000, guid: 6090fe92774c08c4c935c87fcb73ac3e, type: 2}
+  - {fileID: 11400000, guid: 3a8d5cfb108c3a34e95e44f885296874, type: 2}
+  - {fileID: 11400000, guid: 96c3905dc00ff3844bb31c2eeb3c78f8, type: 2}
+  - {fileID: 11400000, guid: d6e1859096247314dbd986d86926eefb, type: 2}
+  - {fileID: 11400000, guid: 5b8c6e5916959944fbc660e6bac775ca, type: 2}
+  - {fileID: 11400000, guid: d943b2c9674f9ca4897b744f3419e28e, type: 2}
+  - {fileID: 11400000, guid: 920b32c1a3de97844865cf01686fe60d, type: 2}
+  - {fileID: 11400000, guid: a9209b515019e3043a71fc6faa88fb23, type: 2}
+  - {fileID: 11400000, guid: f27bc896021f56e49b6198a57d6026c9, type: 2}
+  - {fileID: 11400000, guid: bf25b2f0ddc021a4b954deeeedc11884, type: 2}
+  - {fileID: 11400000, guid: 31a10c7d947b50144961011c75cc7bf6, type: 2}
+  - {fileID: 11400000, guid: e9cb33d110fd816409c1375ce7072750, type: 2}
+  - {fileID: 11400000, guid: 2ad05aab8d2272844a65a6e69ad1a85e, type: 2}
+  - {fileID: 11400000, guid: eaaceae3a705674449eeea3ed5436e4d, type: 2}
+  - {fileID: 11400000, guid: 4e27b3ebc7e72164c9aef794b25a7504, type: 2}
+  - {fileID: 11400000, guid: e4262070a1c1f4840a389b7cd81d009f, type: 2}
 --- !u!4 &63123370
 Transform:
   m_ObjectHideFlags: 0
@@ -516,6 +549,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &85338446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85338437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: OfficeWorkerInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
+--- !u!1 &103363978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 930860936572326468, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
+  m_PrefabInstance: {fileID: 5970042234353755600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &124934224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,6 +641,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9005232163109192899, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
   m_PrefabInstance: {fileID: 1647600680}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &150158451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150158442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: WorkerPhoneInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1001 &154923896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -747,6 +837,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -842,6 +936,10 @@ PrefabInstance:
       propertyPath: 'lights.Array.data[7]'
       value: 
       objectReference: {fileID: 1744848979}
+    - target: {fileID: 8665415407597176505, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1853,12 +1951,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 657012343}
     - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: m_Name
       value: Man04 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1867,6 +1973,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 436890900}
+    - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 436890908}
   m_SourcePrefab: {fileID: 100100000, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
 --- !u!1 &436890899 stripped
 GameObject:
@@ -1900,6 +2009,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2001422780394876757, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
   m_PrefabInstance: {fileID: 436890898}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &436890908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436890899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: FacilityDuoInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!114 &447830968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,6 +2065,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 219131159}
+    - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -2002,6 +2141,10 @@ PrefabInstance:
       propertyPath: 'lights.Array.data[1]'
       value: 
       objectReference: {fileID: 2001853975}
+    - target: {fileID: 8665415407597176505, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2091,6 +2234,10 @@ PrefabInstance:
       propertyPath: lightSwitchNoise
       value: 
       objectReference: {fileID: 8300000, guid: 9628bd4bdf65de146b548715f14b4d59, type: 3}
+    - target: {fileID: 3858052342679744629, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4290836151557442224, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Name
       value: Office (2)
@@ -2136,6 +2283,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -2151,6 +2302,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 219131159}
+    - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -2936,6 +3091,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1160735519819330982, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
   m_PrefabInstance: {fileID: 5970042234353755600}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &533793273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103363978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: DadInitial
+  repeatedEventID: DadRepeated
+  suspiciousEventID: DadSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: DadStareOne
+  stareEventTwo: DadStareTwo
+  stareEventThree: DadStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1001 &559233273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3299,6 +3480,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8094033317471980413, guid: a263968df0d0f324c9992de49ad41192, type: 3}
   m_PrefabInstance: {fileID: 1140563375}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &580147448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580147439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: LabDuoInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1 &582037229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,6 +3652,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2001422780394876757, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
   m_PrefabInstance: {fileID: 1510307244}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &611993370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611993361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: OfficeWorkerInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1 &613898932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3606,6 +3839,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 657012343}
     - target: {fileID: 977013668435210100, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 977013668435210100, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -3653,6 +3890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man06 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3660,6 +3901,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 638947606}
+    - targetCorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 638947614}
   m_SourcePrefab: {fileID: 100100000, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
 --- !u!1 &638947605 stripped
 GameObject:
@@ -3693,6 +3937,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5770931655640577479, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
   m_PrefabInstance: {fileID: 638947604}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &638947614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638947605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: FacilityDuoInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!114 &657012343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4260,6 +4530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       propertyPath: maxDistance
       value: 10
@@ -4268,6 +4542,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 657012343}
+    - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -4279,6 +4557,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 767467495}
+    - targetCorrespondingSourceObject: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 767467503}
   m_SourcePrefab: {fileID: 100100000, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
 --- !u!1 &767467494 stripped
 GameObject:
@@ -4312,6 +4593,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7003376043888285268, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
   m_PrefabInstance: {fileID: 767467493}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &767467503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767467494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: WorkerFilesInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1 &777161856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,6 +4851,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -4619,6 +4930,10 @@ PrefabInstance:
       propertyPath: 'lights.Array.data[2]'
       value: 
       objectReference: {fileID: 1308423242}
+    - target: {fileID: 8665415407597176505, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5711,6 +6026,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 40589734}
     - target: {fileID: 977013668435210100, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 977013668435210100, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -5758,6 +6077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man06 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5765,6 +6088,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1454791767}
+    - targetCorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1454791775}
   m_SourcePrefab: {fileID: 100100000, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
 --- !u!1 &968405067 stripped
 GameObject:
@@ -5798,6 +6124,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9005232163109192899, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
   m_PrefabInstance: {fileID: 50955585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &968405076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968405067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: MeetingGroupInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!4 &971296352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2467626795304145898, guid: d381f9aa2ffa5b14e8cccf3520a34b3d, type: 3}
@@ -5880,6 +6232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8094033317471980413, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.2270002
@@ -5929,6 +6285,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 165373463}
     - target: {fileID: 8587080298520929646, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8587080298520929646, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -5939,6 +6299,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       insertIndex: -1
       addedObject: {fileID: 987253112}
+    - targetCorrespondingSourceObject: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 987253120}
   m_SourcePrefab: {fileID: 100100000, guid: a263968df0d0f324c9992de49ad41192, type: 3}
 --- !u!1 &987253111 stripped
 GameObject:
@@ -5972,6 +6335,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8094033317471980413, guid: a263968df0d0f324c9992de49ad41192, type: 3}
   m_PrefabInstance: {fileID: 987253110}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &987253120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987253111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: MeetingGroupInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!108 &987586939 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 2552651496656085352, guid: df608f12c52f14b4893aa583747aac69, type: 3}
@@ -6092,6 +6481,10 @@ PrefabInstance:
       propertyPath: lightSwitchNoise
       value: 
       objectReference: {fileID: 8300000, guid: 9628bd4bdf65de146b548715f14b4d59, type: 3}
+    - target: {fileID: 3858052342679744629, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4290836151557442224, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Name
       value: Office (3)
@@ -6137,6 +6530,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -6152,6 +6549,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 219131159}
+    - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -6331,6 +6732,10 @@ PrefabInstance:
       propertyPath: lightSwitchNoise
       value: 
       objectReference: {fileID: 8300000, guid: 9628bd4bdf65de146b548715f14b4d59, type: 3}
+    - target: {fileID: 3858052342679744629, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4290836151557442224, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Name
       value: Office (1)
@@ -6372,6 +6777,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -6387,6 +6796,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 219131159}
+    - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -6751,6 +7164,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1082044099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082044090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: OfficeWorkerInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1 &1090506188
 GameObject:
   m_ObjectHideFlags: 0
@@ -7115,6 +7554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man05 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8094033317471980413, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7164,6 +7607,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1559716663}
     - target: {fileID: 8587080298520929646, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8587080298520929646, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -7174,6 +7621,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       insertIndex: -1
       addedObject: {fileID: 580147440}
+    - targetCorrespondingSourceObject: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 580147448}
   m_SourcePrefab: {fileID: 100100000, guid: a263968df0d0f324c9992de49ad41192, type: 3}
 --- !u!1 &1146982947
 GameObject:
@@ -7428,6 +7878,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -7511,6 +7965,10 @@ PrefabInstance:
       propertyPath: 'lights.Array.data[4]'
       value: 
       objectReference: {fileID: 1905665748}
+    - target: {fileID: 8665415407597176505, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7592,6 +8050,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7003376043888285268, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
   m_PrefabInstance: {fileID: 1477489522}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1195687347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195687338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: MeetingGroupInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1 &1199888268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7871,6 +8355,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1559716663}
     - target: {fileID: 204398508403909398, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 204398508403909398, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -7918,6 +8406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man02 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7925,6 +8417,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2018593405}
+    - targetCorrespondingSourceObject: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2018593413}
   m_SourcePrefab: {fileID: 100100000, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
 --- !u!1001 &1238963327
 PrefabInstance:
@@ -8044,6 +8539,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1830771311572760987, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
   m_PrefabInstance: {fileID: 1679572789}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250683626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250683617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: MeetingGroupInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1001 &1258044980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9252,6 +9773,10 @@ PrefabInstance:
       propertyPath: lightSwitchNoise
       value: 
       objectReference: {fileID: 8300000, guid: 9628bd4bdf65de146b548715f14b4d59, type: 3}
+    - target: {fileID: 3858052342679744629, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4290836151557442224, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Name
       value: Office (4)
@@ -9293,6 +9818,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -9308,6 +9837,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 219131159}
+    - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -9748,6 +10281,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1443936342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443936333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: OfficeWorkerInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1 &1454791766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
@@ -9780,6 +10339,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5770931655640577479, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
   m_PrefabInstance: {fileID: 954633996}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454791775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454791766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: SofaDuoInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1 &1454999784
 GameObject:
   m_ObjectHideFlags: 0
@@ -10006,6 +10591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man03 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       propertyPath: maxDistance
       value: 10
@@ -10014,6 +10603,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 1623609960}
+    - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -10025,6 +10618,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1195687339}
+    - targetCorrespondingSourceObject: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1195687347}
   m_SourcePrefab: {fileID: 100100000, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
 --- !u!1001 &1483565949
 PrefabInstance:
@@ -10198,12 +10794,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 165373463}
     - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: m_Name
       value: Man04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10212,6 +10816,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 611993362}
+    - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 611993370}
   m_SourcePrefab: {fileID: 100100000, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
 --- !u!1001 &1510698759
 PrefabInstance:
@@ -10427,6 +11034,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1542589560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542589551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: OfficeWorkerInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!114 &1559716663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10645,6 +11278,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -10732,6 +11369,10 @@ PrefabInstance:
       propertyPath: 'lights.Array.data[4]'
       value: 
       objectReference: {fileID: 849488367}
+    - target: {fileID: 8665415407597176505, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11075,12 +11716,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 657012343}
     - target: {fileID: 3601776454904980634, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 3601776454904980634, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     - target: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: m_Name
       value: Man01 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 9005232163109192899, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11129,6 +11778,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 150158443}
+    - targetCorrespondingSourceObject: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 150158451}
   m_SourcePrefab: {fileID: 100100000, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
 --- !u!1 &1650697314
 GameObject:
@@ -11396,12 +12048,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 848559749}
     - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: m_Name
       value: Man04 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11410,6 +12070,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1659130503}
+    - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1659130511}
   m_SourcePrefab: {fileID: 100100000, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
 --- !u!1 &1659130502 stripped
 GameObject:
@@ -11443,6 +12106,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2001422780394876757, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
   m_PrefabInstance: {fileID: 1659130501}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1659130511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659130502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: SofaDuoInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: ConvoStareOne
+  stareEventTwo: ConvoStareTwo
+  stareEventThree: ConvoStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1001 &1662547389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11588,6 +12277,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 447830968}
     - target: {fileID: 204398508403909398, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 204398508403909398, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -11635,6 +12328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man02 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11642,6 +12339,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1250683618}
+    - targetCorrespondingSourceObject: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1250683626}
   m_SourcePrefab: {fileID: 100100000, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
 --- !u!1001 &1726674266
 PrefabInstance:
@@ -11791,6 +12491,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1737458769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737458760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: OfficeWorkerInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1001 &1741130749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12696,6 +13422,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1883045190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883045181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: OfficeWorkerInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1001 &1887079342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13783,6 +14535,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1830771311572760987, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
   m_PrefabInstance: {fileID: 1203620538}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2018593413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018593404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef1646028cc61144bae64e5dc1caa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
+  narratorManager: {fileID: 63123369}
+  dialogueManager: {fileID: 1199888270}
+  initalEventID: LabDuoInitial
+  repeatedEventID: WorkerRepeated
+  suspiciousEventID: WorkerSuspicious
+  respawnEventID: RespawnPlayer
+  postRespawnEventID: SecondRespawn
+  interactionsBeforeSuspicious: 3
+  maxTimeBetweenInteractions: 5
+  interactionsBeforeRespawn: 3
+  stareEventOne: NPCStareOne
+  stareEventTwo: NPCStareTwo
+  stareEventThree: NPCStareThree
+  stareTimeBetweenEvents: 8
 --- !u!1001 &2019381728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14553,6 +15331,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1916350087}
     - target: {fileID: 7432671159351875970, guid: 137f7b59b50960240adf991b0e6ef4e7, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 7432671159351875970, guid: 137f7b59b50960240adf991b0e6ef4e7, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -14622,6 +15404,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1916350087}
     - target: {fileID: 8947942899285483810, guid: 101338b5385ea3241bc500ed0bc17b80, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8947942899285483810, guid: 101338b5385ea3241bc500ed0bc17b80, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -14642,6 +15428,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 1916350087}
+    - target: {fileID: 2588844920908483470, guid: 5f031712ee9674145baf2a0aa99bfc24, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 2588844920908483470, guid: 5f031712ee9674145baf2a0aa99bfc24, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -14760,6 +15550,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1916350087}
     - target: {fileID: 8646658256807750530, guid: b7e3caf8eeea9284ea6b1b32fe112850, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8646658256807750530, guid: b7e3caf8eeea9284ea6b1b32fe112850, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -14829,6 +15623,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1916350087}
     - target: {fileID: 5568488112245883871, guid: fcecd8adea6af1f4095be3aca528658c, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5568488112245883871, guid: fcecd8adea6af1f4095be3aca528658c, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -14890,6 +15688,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1916350087}
     - target: {fileID: 7692128615251584596, guid: 0b758c67702bd3842931f95b0ff5fb6e, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 7692128615251584596, guid: 0b758c67702bd3842931f95b0ff5fb6e, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -14923,12 +15725,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 172338931}
     - target: {fileID: 3601776454904980634, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 3601776454904980634, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     - target: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: m_Name
       value: Man01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 9005232163109192899, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14977,6 +15787,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1737458765}
+    - targetCorrespondingSourceObject: {fileID: 3800666445434708130, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1737458769}
   m_SourcePrefab: {fileID: 100100000, guid: b2806ee7d6935db47b53780d6980086c, type: 3}
 --- !u!1001 &4565068712668265393
 PrefabInstance:
@@ -14994,6 +15807,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 165373463}
+    - target: {fileID: 204398508403909398, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 204398508403909398, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -15042,6 +15859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man02
       objectReference: {fileID: 0}
+    - target: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15049,6 +15870,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1542589556}
+    - targetCorrespondingSourceObject: {fileID: 8474651082885132144, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1542589560}
   m_SourcePrefab: {fileID: 100100000, guid: 5e58a6242cee102439cb89fa4060b629, type: 3}
 --- !u!1001 &5779916834587674076
 PrefabInstance:
@@ -15118,6 +15942,10 @@ PrefabInstance:
       propertyPath: lightSwitchNoise
       value: 
       objectReference: {fileID: 8300000, guid: 9628bd4bdf65de146b548715f14b4d59, type: 3}
+    - target: {fileID: 3858052342679744629, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4290836151557442224, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Name
       value: Office
@@ -15159,6 +15987,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219131159}
     - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8645267667172739792, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -15174,6 +16006,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 219131159}
+    - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8744951474076363728, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -15209,6 +16045,10 @@ PrefabInstance:
     - target: {fileID: 930860936572326468, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
       propertyPath: m_Name
       value: Dad
+      objectReference: {fileID: 0}
+    - target: {fileID: 930860936572326468, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 1160735519819330982, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15259,13 +16099,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 165373463}
     - target: {fileID: 3028521425438674210, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 3028521425438674210, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 930860936572326468, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 533793273}
   m_SourcePrefab: {fileID: 100100000, guid: e621bc4ebdc77554abd890e925fdc6f2, type: 3}
 --- !u!1001 &6076110964288785143
 PrefabInstance:
@@ -15685,6 +16532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man03
       objectReference: {fileID: 0}
+    - target: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       propertyPath: maxDistance
       value: 10
@@ -15693,6 +16544,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 165373463}
+    - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 8955727216529541917, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -15704,6 +16559,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1443936338}
+    - targetCorrespondingSourceObject: {fileID: 7943792100287293213, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1443936342}
   m_SourcePrefab: {fileID: 100100000, guid: c376564f21d497a4a9cf65a51a911d2a, type: 3}
 --- !u!1001 &7514052966076242137
 PrefabInstance:
@@ -15958,6 +16816,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 165373463}
     - target: {fileID: 977013668435210100, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 977013668435210100, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -16005,6 +16867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man06
       objectReference: {fileID: 0}
+    - target: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16012,6 +16878,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1082044095}
+    - targetCorrespondingSourceObject: {fileID: 9014513010612809847, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1082044099}
   m_SourcePrefab: {fileID: 100100000, guid: c5b1f35e47a3100448e83ff886718df2, type: 3}
 --- !u!1001 &8164586966419953099
 PrefabInstance:
@@ -16033,6 +16902,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 1916350087}
+    - target: {fileID: 2894392524155016746, guid: f91c9ba5c185ce44baddc19f72dd1e31, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 2894392524155016746, guid: f91c9ba5c185ce44baddc19f72dd1e31, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -16094,6 +16967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Man05
       objectReference: {fileID: 0}
+    - target: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 8094033317471980413, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8810005
@@ -16143,6 +17020,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 165373463}
     - target: {fileID: 8587080298520929646, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 8587080298520929646, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
@@ -16153,6 +17034,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
       insertIndex: -1
       addedObject: {fileID: 85338442}
+    - targetCorrespondingSourceObject: {fileID: 44452675571207297, guid: a263968df0d0f324c9992de49ad41192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 85338446}
   m_SourcePrefab: {fileID: 100100000, guid: a263968df0d0f324c9992de49ad41192, type: 3}
 --- !u!1001 &8966565423672552863
 PrefabInstance:
@@ -16170,6 +17054,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 219131159}
+    - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
     - target: {fileID: 5174778180455866195, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
       propertyPath: levelInteractions
       value: 
@@ -16266,6 +17154,10 @@ PrefabInstance:
       propertyPath: 'lights.Array.data[7]'
       value: 
       objectReference: {fileID: 1744848979}
+    - target: {fileID: 8665415407597176505, guid: c977926f67e1f1b469b820f1f9bbd290, type: 3}
+      propertyPath: interactionsBeforeNarration
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16331,12 +17223,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 165373463}
     - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1199888270}
+    - target: {fileID: 5158658105087686590, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: levelInteractions
       value: 
       objectReference: {fileID: 1743252873}
     - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       propertyPath: m_Name
       value: Man04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16345,6 +17245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1883045186}
+    - targetCorrespondingSourceObject: {fileID: 7503317090173130012, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1883045190}
   m_SourcePrefab: {fileID: 100100000, guid: 25cc258e4a0a2c14abeb1170f5853e30, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

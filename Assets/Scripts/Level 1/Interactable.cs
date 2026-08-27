@@ -11,8 +11,9 @@ public class Interactable : MonoBehaviour
     [Header("Input")]
     [SerializeField] private InputActionReference interactAction;
 
-    [Header("Central Interaction Manager")]
+    [Header("References")]
     [SerializeField] private LevelOneInteractions levelInteractions;
+    [SerializeField] private DialogueManager dialogueManager;
 
     private Camera playerCamera;
     private Outline outline;
@@ -91,15 +92,20 @@ public class Interactable : MonoBehaviour
             {
                 outline.enabled = isHovered;
             }
+
+            NPCInteraction npcInteraction = GetComponent<NPCInteraction>();
+
+            if (npcInteraction != null)
+            {
+                npcInteraction.SetHovered(isHovered);
+            }
         }
     }
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        if (!isHovered)
-        {
-            return;
-        }
+        if (dialogueManager != null && dialogueManager.IsDialogueRunning) return;
+        if (!isHovered) return;
 
         if (levelInteractions != null)
         {

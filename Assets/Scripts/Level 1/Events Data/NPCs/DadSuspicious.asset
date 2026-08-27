@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: DadSuspicious
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: DadSuspicious
+  dialogueLines:
+  - The player spoke to Dad again. The narrator was beginning to suspect this was
+    intentional.
+  - The player spoke to Dad once more. The narrator was starting to notice a pattern.
+  - The player approached Dad again. Surely this repetition was deliberate.
+  - The player spoke to Dad again. The narrator was beginning to think they were
+    doing this on purpose.
+  - Once again, the player spoke to Dad. The narrator was becoming suspicious.
+  - The player interacted with Dad again. At this point, the narrator was fairly
+    certain this was intentional.
+  - The player returned to Dad for another conversation. The narrator was starting
+    to catch on.
+  - The player spoke to Dad yet again. The narrator was beginning to wonder if they
+    had discovered a new hobby.
+  - Again, the player spoke to Dad. The narrator was starting to see what was happening
+    here.
+  - The player interacted with Dad once more. The narrator had noticed the repetition,
+    and it was becoming difficult to ignore.
+  canRepeat: 1

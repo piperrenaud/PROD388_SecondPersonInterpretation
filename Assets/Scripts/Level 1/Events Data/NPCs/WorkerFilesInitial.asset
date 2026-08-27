@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: WorkerFilesInitial
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: WorkerFilesInitial
+  dialogueLines:
+  - "This worker is sorting through some files. Looks like there\u2019s quite a lot
+    of them."
+  - "This employee is going through a stack of files. That\u2019s a lot of paperwork."
+  - This worker is busy sorting through documents. They certainly have plenty to
+    get through.
+  - "This employee is organising some files. Judging by that pile, they\u2019ll be
+    busy for a while."
+  - This worker is going through a mountain of paperwork. That looks like quite a
+    job.
+  canRepeat: 0

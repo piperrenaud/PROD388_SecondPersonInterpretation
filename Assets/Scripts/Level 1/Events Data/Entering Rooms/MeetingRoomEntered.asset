@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MeetingRoomEntered
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MeetingRoomEntered
-  dialogue: The player has entered the meeting room, where employees often chat.
+  dialogueLines:
+  - The player has entered the Meeting Room. Lots of workers come in here to chat.
   canRepeat: 0

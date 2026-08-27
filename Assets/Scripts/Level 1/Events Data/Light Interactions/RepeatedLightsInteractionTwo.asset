@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: RepeatedLightsInteractionTwo
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedLightsInteractionTwo
-  dialogue: The player is again messing with the lights.
+  dialogueLines:
+  - The player is such a child.
   canRepeat: 0

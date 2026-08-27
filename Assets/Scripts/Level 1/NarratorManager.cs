@@ -14,6 +14,8 @@ public class NarratorManager : MonoBehaviour
 
     private HashSet<string> completedEvents = new HashSet<string>();
 
+    private Dictionary<string, List<string>> usedDialogueLines = new Dictionary<string, List<string>>();
+
     private int doorSequences = 0;
     private int lightSequences = 0;
     private int officesEntered = 0;
@@ -92,19 +94,65 @@ public class NarratorManager : MonoBehaviour
             return;
         }
 
-        completedEvents.Add(eventID);
+        string dialogue = GetUnusedDialogue(eventData);
 
-        dialogueManager.SetText(eventData.dialogue);
+        if (string.IsNullOrEmpty(dialogue))
+        {
+            Debug.Log("No unused dialogue left for narrator event: " + eventID);
+            return;
+        }
 
-        if (eventID == "RespawnPlayer")
+        if (!eventData.canRepeat) completedEvents.Add(eventID);
+
+        dialogueManager.SetText(dialogue);
+
+        if (eventID == "RespawnPlayer" || eventID == "SecondRespawn")
         {
             StartCoroutine(RespawnPlayer());
         }
     }
 
+    private string GetUnusedDialogue(NarratorEventData eventData)
+    {
+        if (eventData.dialogueLines == null || eventData.dialogueLines.Count == 0)
+        {
+            Debug.LogWarning("Narrator event has no dialogue lines: " + eventData.eventID);
+            return null;
+        }
+
+        //used lines for this event
+        if (!usedDialogueLines.ContainsKey(eventData.eventID))
+        {
+            usedDialogueLines[eventData.eventID] = new List<string>();
+        }
+
+        List<string> usedLines = usedDialogueLines[eventData.eventID];
+
+        //lines that havent been used
+        List<string> availableLines = new List<string>();
+
+        foreach (string line in eventData.dialogueLines)
+        {
+            if (!usedLines.Contains(line))
+            {
+                availableLines.Add(line);
+            }
+        }
+
+        //ever line has already been used
+        if (availableLines.Count == 0) return null;
+
+        string selectedLine = availableLines[Random.Range(0, availableLines.Count)];
+
+        //remeber that this lines been used
+        usedLines.Add(selectedLine);
+
+        return selectedLine;
+    }
+
     private IEnumerator RespawnPlayer()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
 
         if (playerState == null)
         {

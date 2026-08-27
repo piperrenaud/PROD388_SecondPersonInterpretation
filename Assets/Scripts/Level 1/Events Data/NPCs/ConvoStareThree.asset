@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: ConvoStareThree
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: ConvoStareThree
+  dialogueLines:
+  - The player is still listening. The narrator has noticed, and their patience is
+    running out.
+  - This has gone on long enough. The narrator is beginning to consider taking action.
+  - The player continues to eavesdrop. Any longer, and the narrator may have to intervene.
+  - The narrator has had enough of the snooping. The player should probably go away
+    now.
+  - The player really needs to stop listening. The narrator is very close to stepping
+    in.
+  - This is no longer just awkward. The narrator is running out of patience.
+  - The player has pushed the snooping far enough. The narrator is prepared to intervene.
+  - Still listening? The narrator is giving the player one final chance to go away.
+  - The narrator has noticed exactly what the player is doing. They strongly suggest
+    stopping now.
+  - "That is quite enough snooping. If the player doesn\u2019t stop, the narrator
+    will make them stop."
+  canRepeat: 1

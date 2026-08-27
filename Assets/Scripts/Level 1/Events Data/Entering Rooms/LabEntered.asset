@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LabEntered
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: LabEntered
-  dialogue: The player has entered the lab, this is where all the confusing robot
-    stuff happens.
+  dialogueLines:
+  - The player has found the Lab. Probably best not to mess with things in here.
   canRepeat: 0

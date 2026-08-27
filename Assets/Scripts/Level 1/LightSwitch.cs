@@ -4,7 +4,7 @@ public class LightSwitch : MonoBehaviour
 {
     [Header("Narration")]
     [SerializeField] private NarratorManager narratorManager;
-    [SerializeField] private int interactionsBeforeNarration = 6;
+    [SerializeField] private int interactionsBeforeNarration = 12;
     [SerializeField] private float maxTimeBetweenInteractions = 2f;
 
     [Header("Lights")]

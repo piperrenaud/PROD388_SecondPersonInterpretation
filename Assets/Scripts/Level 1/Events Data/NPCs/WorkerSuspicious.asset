@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: WorkerSuspicious
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: WorkerSuspicious
+  dialogueLines:
+  - The player spoke to the employee again. And again. The narrator was beginning
+    to suspect this was intentional.
+  - The player spoke to the employee again. Surely they remembered doing this already.
+    Surely.
+  - The player spoke to the employee again. The narrator was starting to notice a
+    pattern.
+  - The player spoke to the employee again. And once more for good measure. Interesting.
+  - "The player spoke to the employee again. The narrator was beginning to think
+    this wasn\u2019t an accident."
+  - Again, the player spoke to the employee. At this point, repetition seemed to
+    be the goal.
+  - The player spoke to the employee. Then spoke to them again. The narrator was
+    becoming suspicious.
+  - The player had another conversation with the employee. The narrator wondered
+    if they were doing this on purpose.
+  - The player spoke to the employee again. And again. There was definitely a pattern
+    forming.
+  - Once again, the player approached the employee. The narrator was beginning to
+    run out of excuses for them.
+  - The player spoke to the employee again. The narrator was starting to suspect
+    this was less curiosity and more persistence.
+  - Another interaction. With the same employee. Again. The narrator was taking note.
+  - The player spoke to the employee yet again. Surely this was deliberate by now.
+  - The player returned to the employee for another conversation. The narrator was
+    beginning to see what was happening.
+  - Again, the player spoke to the employee. The narrator was starting to question
+    their intentions.
+  - The player spoke to the employee. Then did it again. And again. This was becoming
+    difficult to ignore.
+  - The player had another chat with the employee. The narrator was beginning to
+    suspect they enjoyed pressing that button.
+  - The player spoke to the employee once more. The narrator was beginning to think
+    they had discovered a new hobby.
+  - The player interacted with the employee again. The narrator was now fairly certain
+    this was intentional.
+  - The player spoke to the employee again. At this point, the narrator was less
+    curious about why and more curious about how long this would continue.
+  canRepeat: 1

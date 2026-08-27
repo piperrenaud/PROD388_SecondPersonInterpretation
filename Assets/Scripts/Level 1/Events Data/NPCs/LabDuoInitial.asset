@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: LabDuoInitial
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: LabDuoInitial
+  dialogueLines:
+  - "This man looks like he\u2019s working on something important. Looks like some
+    kind of experiment."
+  - This worker seems to be focused on something important. Is that some kind of
+    experiment?
+  - This man appears to be working on an experiment. Whatever it is, he looks rather
+    serious.
+  - "This worker is busy with something that looks quite complicated. Perhaps it\u2019s
+    an experiment."
+  - "This man seems to be conducting some kind of experiment. I wonder what he\u2019s
+    working on."
+  - "Something important appears to be happening here. The narrator suspects it\u2019s
+    some kind of experiment."
+  - This worker is focused on a rather unusual task. It looks like some sort of experiment.
+  - "This man looks very busy with his work. Whatever he\u2019s doing, it certainly
+    resembles an experiment."
+  - The worker seems to be carefully working on something. Could this be some kind
+    of experiment?
+  - "This man appears to be conducting an experiment. The narrator wonders what he\u2019s
+    trying to discover."
+  canRepeat: 1

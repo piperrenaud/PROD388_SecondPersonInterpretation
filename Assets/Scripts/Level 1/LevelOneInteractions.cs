@@ -33,6 +33,11 @@ public class LevelOneInteractions : MonoBehaviour
         {
             HandleDialogue(interactedObject);
         }
+
+        if (interactedObject.CompareTag("NPC"))
+        {
+            HandleNPC(interactedObject);
+        }
     }
 
     private void HandleDoor(GameObject door)
@@ -96,5 +101,18 @@ public class LevelOneInteractions : MonoBehaviour
     private void HandleDialogue(GameObject interactedObject)
     {
         dialogueManager.SetText($"This is a {interactedObject.name}");
+    }
+
+    private void HandleNPC(GameObject interactedObject)
+    {
+        NPCInteraction npc = interactedObject.GetComponent<NPCInteraction>();
+
+        if (npc == null)
+        {
+            Debug.LogWarning("NPC has no NPCInteraction component");
+            return;
+        }
+
+        npc.Observe();
     }
 }

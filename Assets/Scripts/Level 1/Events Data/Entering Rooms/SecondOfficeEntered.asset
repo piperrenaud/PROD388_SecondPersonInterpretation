@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: SecondOfficeEntered
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: SecondOfficeEntered
-  dialogue: This is also someones office. Identical to the first one.
+  dialogueLines:
+  - The player is in yet another office.
   canRepeat: 0

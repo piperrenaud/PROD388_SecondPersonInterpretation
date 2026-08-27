@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MeetingRoomExited
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MeetingRoomExited
-  dialogue: The player has immediately left the meeting room. Maybe they were talking
-    about politics.
+  dialogueLines:
+  - The player apparently hates chatter, and so left the Meeting Room rather quick.
   canRepeat: 0

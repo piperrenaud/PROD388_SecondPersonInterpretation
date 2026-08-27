@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: RepeatedDoorInteractionOne
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedDoorInteractionOne
-  dialogue: The player seems very detemined to open and close this door.
+  dialogueLines:
+  - The player seems to enjoy opening and closing this door.
   canRepeat: 0

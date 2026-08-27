@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FacilityEntered
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: FacilityEntered
-  dialogue: The player is now in the experiment area, I'm sure nothing can go wrong
-    here.
+  dialogueLines:
+  - The player has now entered the Experiment room, lots of big and confusing things
+    happen in here.
   canRepeat: 0

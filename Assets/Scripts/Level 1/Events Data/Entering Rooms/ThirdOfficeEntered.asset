@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ThirdOfficeEntered
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: ThirdOfficeEntered
-  dialogue: This is yet another office. Same as the last two.
+  dialogueLines:
+  - The player has found a third office, identical to literally every other one.
   canRepeat: 0

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: DadRepeated
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: DadRepeated
+  dialogueLines:
+  - The player has already spoken to their dad. Perhaps they should find something
+    else to do.
+  - "The player has already seen their dad. There\u2019s no need to bother him again."
+  - "The player has checked in with their dad. Maybe it\u2019s time to explore somewhere
+    else."
+  - The players dad has already been visited. Perhaps the player should move on.
+  - The player has already said hello to their dad. There must be something else
+    to investigate.
+  - "There\u2019s nothing more to see here. Perhaps the player should look around
+    the office."
+  - The player has already found their dad. Now what else could there be to discover?
+  - The players dad is already accounted for. Time to see what else the office has
+    to offer.
+  - The player has already had their conversation with dad. Perhaps they should leave
+    him to work.
+  - "Dad has been checked on. Surely there\u2019s something else for the player to
+    get up to."
+  - "The player has already seen their dad. Perhaps there\u2019s something else to
+    do."
+  - The player has already checked in with dad. Time to find something else.
+  - "There\u2019s nothing new to see with dad. Perhaps the player should move along."
+  - The player has already spoken to their dad. Maybe they should explore the rest
+    of the office.
+  - Dad has already been seen. Surely the player can find something else to occupy
+    their time.
+  - "The player has already stopped by dad\u2019s desk. Perhaps another desk would
+    be more interesting."
+  - "Their dad has already been checked on. Maybe it\u2019s time for the player to
+    wander elsewhere."
+  - The player has already had a look at what dad is doing. There must be something
+    else around here.
+  - Dad is still busy working. The player has already seen him, so perhaps they should
+    leave him to it.
+  - The player has already paid dad a visit. Maybe they should see what else is happening.
+  - "There\u2019s no reason to keep visiting dad. The office has plenty of other
+    things to see."
+  - The player has already found their dad. Now perhaps they should find something
+    else.
+  - Dad has been seen, greeted, and accounted for. Maybe the player should move on.
+  - "The player has already checked on dad. Perhaps it\u2019s time to explore somewhere
+    new."
+  canRepeat: 1

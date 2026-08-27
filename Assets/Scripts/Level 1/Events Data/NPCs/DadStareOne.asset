@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: DadStareOne
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: DadStareOne
+  dialogueLines:
+  - The player has been staring at this worker for quite a while. You good?
+  - The player has been looking at this worker for an awfully long time. Everything
+    alright?
+  - "The player hasn\u2019t taken their eyes off this worker. Is there something
+    they\u2019re waiting for?"
+  - The player has been watching this worker for a while now. Perhaps they should
+    look elsewhere.
+  - The player is still staring at the worker. The narrator is starting to wonder
+    why.
+  - The player has been staring for an uncomfortable amount of time. You alright
+    there?
+  - Dad is still working. The player is still staring. This is getting a little strange.
+  - The player has been watching their Dad for quite some time. Surely they have
+    something else to do.
+  - "The player hasn\u2019t moved their gaze in a while. Perhaps it\u2019s time to
+    look at something else."
+  - The player continues to stare at their Dad. The narrator is beginning to feel
+    awkward.
+  - The player has been staring at their poor Dad for ages. Maybe give them some
+    privacy?
+  - Dad is trying to work. The player, meanwhile, appears to be studying them.
+  - The player has been watching their Dad for long enough. Even the narrator has
+    noticed.
+  - Still staring? The narrator is beginning to think the player has forgotten how
+    to look away.
+  - The player has spent a surprisingly long time staring at their Dad. Everything
+    okay?
+  - Dad is busy doing their job. The player seems very interested in watching him
+    do it.
+  - "The player continues to stare. The narrator is starting to question what exactly
+    they\u2019re waiting for."
+  - "That\u2019s quite a long time to be staring at someone. Perhaps the player should
+    move along."
+  - "The player has been watching their Dad for a while now. Maybe it\u2019s time
+    to give them a break."
+  - The player is still staring at their Dad. The narrator is beginning to think
+    this has gone on long enough.
+  canRepeat: 1

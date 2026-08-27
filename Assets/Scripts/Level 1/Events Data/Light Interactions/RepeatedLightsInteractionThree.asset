@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: RepeatedLightsInteractionThree
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedLightsInteractionThree
-  dialogue: The players about to deal with the consequences of continuously playing
-    with the lights.
+  dialogueLines:
+  - The player is going to find out what happen if they keep messing with the lights.
   canRepeat: 0

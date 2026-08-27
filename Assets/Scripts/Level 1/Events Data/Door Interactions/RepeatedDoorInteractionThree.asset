@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: RepeatedDoorInteractionThree
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedDoorInteractionThree
-  dialogue: Keep messing with that door and see what happens.
+  dialogueLines:
+  - The player is now doing this on purpose to be annoying.
   canRepeat: 0

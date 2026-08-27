@@ -13,5 +13,28 @@ MonoBehaviour:
   m_Name: RespawnPlayer
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RespawnPlayer
-  dialogue: You're annoying me now. Lets try this again.
+  dialogueLines:
+  - "That\u2019s enough. The narrator has decided the player needs a fresh start."
+  - The player has pushed their luck far enough. Time to reset.
+  - "The narrator has had enough of this. Let\u2019s start over."
+  - That will do. The player is going back to the beginning.
+  - "The narrator\u2019s patience has officially run out. Time for a reset."
+  - The player has been warned. The narrator is taking matters into their own hands.
+  - Enough is enough. Perhaps starting over will help the player understand.
+  - The narrator has seen quite enough. Time to rewind.
+  - "The player clearly isn\u2019t going to stop. The narrator has a solution: reset."
+  - "That\u2019s quite enough repetition. The narrator is restarting things."
+  - "The narrator has reached their limit. Let\u2019s give the player another chance."
+  - The player has continued for long enough. Time for a fresh start.
+  - The narrator is officially fed up. The player is being sent back.
+  - There is only so much repetition the narrator can tolerate. Time to reset.
+  - "The player has tested the narrator\u2019s patience enough. Let\u2019s start
+    again."
+  - The narrator has decided this interaction needs to end. Resetting now.
+  - Apparently, the player needs a reminder. Back to the beginning they go.
+  - The narrator has had enough of this little game. Time for a do-over.
+  - "The player refused to stop, so the narrator has decided to intervene. Let\u2019s
+    restart."
+  - "That\u2019s it. The narrator is done watching this. Time to send the player
+    back and try again."
   canRepeat: 1

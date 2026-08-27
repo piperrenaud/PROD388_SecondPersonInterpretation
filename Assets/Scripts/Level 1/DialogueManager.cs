@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
 
     private AudioSource source;
     private Coroutine dialogueCoroutine;
+    public bool IsDialogueRunning => dialogueCoroutine != null;
 
     public void Awake()
     {
@@ -27,10 +28,7 @@ public class DialogueManager : MonoBehaviour
 
     public void SetText(string text)
     {
-        if (dialogueCoroutine != null)
-        {
-            StopCoroutine(dialogueCoroutine);
-        }
+        if (IsDialogueRunning) return;
 
         dialogueCoroutine = StartCoroutine(ShowDialogue(text));
     }

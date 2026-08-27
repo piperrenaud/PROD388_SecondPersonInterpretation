@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FourthOfficeEntered
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: FourthOfficeEntered
-  dialogue: This is again another office. Surely, the player has more interesting
-    things to explore?
+  dialogueLines:
+  - This office is the same as all the other ones you went to. Move on.
   canRepeat: 0

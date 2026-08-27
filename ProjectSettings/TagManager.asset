@@ -8,6 +8,7 @@ TagManager:
   - ObjectCamera
   - LightSwitch
   - DialogueProp
+  - NPC
   layers:
   - Default
   - TransparentFX
