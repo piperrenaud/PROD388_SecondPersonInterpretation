@@ -29,9 +29,9 @@ public class LevelOneInteractions : MonoBehaviour
             HandleLights(interactedObject);
         }
 
-        if (interactedObject.CompareTag("DialogueProp"))
+        if (interactedObject.CompareTag("Object"))
         {
-            HandleDialogue(interactedObject);
+            HandleObject(interactedObject);
         }
 
         if (interactedObject.CompareTag("NPC"))
@@ -98,9 +98,14 @@ public class LevelOneInteractions : MonoBehaviour
         lightSwitch.ToggleLights();
     }
 
-    private void HandleDialogue(GameObject interactedObject)
+    private void HandleObject(GameObject interactedObject)
     {
-        dialogueManager.SetText($"This is a {interactedObject.name}");
+        ObjectInteraction objectInteraction = interactedObject.GetComponent<ObjectInteraction>();
+
+        if (objectInteraction != null)
+        {
+            objectInteraction.Observe();
+        }
     }
 
     private void HandleNPC(GameObject interactedObject)

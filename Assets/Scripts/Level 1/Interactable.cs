@@ -92,13 +92,6 @@ public class Interactable : MonoBehaviour
             {
                 outline.enabled = isHovered;
             }
-
-            NPCInteraction npcInteraction = GetComponent<NPCInteraction>();
-
-            if (npcInteraction != null)
-            {
-                npcInteraction.SetHovered(isHovered);
-            }
         }
     }
 

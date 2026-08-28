@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: MechanicalStageTwo
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: MechanicalStageTwo
+  dialogueLines:
+  - "It looks kind of fragile. Maybe don\u2019t be so rough with it."
+  - That machine looks pretty delicate. Perhaps handle it a little more carefully.
+  - "It doesn\u2019t look particularly sturdy. Maybe go easy on it."
+  - "That thing looks fragile. I\u2019d suggest being a little more gentle."
+  - "It looks like it could break pretty easily. Perhaps don\u2019t push it too hard."
+  - The machine seems rather delicate. Maybe the player should be more careful.
+  - "That doesn\u2019t look very durable. I\u2019d probably stop being so rough with
+    it."
+  - It looks like one wrong move could cause a problem. Perhaps take it easy.
+  - "The machine seems quite fragile. Maybe it\u2019s best not to mess with it too
+    much."
+  - That thing looks delicate enough already. Perhaps the player should handle it
+    with care.
+  canRepeat: 1

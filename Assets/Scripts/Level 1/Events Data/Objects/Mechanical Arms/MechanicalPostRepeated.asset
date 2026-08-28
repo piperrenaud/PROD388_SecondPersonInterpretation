@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: MechanicalPostRepeated
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: MechanicalPostRepeated
+  dialogueLines:
+  - "Okay, I\u2019m getting sick of this. Please do something else."
+  - "Alright, that\u2019s enough. Can we move on to something else now?"
+  - "Okay, I\u2019ve had enough of this. Go find something else to do."
+  - Seriously, can we stop doing this now? Please try something else.
+  - "Right, I\u2019m getting rather tired of this. Let\u2019s do something different."
+  - Okay, this is getting old. Please move on to something else.
+  - Enough already. There are other things to do, you know.
+  - "I think we\u2019ve spent quite enough time on this. Let\u2019s move along."
+  - "Alright, I\u2019m officially bored of this. Please find something else to interact
+    with."
+  - "Okay, that\u2019s enough messing around. Do something else before I lose my
+    patience."
+  canRepeat: 1

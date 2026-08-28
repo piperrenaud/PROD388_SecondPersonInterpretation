@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: VaseInteracted
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: VaseInteracted
+  dialogueLines:
+  - Oh look, you knocked it over. Glad you worked so hard for that.
+  - Well, you did it. The vase is on the floor. Was that worth all the effort?
+  - Oh, wonderful. You knocked over a vase. Truly an impressive achievement.
+  - "There it goes. The vase is knocked over. I\u2019m sure that was exactly what
+    you were hoping for."
+  - Congratulations. You successfully knocked over a completely normal vase. Well
+    done.
+  canRepeat: 0

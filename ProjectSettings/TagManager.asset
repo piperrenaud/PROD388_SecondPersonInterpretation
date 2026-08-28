@@ -7,8 +7,8 @@ TagManager:
   - Door
   - ObjectCamera
   - LightSwitch
-  - DialogueProp
   - NPC
+  - Object
   layers:
   - Default
   - TransparentFX

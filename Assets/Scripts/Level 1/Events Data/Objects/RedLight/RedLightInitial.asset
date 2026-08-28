@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: RedLightInitial
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: RedLightInitial
+  dialogueLines:
+  - This is a red button. Perhaps it does something.
+  - "There\u2019s a red button here. I wonder what it does."
+  - "The player has found a red button. Maybe it\u2019s important."
+  - This appears to be a red button. Surely it must do something.
+  - A red button. The narrator wonders what might happen if the player presses it.
+  canRepeat: 0

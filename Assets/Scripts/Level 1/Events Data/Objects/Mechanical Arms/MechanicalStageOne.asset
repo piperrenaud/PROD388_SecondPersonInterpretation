@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: MechanicalStageOne
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: MechanicalStageOne
+  dialogueLines:
+  - "I don\u2019t know what will happen if you keep touching it."
+  - "I\u2019m not sure what will happen if you keep messing with it."
+  - The narrator has no idea what might happen if you keep interacting with it.
+  - "I really don\u2019t know what will happen if you keep pressing things."
+  - "Perhaps you should stop touching it. The narrator isn\u2019t sure what it might
+    do."
+  - I have no idea what this thing will do if you keep interfering with it.
+  - "The narrator can\u2019t say what will happen if you keep messing around with
+    this machine."
+  - Maybe stop touching it before we find out what happens.
+  - "I\u2019m starting to wonder what will happen if you keep poking at it."
+  - "The narrator isn\u2019t entirely sure this machine should be touched. Maybe
+    don\u2019t find out."
+  canRepeat: 1

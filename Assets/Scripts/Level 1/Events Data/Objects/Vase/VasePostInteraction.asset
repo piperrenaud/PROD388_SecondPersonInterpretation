@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: VasePostInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: VasePostInteraction
+  dialogueLines:
+  - "It\u2019s already on the ground. What more do you expect to do with it?"
+  - "The vase is already knocked over. There\u2019s really nothing else to do here."
+  - "It\u2019s on the floor now. Surely that\u2019s enough."
+  - The vase has already fallen. What more could possibly happen?
+  - "It\u2019s already lying on the ground. You\u2019ve done all you can do."
+  - "The vase is already down. Maybe it\u2019s time to leave it alone."
+  canRepeat: 0

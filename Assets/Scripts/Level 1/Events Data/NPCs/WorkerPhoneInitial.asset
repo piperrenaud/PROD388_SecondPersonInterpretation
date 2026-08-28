@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
   m_Name: WorkerPhoneInitial
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
-  eventID: WorlerPhoneInitla
+  eventID: WorlerPhoneInitial
   dialogueLines:
   - "This worker is talking on the phone. He seems very passionate about whatever
     he\u2019s discussing."

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: MechanicalPostInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: MechanicalPostInteraction
+  dialogueLines:
+  - You already broke it. Why bother messing with it now?
+  - "It\u2019s already broken. There\u2019s really no point in touching it anymore."
+  - "You\u2019ve already damaged it. What more are you hoping to accomplish?"
+  - The machine is broken. Maybe leave it alone now.
+  - "You already broke the thing. Surely that\u2019s enough messing around."
+  - "It\u2019s not working anymore. Why keep trying to interact with it?"
+  - "The machine has already been broken. There\u2019s nothing left to do with it."
+  - "You\u2019ve already broken it. I\u2019m not sure what you expect to happen now."
+  - "It\u2019s completely broken. Perhaps stop poking at it."
+  - You broke it already. Continuing to mess with it is just wasting time.
+  canRepeat: 1

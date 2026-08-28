@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: VaseStageOne
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: VaseStageOne
+  dialogueLines:
+  - Yeah, keep messing with the vase. Something cool will definitely happen.
+  - Go on, keep playing with the vase. Surely something interesting will happen.
+  - "Keep poking at it. I\u2019m sure the vase has a big surprise waiting."
+  - Yes, keep messing with the vase. This is definitely going somewhere.
+  - Go ahead, keep interacting with it. Something amazing is bound to happen.
+  - Keep at it. Surely this completely normal vase has something exciting in store.
+  - "Yeah, don\u2019t stop now. The vase is obviously hiding something incredible."
+  - "Keep messing around with it. I\u2019m sure the narrator has nothing to worry
+    about."
+  - Yes, keep pressing it. Surely the vase will do something eventually.
+  - Go on, keep trying. Something totally unexpected will definitely happen.
+  canRepeat: 1
