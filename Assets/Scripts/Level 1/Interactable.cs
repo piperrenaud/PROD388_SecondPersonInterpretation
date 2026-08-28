@@ -92,6 +92,12 @@ public class Interactable : MonoBehaviour
             {
                 outline.enabled = isHovered;
             }
+
+            DangerInteract dangerInteract = GetComponent<DangerInteract>();
+            if (dangerInteract != null)
+            {
+                dangerInteract.SetHovered(isHovered);
+            }
         }
     }
 

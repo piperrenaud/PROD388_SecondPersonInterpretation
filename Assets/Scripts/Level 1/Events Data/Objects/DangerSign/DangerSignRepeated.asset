@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: DangerSignRepeated
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: DangerSignRepeated
+  dialogueLines:
+  - This is still a danger sign. Maybe staring at it will help you remember the rules.
+  - "The player is still looking at the danger sign. Perhaps they\u2019re trying
+    to memorise it."
+  - "It\u2019s the same warning sign. Maybe reading it a few more times will make
+    the message clearer."
+  - The sign still says Do Not Enter. Perhaps the player needs a few more reminders.
+  - "The player seems very interested in this warning sign. Hopefully they\u2019re
+    paying attention to what it says."
+  - "It\u2019s still a sign telling you not to enter. Maybe looking at it repeatedly
+    will help."
+  - "The player has been studying the danger sign. Surely they understand what it\u2019s
+    asking by now."
+  - "The warning hasn\u2019t changed. Perhaps the player is making absolutely certain
+    they\u2019ve read it correctly."
+  - "The player keeps checking the sign. Maybe they\u2019re finally starting to understand
+    the instructions."
+  - "It\u2019s still a danger sign. The narrator hopes all this staring will encourage
+    the player to follow its rules."
+  canRepeat: 1

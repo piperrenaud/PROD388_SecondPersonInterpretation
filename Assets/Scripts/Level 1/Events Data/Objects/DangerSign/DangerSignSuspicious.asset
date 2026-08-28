@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: DangerSignSuspicious
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: DangerSignSuspicious
+  dialogueLines:
+  - "Okay, now you\u2019re just rereading it to annoy me. Please do something else."
+  - "You\u2019ve already read the sign. There\u2019s really no reason to keep looking
+    at it."
+  - "Alright, I think you\u2019ve memorised the sign by now. Please move on."
+  - "You\u2019re still reading it? I\u2019m starting to think you\u2019re doing this
+    just to bother me."
+  - "The message hasn\u2019t changed. Please find something else to look at."
+  - "Okay, that\u2019s enough reading. The narrator would really like you to move
+    along now."
+  - "You\u2019ve read the warning several times already. Surely there\u2019s something
+    else to do."
+  - The sign has been thoroughly inspected. Please, for my sake, look somewhere else.
+  - "You keep coming back to the same sign. I\u2019m beginning to suspect this is
+    deliberate."
+  - Yes, it still says Do Not Enter. Now please stop reading it and do something
+    else.
+  canRepeat: 1

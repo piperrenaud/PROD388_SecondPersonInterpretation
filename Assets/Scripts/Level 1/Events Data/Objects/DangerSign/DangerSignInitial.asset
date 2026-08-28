@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: DangerSignInitial
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: DangerSignInitial
+  dialogueLines:
+  - This is a danger sign. It says Do Not Enter. Sounds serious.
+  - "There\u2019s a warning sign here. Apparently, we\u2019re not supposed to go
+    in."
+  - This sign says Do Not Enter. That seems like a fairly clear warning.
+  - "A danger sign telling us not to enter. I wonder what\u2019s inside."
+  - This is clearly a restricted area. The sign seems pretty serious about keeping
+    people out.
+  canRepeat: 0

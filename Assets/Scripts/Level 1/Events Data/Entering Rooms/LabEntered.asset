@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: LabEntered
   dialogueLines:
-  - The player has found the Lab. Probably best not to mess with things in here.
+  - The player has found the Lab. Looks kind of dangerous in here. Probably best
+    not to mess with things.
   canRepeat: 0

@@ -7,11 +7,15 @@ public class NarratorTrigger : MonoBehaviour
     [SerializeField] private string enterTriggerID;
     [SerializeField] private string exitTriggerID;
 
+    [Header("Danger Sign?")]
+    [SerializeField] private DangerInteract[] dangerSigns;
+    [SerializeField] private string seenSignEnterTriggerID;
+
     [Header("Exit timing")]
     [SerializeField] private float quickExitTime = 3f;
 
     private float timeEntered;
-    private bool playerInside;
+    private bool playerAlreadyExplored;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,10 +30,30 @@ public class NarratorTrigger : MonoBehaviour
             return;
         }
 
-        playerInside = true;
         timeEntered = Time.time;
 
-        narratorManager.TriggerEvent(enterTriggerID);
+        //check if playes seen danger sign
+        if (HasSeenDangerSign())
+        {
+            narratorManager.TriggerEvent(seenSignEnterTriggerID);
+        }
+        else
+        {
+            narratorManager.TriggerEvent(enterTriggerID);
+        }
+    }
+
+    private bool HasSeenDangerSign()
+    {
+        foreach (DangerInteract sign in dangerSigns)
+        {
+            if (sign != null && sign.HasPlayerSeen)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void OnTriggerExit(Collider other)
@@ -44,7 +68,9 @@ public class NarratorTrigger : MonoBehaviour
             return;
         }
 
-        playerInside = false;
+        if (playerAlreadyExplored) return;
+
+        playerAlreadyExplored = true;
         float timeSpendInside = Time.time - timeEntered;
 
         if (timeSpendInside <= quickExitTime)

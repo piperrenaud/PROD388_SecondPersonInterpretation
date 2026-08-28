@@ -9,6 +9,7 @@ TagManager:
   - LightSwitch
   - NPC
   - Object
+  - DangerSign
   layers:
   - Default
   - TransparentFX

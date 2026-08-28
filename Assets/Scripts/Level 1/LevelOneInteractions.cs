@@ -17,6 +17,9 @@ public class LevelOneInteractions : MonoBehaviour
     [Header("Narrator")]
     [SerializeField] private NarratorManager narratorManager;
 
+    private bool dangerSignInteracted = false;
+    private DangerInteract lastInteractedSign;
+
     public void HandleInteraction(GameObject interactedObject)
     {
         if (interactedObject.CompareTag("Door"))
@@ -37,6 +40,11 @@ public class LevelOneInteractions : MonoBehaviour
         if (interactedObject.CompareTag("NPC"))
         {
             HandleNPC(interactedObject);
+        }
+
+        if (interactedObject.CompareTag("DangerSign"))
+        {
+            HandleDangerSign(interactedObject);
         }
     }
 
@@ -119,5 +127,14 @@ public class LevelOneInteractions : MonoBehaviour
         }
 
         npc.Observe();
+    }
+
+    private void HandleDangerSign(GameObject interactedObject)
+    {
+        DangerInteract dangerInteract = interactedObject.GetComponent<DangerInteract>();
+
+        if (dangerInteract == null) return;
+
+        dangerInteract.Observe();
     }
 }
