@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player is having fun with the lights.
   canRepeat: 0
+  priority: 1

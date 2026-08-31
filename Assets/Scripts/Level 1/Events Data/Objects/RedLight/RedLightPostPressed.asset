@@ -27,3 +27,4 @@ MonoBehaviour:
   - "You\u2019ve pressed it already. The narrator can assure you, nothing else will
     happen."
   canRepeat: 1
+  priority: 3

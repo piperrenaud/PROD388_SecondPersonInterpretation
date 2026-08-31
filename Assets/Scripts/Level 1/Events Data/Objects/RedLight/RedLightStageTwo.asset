@@ -25,3 +25,4 @@ MonoBehaviour:
   - "That\u2019s it. The button is almost ready to do something."
   - Yes, keep going. Something is about to happen.
   canRepeat: 1
+  priority: 3

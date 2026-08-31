@@ -28,8 +28,17 @@ public class DialogueManager : MonoBehaviour
 
     public void SetText(string text)
     {
-        if (IsDialogueRunning) return;
+        //stop whatever dialogue is currently playing
+        if (dialogueCoroutine != null)
+        {
+            StopCoroutine(dialogueCoroutine);
+            dialogueCoroutine = null;
+        }
 
+        //clear old text
+        dialogueText.text = "";
+
+        //start new dialogue immediately
         dialogueCoroutine = StartCoroutine(ShowDialogue(text));
     }
 

@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player seems to enjoy opening and closing this door.
   canRepeat: 0
+  priority: 1

@@ -28,3 +28,4 @@ MonoBehaviour:
   - That thing looks delicate enough already. Perhaps the player should handle it
     with care.
   canRepeat: 1
+  priority: 3

@@ -32,3 +32,4 @@ MonoBehaviour:
   - "These two look like they\u2019re in the middle of a conversation. Whatever it
     is, they seem rather focused on it."
   canRepeat: 1
+  priority: 3

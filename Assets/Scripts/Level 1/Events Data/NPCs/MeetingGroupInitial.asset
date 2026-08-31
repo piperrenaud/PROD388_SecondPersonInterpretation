@@ -32,3 +32,4 @@ MonoBehaviour:
   - "This man is clearly having a meeting. The narrator is a little curious about
     what they\u2019re talking about."
   canRepeat: 1
+  priority: 3

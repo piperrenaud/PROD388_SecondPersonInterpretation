@@ -26,3 +26,4 @@ MonoBehaviour:
     enough."
   - "Escape does nothing. I\u2019ve said this already. Please stop pressing it."
   canRepeat: 1
+  priority: 1

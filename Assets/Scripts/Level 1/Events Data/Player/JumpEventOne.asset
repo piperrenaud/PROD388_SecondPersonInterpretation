@@ -26,3 +26,4 @@ MonoBehaviour:
   - "The player tried pressing Space. Nice idea, but jumping isn\u2019t an option
     here."
   canRepeat: 0
+  priority: 1

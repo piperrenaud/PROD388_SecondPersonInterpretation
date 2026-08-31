@@ -25,3 +25,4 @@ MonoBehaviour:
   - The player is still trying to activate it. This is getting rather unnecessary.
   - "Enough with the button. It\u2019s done. Leave it alone."
   canRepeat: 1
+  priority: 3

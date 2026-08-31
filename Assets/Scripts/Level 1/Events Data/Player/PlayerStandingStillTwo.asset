@@ -27,3 +27,4 @@ MonoBehaviour:
     unsettling.
   - "The player is still frozen in place. The narrator isn\u2019t sure this is normal."
   canRepeat: 1
+  priority: 1

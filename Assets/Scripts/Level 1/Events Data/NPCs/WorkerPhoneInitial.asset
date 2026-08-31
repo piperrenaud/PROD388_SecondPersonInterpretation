@@ -23,3 +23,4 @@ MonoBehaviour:
   - "He\u2019s talking on the phone, and he looks rather invested in the conversation."
   - This employee is on a phone call. He seems to have a lot to say.
   canRepeat: 0
+  priority: 3

@@ -39,3 +39,4 @@ MonoBehaviour:
   - "There\u2019s work to be done, and apparently, the player isn\u2019t part of
     it."
   canRepeat: 1
+  priority: 3

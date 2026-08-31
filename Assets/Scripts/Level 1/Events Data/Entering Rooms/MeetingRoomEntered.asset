@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player has entered the Meeting Room. Lots of workers come in here to chat.
   canRepeat: 0
+  priority: 5

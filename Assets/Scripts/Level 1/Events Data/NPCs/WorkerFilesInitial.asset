@@ -24,3 +24,4 @@ MonoBehaviour:
   - This worker is going through a mountain of paperwork. That looks like quite a
     job.
   canRepeat: 0
+  priority: 3

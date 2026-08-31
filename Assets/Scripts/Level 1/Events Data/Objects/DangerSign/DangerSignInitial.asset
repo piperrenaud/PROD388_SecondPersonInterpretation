@@ -22,3 +22,4 @@ MonoBehaviour:
   - This is clearly a restricted area. The sign seems pretty serious about keeping
     people out.
   canRepeat: 0
+  priority: 3

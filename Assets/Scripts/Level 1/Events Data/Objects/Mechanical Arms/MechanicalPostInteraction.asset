@@ -25,3 +25,4 @@ MonoBehaviour:
   - "It\u2019s completely broken. Perhaps stop poking at it."
   - You broke it already. Continuing to mess with it is just wasting time.
   canRepeat: 1
+  priority: 3

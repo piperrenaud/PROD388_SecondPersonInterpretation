@@ -28,3 +28,4 @@ MonoBehaviour:
   - "The narrator isn\u2019t entirely sure this machine should be touched. Maybe
     don\u2019t find out."
   canRepeat: 1
+  priority: 3

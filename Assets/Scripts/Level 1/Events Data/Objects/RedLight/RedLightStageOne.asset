@@ -25,3 +25,4 @@ MonoBehaviour:
   - The player has pressed it several times now. Something must happen eventually.
   - Maybe persistence is the key. Keep pressing and see what happens.
   canRepeat: 1
+  priority: 3

@@ -20,3 +20,4 @@ MonoBehaviour:
   - Success! The button actually did something.
   - There we go! Something happened after all.
   canRepeat: 1
+  priority: 3

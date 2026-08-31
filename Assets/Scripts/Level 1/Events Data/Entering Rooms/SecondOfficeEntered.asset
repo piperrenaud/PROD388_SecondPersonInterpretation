@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player is in yet another office.
   canRepeat: 0
+  priority: 1

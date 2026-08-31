@@ -17,3 +17,4 @@ MonoBehaviour:
   - The player has now entered the Experiment room, lots of big and confusing things
     happen in here.
   canRepeat: 0
+  priority: 5

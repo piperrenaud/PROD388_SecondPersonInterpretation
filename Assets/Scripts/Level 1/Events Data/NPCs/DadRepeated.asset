@@ -56,3 +56,4 @@ MonoBehaviour:
   - "The player has already checked on dad. Perhaps it\u2019s time to explore somewhere
     new."
   canRepeat: 1
+  priority: 3

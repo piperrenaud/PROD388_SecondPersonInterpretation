@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player got bored and left the Experiment room almost immediately.
   canRepeat: 0
+  priority: 5

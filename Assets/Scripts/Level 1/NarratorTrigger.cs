@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NarratorTrigger : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private NarratorManager narratorManager;
+    [SerializeField] private LevelOneInteractions levelOneInteractions;
     [SerializeField] private string enterTriggerID;
     [SerializeField] private string exitTriggerID;
 
@@ -16,9 +18,15 @@ public class NarratorTrigger : MonoBehaviour
 
     private float timeEntered;
     private bool playerAlreadyExplored;
+    private bool playerInside;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (enterTriggerID == "FacilityEntered")
+        {
+            CheckPlayer();
+        }
+
         if (!other.CompareTag("Player"))
         {
             return;
@@ -31,6 +39,7 @@ public class NarratorTrigger : MonoBehaviour
         }
 
         timeEntered = Time.time;
+        playerInside = true;
 
         //check if playes seen danger sign
         if (HasSeenDangerSign())
@@ -77,5 +86,21 @@ public class NarratorTrigger : MonoBehaviour
         {
             narratorManager.TriggerEvent(exitTriggerID);
         }
+
+        playerInside = false;
+
+    }
+
+    private void CheckPlayer()
+    {
+        if (levelOneInteractions.IsTimerUp)
+        {
+            levelOneInteractions.PlayerEnteredFacility();
+        }
+    }
+
+    public bool IsPlayerInside()
+    {
+        return playerInside;
     }
 }

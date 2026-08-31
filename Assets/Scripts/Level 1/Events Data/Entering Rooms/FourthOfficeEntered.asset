@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - This office is the same as all the other ones you went to. Move on.
   canRepeat: 0
+  priority: 1

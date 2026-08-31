@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player is such a child.
   canRepeat: 0
+  priority: 1

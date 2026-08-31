@@ -21,3 +21,4 @@ MonoBehaviour:
   - "It\u2019s already lying on the ground. You\u2019ve done all you can do."
   - "The vase is already down. Maybe it\u2019s time to leave it alone."
   canRepeat: 0
+  priority: 3

@@ -31,3 +31,4 @@ MonoBehaviour:
   - The player pressed Escape again. The narrator admires their optimism, but nothing
     is happening.
   canRepeat: 0
+  priority: 1

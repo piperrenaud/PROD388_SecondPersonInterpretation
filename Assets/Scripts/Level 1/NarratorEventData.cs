@@ -13,4 +13,7 @@ public class NarratorEventData : ScriptableObject
 
     [Header("Settings")]
     public bool canRepeat;
+
+    [Tooltip("Higher prioty events interrupt lower priority events")]
+    public int priority = 0;
 }

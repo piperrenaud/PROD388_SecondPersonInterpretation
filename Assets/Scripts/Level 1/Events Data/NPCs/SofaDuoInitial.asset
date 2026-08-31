@@ -34,3 +34,4 @@ MonoBehaviour:
   - "These two are clearly having a conversation. The narrator can\u2019t help but
     wonder what it\u2019s about."
   canRepeat: 1
+  priority: 3

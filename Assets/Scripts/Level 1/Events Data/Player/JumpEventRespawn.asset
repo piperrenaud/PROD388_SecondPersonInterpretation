@@ -29,3 +29,4 @@ MonoBehaviour:
   - Okay, everything is being reset. This time, try not to press Space repeatedly.
   - Time for a fresh start. And this time, you better leave Space alone.
   canRepeat: 1
+  priority: 1

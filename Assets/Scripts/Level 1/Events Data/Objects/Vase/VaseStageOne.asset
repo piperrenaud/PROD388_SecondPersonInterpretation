@@ -26,3 +26,4 @@ MonoBehaviour:
   - Yes, keep pressing it. Surely the vase will do something eventually.
   - Go on, keep trying. Something totally unexpected will definitely happen.
   canRepeat: 1
+  priority: 3

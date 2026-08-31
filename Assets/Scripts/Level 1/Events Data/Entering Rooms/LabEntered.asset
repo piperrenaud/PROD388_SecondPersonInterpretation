@@ -17,3 +17,4 @@ MonoBehaviour:
   - The player has found the Lab. Looks kind of dangerous in here. Probably best
     not to mess with things.
   canRepeat: 0
+  priority: 5

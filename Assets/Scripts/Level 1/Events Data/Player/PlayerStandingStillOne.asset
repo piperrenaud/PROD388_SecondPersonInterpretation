@@ -33,3 +33,4 @@ MonoBehaviour:
   - "The player hasn\u2019t moved in a while. The narrator wonders if they\u2019ve
     simply decided to stand there."
   canRepeat: 1
+  priority: 1

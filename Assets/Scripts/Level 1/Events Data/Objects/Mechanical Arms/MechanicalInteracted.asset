@@ -20,3 +20,4 @@ MonoBehaviour:
   - "And now it\u2019s broken. I told you to be careful."
   - Great. You managed to break it. Well done.
   canRepeat: 0
+  priority: 3

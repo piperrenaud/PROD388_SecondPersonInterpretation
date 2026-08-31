@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player has found a third office, identical to literally every other one.
   canRepeat: 0
+  priority: 1

@@ -20,3 +20,4 @@ MonoBehaviour:
   - This is an entirely unremarkable vase.
   - "It\u2019s a vase. A completely normal vase."
   canRepeat: 0
+  priority: 3

@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player immediately left the Lab. I guess it is kind of scary.
   canRepeat: 0
+  priority: 5

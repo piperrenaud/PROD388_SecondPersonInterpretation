@@ -52,3 +52,4 @@ MonoBehaviour:
   - The player spoke to the employee again. At this point, the narrator was less
     curious about why and more curious about how long this would continue.
   canRepeat: 1
+  priority: 3

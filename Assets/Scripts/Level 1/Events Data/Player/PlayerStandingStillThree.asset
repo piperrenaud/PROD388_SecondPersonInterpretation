@@ -33,3 +33,4 @@ MonoBehaviour:
   - The player is still completely motionless. The narrator is giving them a little
     longer, but not much.
   canRepeat: 1
+  priority: 1

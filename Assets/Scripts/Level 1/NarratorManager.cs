@@ -20,6 +20,13 @@ public class NarratorManager : MonoBehaviour
     private int lightSequences = 0;
     private int officesEntered = 0;
 
+    //current event
+    private NarratorEventData currentEvent;
+    private int currentPriority = -1;
+
+    //stop olf respawn coroutines form acting
+    private Coroutine respawnCoroutine;
+
     public void DoorSequenceCompleted()
     {
         doorSequences++;
@@ -94,6 +101,20 @@ public class NarratorManager : MonoBehaviour
             return;
         }
 
+        //priorty check
+        if (dialogueManager.IsDialogueRunning)
+        {
+            //new event has lower priority
+            if (eventData.priority < currentPriority)
+            {
+                Debug.Log($"ignoring {eventID} because its lower priority than {currentEvent.eventID}");
+                return;
+            }    
+
+            //same or higher priorty takes over
+            Debug.Log($"interrupting {currentEvent.eventID} with {eventID}");
+        }
+
         string dialogue = GetUnusedDialogue(eventData);
 
         if (string.IsNullOrEmpty(dialogue))
@@ -104,11 +125,24 @@ public class NarratorManager : MonoBehaviour
 
         if (!eventData.canRepeat) completedEvents.Add(eventID);
 
+        //cancel any old respawn waiting for the previous dialogue
+        if (respawnCoroutine != null)
+        {
+            StopCoroutine(respawnCoroutine);
+            respawnCoroutine = null;
+        }
+
+        //set this as new active event
+        currentEvent = eventData;
+        currentPriority = eventData.priority;
+
+        //interrupt current dialogue
         dialogueManager.SetText(dialogue);
 
+        //respawn events wait for this dialogue to finish
         if (eventID.Contains("Respawn"))
         {
-            StartCoroutine(RespawnPlayer());
+            respawnCoroutine = StartCoroutine(RespawnPlayer());
         }
     }
 
@@ -153,6 +187,10 @@ public class NarratorManager : MonoBehaviour
     private IEnumerator RespawnPlayer()
     {
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
+
+        //clear active event
+        currentEvent = null;
+        currentPriority = -1;
 
         if (playerState == null)
         {

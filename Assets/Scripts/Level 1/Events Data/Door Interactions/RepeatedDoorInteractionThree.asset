@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player is now doing this on purpose to be annoying.
   canRepeat: 0
+  priority: 1

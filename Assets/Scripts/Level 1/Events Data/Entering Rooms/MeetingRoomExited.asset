@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player apparently hates chatter, and so left the Meeting Room rather quick.
   canRepeat: 0
+  priority: 5

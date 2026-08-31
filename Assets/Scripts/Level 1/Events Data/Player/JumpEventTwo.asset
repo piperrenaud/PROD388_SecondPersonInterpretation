@@ -29,3 +29,4 @@ MonoBehaviour:
     enough."
   - "Space does nothing. I\u2019ve said this already. Please stop trying to jump."
   canRepeat: 1
+  priority: 1

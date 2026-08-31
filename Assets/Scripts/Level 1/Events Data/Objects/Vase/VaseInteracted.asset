@@ -22,3 +22,4 @@ MonoBehaviour:
   - Congratulations. You successfully knocked over a completely normal vase. Well
     done.
   canRepeat: 0
+  priority: 3

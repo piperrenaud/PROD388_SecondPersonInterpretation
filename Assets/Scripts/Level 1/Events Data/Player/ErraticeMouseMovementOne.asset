@@ -35,3 +35,4 @@ MonoBehaviour:
   - The player is looking around at an alarming speed. Perhaps slowing down would
     be wise.
   canRepeat: 1
+  priority: 1

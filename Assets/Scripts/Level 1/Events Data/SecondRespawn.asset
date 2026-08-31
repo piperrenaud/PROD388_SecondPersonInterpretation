@@ -27,3 +27,4 @@ MonoBehaviour:
     is not allowing a repeat.
   - "Oh, you\u2019re back. The narrator knows where this is going. Resetting now."
   canRepeat: 1
+  priority: 5

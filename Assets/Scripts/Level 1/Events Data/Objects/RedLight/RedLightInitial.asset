@@ -20,3 +20,4 @@ MonoBehaviour:
   - This appears to be a red button. Surely it must do something.
   - A red button. The narrator wonders what might happen if the player presses it.
   canRepeat: 0
+  priority: 3

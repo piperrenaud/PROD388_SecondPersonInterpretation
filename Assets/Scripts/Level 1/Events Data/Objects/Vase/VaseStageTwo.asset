@@ -25,3 +25,4 @@ MonoBehaviour:
   - Wait a minute. Something feels different.
   - Oh! Maybe all that messing around actually worked.
   canRepeat: 1
+  priority: 3

@@ -38,3 +38,4 @@ MonoBehaviour:
   - "That\u2019s it. The narrator is done watching this. Time to send the player
     back and try again."
   canRepeat: 1
+  priority: 5

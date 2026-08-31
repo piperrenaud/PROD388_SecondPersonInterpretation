@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player surely has something better to do.
   canRepeat: 0
+  priority: 1

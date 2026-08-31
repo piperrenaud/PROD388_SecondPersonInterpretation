@@ -32,3 +32,4 @@ MonoBehaviour:
   - The player interacted with Dad once more. The narrator had noticed the repetition,
     and it was becoming difficult to ignore.
   canRepeat: 1
+  priority: 3

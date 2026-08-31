@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class LevelOneInteractions : MonoBehaviour
 {
@@ -17,8 +19,37 @@ public class LevelOneInteractions : MonoBehaviour
     [Header("Narrator")]
     [SerializeField] private NarratorManager narratorManager;
 
+    [Header("Experiment")]
+    [SerializeField] private float timeUntilExperiment = 30f;
+    [SerializeField] private float timeUntilReminder = 20f;
+    [SerializeField] private float timeUntilForce = 20f;
+
+    [SerializeField] private string experimentStartingSoon = "ExperimentStartingSoon";
+    [SerializeField] private string experimentReminder = "ExperimentReminder";
+    [SerializeField] private string experimentForce = "ExperimentForce";
+
+    [Header("Facility")]
+    [SerializeField] private Transform facilityRoomSpawn;
+    [SerializeField] private PlayerState playerState;
+    [SerializeField] private NPCManager npcManager;
+    [SerializeField] private NarratorTrigger facilityRoomTrigger;
+
+    [SerializeField] private Animator experimentAnimation;
+
     private bool dangerSignInteracted = false;
     private DangerInteract lastInteractedSign;
+
+    private Coroutine experimentCoroutine;
+    private bool playerEnteredFacility;
+    private bool experimentStarted;
+
+    private bool timerUp = false;
+    public bool IsTimerUp => timerUp;
+
+    private void Start()
+    {
+        experimentCoroutine = StartCoroutine(ExperimentSequence());
+    }
 
     public void HandleInteraction(GameObject interactedObject)
     {
@@ -136,5 +167,110 @@ public class LevelOneInteractions : MonoBehaviour
         if (dangerInteract == null) return;
 
         dangerInteract.Observe();
+    }
+
+    private IEnumerator ExperimentSequence()
+    {
+        //wait for experiment to start
+        yield return new WaitForSeconds(timeUntilExperiment);
+        timerUp = true;
+
+        npcManager.GatherNPCs();
+        narratorManager.TriggerEvent(experimentStartingSoon);
+
+        if (facilityRoomTrigger.IsPlayerInside())
+        {
+            yield return new WaitForSeconds(3f);
+            PlayerEnteredFacility();
+            yield break;
+        }
+
+        if (playerEnteredFacility)
+        {
+            yield break;
+        }
+
+
+        //wait for player to get to facility room
+        yield return new WaitForSeconds(timeUntilReminder);
+
+        if (playerEnteredFacility) yield break;
+
+        narratorManager.TriggerEvent(experimentReminder);
+
+        //wait again
+        yield return new WaitForSeconds(timeUntilForce);
+
+        if (playerEnteredFacility) yield break; 
+
+        narratorManager.TriggerEvent(experimentForce);
+
+        //force player to facility room
+        yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
+
+        if (playerEnteredFacility) yield break;
+
+        TeleportPlayerToFacility();
+        experimentCoroutine = null;
+    }
+
+    public void PlayerEnteredFacility()
+    {
+        if (playerEnteredFacility || experimentStarted) return;
+
+        playerEnteredFacility = true;
+        experimentStarted = true;
+
+        //stop experiment sequence
+        if (experimentCoroutine != null)
+        {
+            StopCoroutine(experimentCoroutine);
+            experimentCoroutine = null;
+        }
+
+        StartCoroutine(FailedExperiment());
+    }
+
+    private void TeleportPlayerToFacility()
+    {
+        if (playerState == null) return;
+        if (facilityRoomSpawn == null) return;
+
+        GameObject player = playerState.gameObject;
+
+        CharacterController controller = player.GetComponent<CharacterController>();
+
+        if (controller != null)
+        {
+            controller.enabled = false;
+        }
+
+        player.transform.position = facilityRoomSpawn.position;
+        player.transform.rotation = facilityRoomSpawn.rotation;
+
+        if (controller != null)
+        {
+            controller.enabled = true;
+        }
+
+        StartFailedExperiment();
+    }
+
+    private IEnumerator FailedExperiment()
+    {
+        yield return new WaitForSeconds(3f);
+
+        Debug.Log("starting cutscene");
+
+        playerState.gameObject.SetActive(false);
+        experimentAnimation.SetTrigger("Start");
+    }
+
+    private void StartFailedExperiment()
+    {
+        if (experimentStarted) return;
+
+        experimentStarted = true;
+        StartCoroutine(FailedExperiment());
     }
 }

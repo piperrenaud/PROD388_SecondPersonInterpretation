@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - The player is going to find out what happen if they keep messing with the lights.
   canRepeat: 0
+  priority: 1

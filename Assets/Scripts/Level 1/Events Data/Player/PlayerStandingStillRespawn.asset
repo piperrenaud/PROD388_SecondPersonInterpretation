@@ -30,3 +30,4 @@ MonoBehaviour:
   - "The player clearly isn\u2019t responding. Let\u2019s reset things and give them
     another chance."
   canRepeat: 1
+  priority: 1

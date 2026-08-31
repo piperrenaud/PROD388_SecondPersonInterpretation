@@ -27,3 +27,4 @@ MonoBehaviour:
   - "Okay, that\u2019s enough messing around. Do something else before I lose my
     patience."
   canRepeat: 1
+  priority: 3

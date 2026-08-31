@@ -31,3 +31,4 @@ MonoBehaviour:
   - Yes, it still says Do Not Enter. Now please stop reading it and do something
     else.
   canRepeat: 1
+  priority: 3

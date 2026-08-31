@@ -35,6 +35,10 @@ public class ObjectInteraction : MonoBehaviour
     private bool trackingInteractions = false;
     private int postRespawnInteractionsCount = 0;
 
+    private bool buttonInteracted = false;
+    private bool vaseInteracted = false;
+    private bool robotInteracted = false;
+
     private void Update()
     {
         //interation spam timer
@@ -156,6 +160,8 @@ public class ObjectInteraction : MonoBehaviour
         {
             Light light = GetComponentInChildren<Light>();
             light.color = Color.red;
+
+            buttonInteracted = true;
         }
 
         //vase
@@ -163,6 +169,8 @@ public class ObjectInteraction : MonoBehaviour
         {
             Animator anim = GetComponent<Animator>();
             anim.SetTrigger("Fall");
+
+            vaseInteracted = true;
         }
 
         //mechanical arm
@@ -178,6 +186,8 @@ public class ObjectInteraction : MonoBehaviour
 
             AudioSource sparkSource = transform.Find("ElectricitySparks").GetComponent<AudioSource>();
             sparkSource.enabled = true;
+
+            robotInteracted = true;
         }
     }
 }

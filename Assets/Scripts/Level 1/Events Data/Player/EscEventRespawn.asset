@@ -31,3 +31,4 @@ MonoBehaviour:
   - "Fine. We\u2019ll start over. But if you press Escape again, the narrator is
     going to be very disappointed."
   canRepeat: 1
+  priority: 1

@@ -33,3 +33,4 @@ MonoBehaviour:
   - "It\u2019s still a danger sign. The narrator hopes all this staring will encourage
     the player to follow its rules."
   canRepeat: 1
+  priority: 3

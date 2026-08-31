@@ -16,3 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - "This is the player\u2019s dad. Today happens to be Bring Your Kid to Work Day."
   canRepeat: 0
+  priority: 3

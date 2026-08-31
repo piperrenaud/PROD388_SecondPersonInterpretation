@@ -31,3 +31,4 @@ MonoBehaviour:
   - The player refuses to stop spinning the camera. Fine. Keep it up and see what
     happens.
   canRepeat: 1
+  priority: 1

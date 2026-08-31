@@ -34,3 +34,4 @@ MonoBehaviour:
   - "This man appears to be conducting an experiment. The narrator wonders what he\u2019s
     trying to discover."
   canRepeat: 1
+  priority: 5

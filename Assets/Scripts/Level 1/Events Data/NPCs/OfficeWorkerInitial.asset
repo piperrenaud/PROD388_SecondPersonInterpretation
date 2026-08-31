@@ -22,3 +22,4 @@ MonoBehaviour:
   - Here we have an office worker. He looks focused on his work.
   - The worker appears to be hard at work, typing away at his computer.
   canRepeat: 1
+  priority: 3

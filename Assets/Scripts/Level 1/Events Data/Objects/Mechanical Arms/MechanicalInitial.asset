@@ -23,3 +23,4 @@ MonoBehaviour:
   - "This seems to be a robotic machine. Whatever it\u2019s doing, it looks rather
     busy."
   canRepeat: 0
+  priority: 3

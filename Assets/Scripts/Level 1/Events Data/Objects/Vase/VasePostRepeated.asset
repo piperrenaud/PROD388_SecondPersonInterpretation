@@ -25,3 +25,4 @@ MonoBehaviour:
   - Nothing more can happen here. The player is just going in circles now.
   - "There\u2019s nothing left to do. Even the narrator is getting tired of this."
   canRepeat: 1
+  priority: 3

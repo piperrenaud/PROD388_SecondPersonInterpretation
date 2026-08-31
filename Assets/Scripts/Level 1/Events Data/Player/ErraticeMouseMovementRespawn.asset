@@ -25,3 +25,4 @@ MonoBehaviour:
   - The player refuses to slow down. Fine. The narrator will reset them.
   - No more spinning. The narrator has made a decision. Time to start over.
   canRepeat: 1
+  priority: 1
