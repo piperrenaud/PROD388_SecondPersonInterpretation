@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedLightsInteractionTwo
   dialogueLines:
-  - The player is such a child.
+  - "Oh my god, you\u2019re such a child. Please, just move on"
+  - Seriously? Are we really still doing this? I beg you to find something else
+  - "Oh, come on. You\u2019re better than this. Please go do literally anything else"
+  - You are genuinely behaving like a toddler right now. Please move on
+  - Oh my god, can you please stop? There are other things to do, you know
+  - "You\u2019ve officially turned this into your entire personality. Please move
+    on"
+  - "I cannot believe this is how you\u2019ve chosen to spend your time. Please,
+    just leave it alone"
+  - "Honestly, I\u2019m begging you. Find something else to entertain yourself with"
+  - "You\u2019re really committed to being annoying today, huh? Please move on"
+  - "Oh my god, enough already. I\u2019m begging you to discover the rest of the
+    facility"
   canRepeat: 0
   priority: 1

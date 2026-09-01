@@ -14,17 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: PlayerStandingStillTwo
   dialogueLines:
-  - The player is still not moving. This is beginning to feel a little unnerving.
-  - "The player hasn\u2019t moved in quite some time. Is everything alright?"
-  - Still no movement from the player. The narrator is starting to become concerned.
-  - The player remains completely still. This is starting to feel rather strange.
-  - The player is still standing there. The narrator is beginning to wonder if something
-    is wrong.
-  - Not a single step. The player has been still for far too long.
-  - "The player hasn\u2019t moved. The narrator is starting to find this rather concerning."
-  - Still standing there? The narrator is beginning to feel a little uneasy.
-  - The player continues to stand perfectly still. This is becoming increasingly
-    unsettling.
-  - "The player is still frozen in place. The narrator isn\u2019t sure this is normal."
+  - "You\u2019re still not doing anything. Please tell me this is a mechanical failure
+    and not a reflection on my game"
+  - "You\u2019re still standing there? I\u2019m really hoping that\u2019s a mechanical
+    failure and not because my game is boring"
+  - "Still nothing? Tell me your controls have stopped working and this isn\u2019t
+    just my game failing to entertain you"
+  - "You\u2019re not doing anything again. I\u2019d like to believe something\u2019s
+    broken rather than accept that my game is boring"
+  - Still standing completely still? Please tell me this is a technical issue and
+    not you losing interest in my game
   canRepeat: 1
   priority: 1

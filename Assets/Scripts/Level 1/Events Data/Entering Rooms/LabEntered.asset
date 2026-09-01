@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: LabEntered
   dialogueLines:
-  - The player has found the Lab. Looks kind of dangerous in here. Probably best
-    not to mess with things.
+  - "You\u2019ve found the lab. The guys in here look pretty busy"
+  - Well, you made it to the lab. Looks like everyone in here has their hands full
+  - Ah, you found the lab. The people in here seem pretty occupied
+  - "There you go, you\u2019ve made it to the lab. They all look like they\u2019re
+    hard at work"
+  - 'You found the lab. Everyone in here seems surprisingly busy '
   canRepeat: 0
   priority: 5

@@ -14,28 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RespawnPlayer
   dialogueLines:
-  - "That\u2019s enough. The narrator has decided the player needs a fresh start."
-  - The player has pushed their luck far enough. Time to reset.
-  - "The narrator has had enough of this. Let\u2019s start over."
-  - That will do. The player is going back to the beginning.
-  - "The narrator\u2019s patience has officially run out. Time for a reset."
-  - The player has been warned. The narrator is taking matters into their own hands.
-  - Enough is enough. Perhaps starting over will help the player understand.
-  - The narrator has seen quite enough. Time to rewind.
-  - "The player clearly isn\u2019t going to stop. The narrator has a solution: reset."
-  - "That\u2019s quite enough repetition. The narrator is restarting things."
-  - "The narrator has reached their limit. Let\u2019s give the player another chance."
-  - The player has continued for long enough. Time for a fresh start.
-  - The narrator is officially fed up. The player is being sent back.
-  - There is only so much repetition the narrator can tolerate. Time to reset.
-  - "The player has tested the narrator\u2019s patience enough. Let\u2019s start
-    again."
-  - The narrator has decided this interaction needs to end. Resetting now.
-  - Apparently, the player needs a reminder. Back to the beginning they go.
-  - The narrator has had enough of this little game. Time for a do-over.
-  - "The player refused to stop, so the narrator has decided to intervene. Let\u2019s
-    restart."
-  - "That\u2019s it. The narrator is done watching this. Time to send the player
-    back and try again."
+  - "I\u2019m over this now. I think you need to be reset"
+  - "Okay, I\u2019ve had enough of this. I think it\u2019s time for a reset"
+  - "Right, I\u2019m done with this now. You\u2019re getting reset"
+  - "I think we\u2019ve both had enough. Let\u2019s just reset you"
+  - Okay, this has gone on long enough. Time for a reset
+  - "I\u2019m officially bored of this. I think you need a little reset"
+  - "Right, I\u2019ve lost interest. I\u2019m just going to reset you"
+  - "Okay, I\u2019m done waiting. You\u2019re getting a reset"
+  - This is getting old now. I think a reset is in order
+  - "Alright, I\u2019ve had enough. Let\u2019s just reset you and move on"
+  - "Okay, I\u2019m over whatever this is. Reset time"
+  - "Right, this isn\u2019t going anywhere. I\u2019m resetting you"
+  - "I think we\u2019ve reached the point where a reset is necessary"
+  - "Okay, I\u2019m tired of watching you stand there. Reset it is"
+  - "Yeah, I\u2019ve had enough of this. You\u2019re getting sent back"
+  - "Alright, I\u2019m officially done dealing with this. Time for a reset"
+  - Okay, this is boring me now. I think you need to be reset
+  - "Right, nothing is happening here. Let\u2019s just start over"
+  - "I\u2019m losing patience with you standing around. Reset time"
+  - "Okay, I\u2019ve waited long enough. I\u2019m resetting you now"
+  - Honestly, I think a reset will do us both some good
+  - "Right, you\u2019ve done absolutely nothing for long enough. I\u2019m resetting
+    you"
+  - "Okay, I\u2019m done giving you time. Let\u2019s just reset and try again"
+  - "I think we\u2019ve exhausted the possibilities of standing around. Time for
+    a reset"
+  - "Alright, I\u2019m over this. You\u2019re getting reset whether you like it or
+    not"
   canRepeat: 1
   priority: 5

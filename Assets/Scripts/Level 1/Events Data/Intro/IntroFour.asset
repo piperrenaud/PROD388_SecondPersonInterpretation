@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: IntroFour
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: IntroFour
+  dialogueLines:
+  - Yippee, I can tell you already like it. I can practically see you nodding and
+    smiling behind the screen
+  - "Yay, I\u2019m so glad you\u2019re already enjoying yourself. I can just picture
+    that little smile right now"
+  - "Yay, looks like you\u2019re already having fun. I can practically see you nodding
+    along behind that screen"
+  - "Yippee, I\u2019m glad you like it already. I can definitely imagine you sitting
+    there nodding and smiling"
+  - "Yay, I\u2019m happy you\u2019re enjoying this already. I can see that enthusiastic
+    nodding from here, obviously"
+  canRepeat: 0
+  priority: 5

@@ -14,6 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedLightsInteractionThree
   dialogueLines:
-  - The player is going to find out what happen if they keep messing with the lights.
+  - Okay, this is starting to get annoying. Keep playing with those lights and see
+    what happens
+  - "Right, that\u2019s enough now. Keep messing with the lights and you might regret
+    it"
+  - "I\u2019m warning you, you really don\u2019t want to keep doing that"
+  - "Okay, you\u2019ve had your fun. Try that again and we\u2019re going to have
+    a problem"
+  - This was amusing for about five seconds. Keep going and see where it gets you
+  - Seriously, stop messing with the lights before I decide to do something about
+    it
+  - "You\u2019re really testing my patience now. Go on, keep doing it"
+  - "Fine. If you want to keep playing with the lights, don\u2019t say I didn\u2019t
+    warn you"
+  - "This is becoming incredibly annoying. I\u2019d suggest finding something else
+    to do"
+  - "Keep flicking those lights if you want. Let\u2019s see how long you enjoy it"
   canRepeat: 0
   priority: 1

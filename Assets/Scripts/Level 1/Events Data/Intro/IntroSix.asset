@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: IntroSix
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: IntroSix
+  dialogueLines:
+  - Alrighty, good luck, have fun, and please ignore any bugs you happen to come
+    across
+  - Okay then, good luck and have fun! And remember, any bugs you see are definitely
+    not my problem
+  - "Alright, off you go! Have fun, and just pretend you didn\u2019t notice anything
+    that looks a little broken"
+  - Good luck, have fun, and please be kind to my poor little game if you encounter
+    any bugs
+  - "Alrighty, enjoy yourself! And if anything weird happens, let\u2019s all agree
+    you saw absolutely nothing"
+  canRepeat: 0
+  priority: 5

@@ -15,14 +15,13 @@ MonoBehaviour:
   eventID: RedLightPostPressed
   dialogueLines:
   - "You\u2019ve already pressed this. There\u2019s nothing more it can do."
-  - "The player has already activated this. It won\u2019t do anything again."
+  - "You've already activated this. It won\u2019t do anything again."
   - "You\u2019ve already done that. This button has nothing left to offer."
   - This has already been pressed. Perhaps try something else.
   - "The button has already done its job. Pressing it again won\u2019t help."
   - "You\u2019ve already activated it. There\u2019s no reason to keep pressing it."
   - "Nothing new is going to happen here. You\u2019ve already pressed it."
-  - "The player has already used this button. It\u2019s not going to do anything
-    else."
+  - "You've already used this button. It\u2019s not going to do anything else."
   - "That\u2019s already been activated. Maybe it\u2019s time to move on."
   - "You\u2019ve pressed it already. The narrator can assure you, nothing else will
     happen."

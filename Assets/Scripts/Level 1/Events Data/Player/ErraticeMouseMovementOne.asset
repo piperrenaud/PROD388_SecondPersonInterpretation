@@ -14,25 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: ErraticMouseMovementOne
   dialogueLines:
-  - "The player seems to be trying to look at everything at once. They\u2019re going
-    to get dizzy."
-  - The player is moving their view rather enthusiastically. Perhaps they should
-    slow down.
-  - "The player appears to be looking everywhere except where they\u2019re going.
-    This can\u2019t end well."
-  - The player is turning around rather quickly. Even the narrator is struggling
-    to keep up.
-  - The player seems determined to inspect the entire room in one second. Maybe take
-    it easy.
-  - "The player\u2019s view is moving rather erratically. Perhaps they should give
-    their mouse a rest."
-  - "The player is looking left, right, up, and down all at once. Surely this isn\u2019t
-    necessary."
-  - The player appears to have discovered how quickly they can turn. The narrator
-    is not impressed.
-  - "The player is spinning their view around like they\u2019re searching for something.
-    Hopefully they don\u2019t make themselves dizzy."
-  - The player is looking around at an alarming speed. Perhaps slowing down would
-    be wise.
+  - "Okay, you really don\u2019t need to move the mouse that much. My head is spinning"
+  - "Easy there, you\u2019re moving that mouse like you\u2019re trying to break the
+    camera"
+  - Okay, enough with the frantic mouse movements. Give me a second to catch up
+  - "Okay, calm down with the mouse movements. You\u2019re going to make me dizzy"
+  - "Alright, easy with the mouse. I\u2019m starting to feel dizzy just watching
+    this"
+  - Okay, slow down. All this mouse movement is making my head spin
+  - Whoa, okay, maybe ease up on the mouse a little. I can barely keep up
+  - "Alright, that\u2019s enough spinning. I\u2019m getting dizzy over here"
+  - "Okay, relax with the mouse movements. I\u2019m starting to lose track of what\u2019s
+    happening"
+  - "Please slow down with the mouse. I\u2019m getting motion sick just thinking
+    about it"
   canRepeat: 1
   priority: 1

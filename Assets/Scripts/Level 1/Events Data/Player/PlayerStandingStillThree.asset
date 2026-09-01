@@ -14,23 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: PlayerStandingStillThree
   dialogueLines:
-  - "The player still hasn\u2019t moved. Soon, the narrator may have to do something
-    about this."
-  - The player remains completely still. The narrator is starting to think intervention
-    may be necessary.
-  - Still no movement. The narrator is becoming genuinely concerned now.
-  - "The player hasn\u2019t moved for far too long. The narrator may need to step
-    in."
-  - "The player is still standing there. The narrator is beginning to run out of
-    patience\u2014and options."
-  - Not a single movement. The narrator is starting to think something needs to be
-    done.
-  - The player remains frozen in place. The narrator is seriously considering intervening.
-  - The player still refuses to move. The narrator is becoming rather concerned about
-    this.
-  - There has been no movement for quite some time. The narrator may have to take
-    matters into their own hands.
-  - The player is still completely motionless. The narrator is giving them a little
-    longer, but not much.
+  - "Why are you still doing nothingggggg? For my mental health, I\u2019m just going
+    to assume you\u2019ve gone AFK"
+  - "Why are you STILL standing there? Please tell me you\u2019ve gone AFK because
+    I cannot handle this"
+  - "You\u2019re doing absolutely nothinggggg. I\u2019m choosing to believe you\u2019ve
+    gone AFK for my own sanity"
+  - "Why have you stopped moving? I\u2019m just going to assume you\u2019re AFK because
+    the alternative is too painful"
+  - "You\u2019re still not movingggggg. Please be AFK. I need to believe this isn\u2019t
+    my game\u2019s fault"
   canRepeat: 1
   priority: 1

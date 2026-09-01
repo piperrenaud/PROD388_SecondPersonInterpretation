@@ -14,6 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedLightsInteractionOne
   dialogueLines:
-  - The player is having fun with the lights.
+  - You really seem to enjoy playing around with those lights, I guess
+  - Well, I suppose the lights are keeping you entertained somehow
+  - "You\u2019ve taken quite an interest in the lighting situation, haven\u2019t
+    you"
+  - "I didn\u2019t realize flicking lights on and off was going to be your new hobby"
+  - "You really can\u2019t seem to leave those lights alone, can you"
+  - "I guess messing with the lights is what we\u2019re doing now"
+  - "Of all the things in here, you\u2019ve become fascinated with the light switches"
+  - "You\u2019re getting a surprising amount of entertainment out of those lights"
+  - I see. The lights have captured your attention again
+  - "Well, if playing with the lights makes you happy, I suppose I can\u2019t stop
+    you"
   canRepeat: 0
   priority: 1

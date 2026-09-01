@@ -14,24 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: SofaDuoInitial
   dialogueLines:
-  - "This guy is having a conversation with another guy. I wonder what they\u2019re
-    talking about."
-  - "These two seem to be having a conversation. The narrator wonders what it\u2019s
-    about."
-  - "This man appears to be talking with someone else. Curious what they\u2019re
-    discussing."
-  - "He\u2019s having a conversation with another worker. I wonder what they could
-    be talking about."
-  - "These two look like they\u2019re in the middle of a conversation. Wonder what\u2019s
-    going on."
-  - "This guy is chatting with another employee. The narrator is curious what they\u2019re
-    discussing."
-  - It looks like these two have something to talk about. I wonder what it is.
-  - This man seems to be having a rather interesting conversation. Perhaps the player
-    should listen.
-  - "He\u2019s talking with another guy. Whatever they\u2019re discussing seems to
-    have their attention."
-  - "These two are clearly having a conversation. The narrator can\u2019t help but
-    wonder what it\u2019s about."
+  - "These guys seem pretty wrapped up in their conversation. I wonder if they\u2019re
+    sentient"
+  - "Huh, these guys look surprisingly invested in whatever they\u2019re talking
+    about. I wonder if they\u2019re actually sentient"
+  - "They seem pretty deep in conversation. Makes you wonder if there\u2019s anything
+    going on in those heads"
+  - "These two look like they\u2019re having a very serious chat. I wonder if they\u2019re
+    sentient or just really good at pretending"
+  - "They seem completely absorbed in their conversation. I\u2019m starting to wonder
+    if they\u2019re actually alive in there"
   canRepeat: 1
   priority: 3

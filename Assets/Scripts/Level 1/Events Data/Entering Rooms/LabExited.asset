@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: LabExited
   dialogueLines:
-  - The player immediately left the Lab. I guess it is kind of scary.
+  - "Okay, I know the lab is a little boring, but you didn\u2019t need to leave that
+    quickly"
+  - "Alright, I get it, the lab isn\u2019t exactly thrilling, but wow, you really
+    couldn\u2019t wait to leave"
+  - "Okay, maybe the lab isn\u2019t the most exciting place, but you barely even
+    gave it a chance"
+  - "Damn, I know the lab is boring, but you didn\u2019t have to make such a quick
+    escape"
+  - "Fine, the lab isn\u2019t exactly riveting, but you really didn\u2019t need to
+    run off that fast"
   canRepeat: 0
   priority: 5

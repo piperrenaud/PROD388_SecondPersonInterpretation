@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: FourthOfficeEntered
   dialogueLines:
-  - This office is the same as all the other ones you went to. Move on.
+  - Another office. I hope this exploration was fun for you
   canRepeat: 0
   priority: 1

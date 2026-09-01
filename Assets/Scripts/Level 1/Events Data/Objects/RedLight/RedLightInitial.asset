@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RedLightInitial
   dialogueLines:
-  - This is a red button. Perhaps it does something.
-  - "There\u2019s a red button here. I wonder what it does."
-  - "The player has found a red button. Maybe it\u2019s important."
-  - This appears to be a red button. Surely it must do something.
-  - A red button. The narrator wonders what might happen if the player presses it.
+  - This is a pretty cool little button. Surely you should give it a press
+  - Ooh, look at this little button. I mean, you have to press it, right?
+  - "Well, that\u2019s an interesting button. Surely it\u2019s there for you to press"
+  - A mysterious little button just sitting here. What could possibly go wrong?
+  - Look at that button. I feel like it would be rude not to press it
   canRepeat: 0
   priority: 3

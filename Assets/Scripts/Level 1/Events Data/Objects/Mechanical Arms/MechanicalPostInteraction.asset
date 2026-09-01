@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MechanicalPostInteraction
   dialogueLines:
-  - You already broke it. Why bother messing with it now?
-  - "It\u2019s already broken. There\u2019s really no point in touching it anymore."
-  - "You\u2019ve already damaged it. What more are you hoping to accomplish?"
-  - The machine is broken. Maybe leave it alone now.
-  - "You already broke the thing. Surely that\u2019s enough messing around."
-  - "It\u2019s not working anymore. Why keep trying to interact with it?"
-  - "The machine has already been broken. There\u2019s nothing left to do with it."
-  - "You\u2019ve already broken it. I\u2019m not sure what you expect to happen now."
-  - "It\u2019s completely broken. Perhaps stop poking at it."
-  - You broke it already. Continuing to mess with it is just wasting time.
+  - You already broke it, what more do you possibly want to do with it?
+  - "It\u2019s already broken. What exactly are you planning to accomplish now?"
+  - "You\u2019ve literally broken it already. What more could there possibly be?"
+  - "It\u2019s broken, you know. I\u2019m not sure what you\u2019re expecting to
+    happen now"
+  - You already managed to break the thing. Maybe leave it alone now?
+  - What more do you want from it? You already destroyed its entire purpose
+  - "It\u2019s not going to magically start working again. You already broke it"
+  - "You broke it. The experiment is over. There\u2019s nothing left to do here"
+  - "You\u2019ve already broken the robot. Unless you\u2019re planning on making
+    it even more broken"
+  - "Okay, you broke it. I think you\u2019ve gotten everything you\u2019re going
+    to get out of it"
   canRepeat: 1
   priority: 3

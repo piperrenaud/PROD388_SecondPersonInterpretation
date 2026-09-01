@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: DadInitial
   dialogueLines:
-  - "This is the player\u2019s dad. Today happens to be Bring Your Kid to Work Day."
+  - This is your Dad now. It's Bring Your Kid to Work day
   canRepeat: 0
   priority: 3

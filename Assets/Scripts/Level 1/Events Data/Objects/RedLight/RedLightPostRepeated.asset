@@ -22,7 +22,7 @@ MonoBehaviour:
   - You keep pressing it, but nothing is going to change.
   - "I\u2019m telling you, it does nothing now. Stop pressing it."
   - Why are you still pressing the button? I promise, nothing will happen.
-  - The player is still trying to activate it. This is getting rather unnecessary.
+  - Why are you still trying to activate it? This is getting rather unnecessary.
   - "Enough with the button. It\u2019s done. Leave it alone."
   canRepeat: 1
   priority: 3

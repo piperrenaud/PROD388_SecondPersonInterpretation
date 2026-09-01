@@ -14,18 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MechanicalStageTwo
   dialogueLines:
-  - "It looks kind of fragile. Maybe don\u2019t be so rough with it."
-  - That machine looks pretty delicate. Perhaps handle it a little more carefully.
-  - "It doesn\u2019t look particularly sturdy. Maybe go easy on it."
-  - "That thing looks fragile. I\u2019d suggest being a little more gentle."
-  - "It looks like it could break pretty easily. Perhaps don\u2019t push it too hard."
-  - The machine seems rather delicate. Maybe the player should be more careful.
-  - "That doesn\u2019t look very durable. I\u2019d probably stop being so rough with
-    it."
-  - It looks like one wrong move could cause a problem. Perhaps take it easy.
-  - "The machine seems quite fragile. Maybe it\u2019s best not to mess with it too
-    much."
-  - That thing looks delicate enough already. Perhaps the player should handle it
-    with care.
+  - "Okay, seriously, I\u2019m starting to worry it\u2019s going to break. Let\u2019s
+    stop now"
+  - "Alright, I\u2019m genuinely concerned we\u2019re about to break this thing.
+    Please stop"
+  - "Okay, enough. I really don\u2019t think it can take much more of this"
+  - Seriously, can we stop before this thing actually breaks?
+  - "Okay, I\u2019m getting a little worried here. Let\u2019s leave it alone now"
+  - "Right, that\u2019s enough messing with it. I\u2019d really like it to stay intact"
+  - "Okay, I\u2019m begging you to stop before we have another broken robot situation"
+  - "Seriously, this thing has been through enough. Let\u2019s leave it alone"
+  - Alright, maybe we should stop touching it before something goes wrong
+  - "Okay, I have a bad feeling about this. Let\u2019s just leave it alone now"
   canRepeat: 1
   priority: 3

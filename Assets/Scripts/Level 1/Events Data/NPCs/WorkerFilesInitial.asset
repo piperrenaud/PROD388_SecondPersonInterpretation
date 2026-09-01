@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: WorkerFilesInitial
   dialogueLines:
-  - "This worker is sorting through some files. Looks like there\u2019s quite a lot
-    of them."
-  - "This employee is going through a stack of files. That\u2019s a lot of paperwork."
-  - This worker is busy sorting through documents. They certainly have plenty to
-    get through.
-  - "This employee is organising some files. Judging by that pile, they\u2019ll be
-    busy for a while."
-  - This worker is going through a mountain of paperwork. That looks like quite a
-    job.
+  - "This guy\u2019s just going through files. They\u2019re probably all blank anyway"
+  - "Looks like he\u2019s checking through some files. I bet there\u2019s nothing
+    in any of them"
+  - "This guy seems pretty busy sorting through those files. Shame they\u2019re probably
+    all empty"
+  - "Just going through files, huh? I wouldn\u2019t get too excited. They\u2019re
+    probably blank"
+  - "He\u2019s checking all those files like there\u2019s actually something in them.
+    Spoiler: there probably isn\u2019t"
   canRepeat: 0
   priority: 3

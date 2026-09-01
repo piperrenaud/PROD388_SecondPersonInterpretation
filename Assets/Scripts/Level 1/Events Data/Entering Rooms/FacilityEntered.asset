@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: FacilityEntered
   dialogueLines:
-  - The player has now entered the Experiment room, lots of big and confusing things
-    happen in here.
+  - Yay, you finally made it to the experiment room. Trust me, this is the interesting
+    part. Watch this space
+  - Oh, you actually made it here. Good. This is definitely the most interesting
+    room, I promise
+  - "Look at that, you found the experiment room. Now just wait a moment. You\u2019re
+    going to want to see this"
+  - "Finally, you\u2019re here. I promise this room is worth your attention, so keep
+    your eyes open"
+  - There we go, you made it to the experiment room. This is where things get interesting,
+    so watch closely
   canRepeat: 0
   priority: 5

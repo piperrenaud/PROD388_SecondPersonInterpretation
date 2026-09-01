@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: DadSuspicious
   dialogueLines:
-  - The player spoke to Dad again. The narrator was beginning to suspect this was
-    intentional.
-  - The player spoke to Dad once more. The narrator was starting to notice a pattern.
-  - The player approached Dad again. Surely this repetition was deliberate.
-  - The player spoke to Dad again. The narrator was beginning to think they were
-    doing this on purpose.
-  - Once again, the player spoke to Dad. The narrator was becoming suspicious.
-  - The player interacted with Dad again. At this point, the narrator was fairly
-    certain this was intentional.
-  - The player returned to Dad for another conversation. The narrator was starting
-    to catch on.
-  - The player spoke to Dad yet again. The narrator was beginning to wonder if they
-    had discovered a new hobby.
-  - Again, the player spoke to Dad. The narrator was starting to see what was happening
-    here.
-  - The player interacted with Dad once more. The narrator had noticed the repetition,
-    and it was becoming difficult to ignore.
+  - "Okay, now you\u2019re only talking to him to annoy me, aren\u2019t you?"
+  - "Oh, come on. You\u2019re deliberately talking to him just to get on my nerves
+    now"
+  - Right, so now this is just you trying to annoy me, is it?
+  - "You\u2019re not even here to talk to him anymore. You\u2019re just doing it
+    to bother me"
+  - "Okay, I see what you\u2019re doing. You\u2019re talking to him purely to annoy
+    me"
+  - "Seriously? Now you\u2019re going back to him just because you know it annoys
+    me"
+  - "Oh my god, you\u2019re doing this on purpose now, aren\u2019t you?"
+  - Right, because apparently talking to your dad repeatedly is your new way of irritating
+    me
+  - You really are just talking to him for the sole purpose of getting a reaction
+    out of me, huh?
+  - "Okay, you\u2019ve officially turned talking to your dad into an attempt to annoy
+    me. Congratulations"
   canRepeat: 1
   priority: 3

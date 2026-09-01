@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: DangerSignInitial
   dialogueLines:
-  - This is a danger sign. It says Do Not Enter. Sounds serious.
-  - "There\u2019s a warning sign here. Apparently, we\u2019re not supposed to go
-    in."
-  - This sign says Do Not Enter. That seems like a fairly clear warning.
-  - "A danger sign telling us not to enter. I wonder what\u2019s inside."
-  - This is clearly a restricted area. The sign seems pretty serious about keeping
-    people out.
+  - "This danger sign says DO NOT ENTER in giant letters. Let\u2019s try to remember
+    that"
+  - Hmm, this sign very clearly says DO NOT ENTER. Probably best we listen to it
+  - Big red warning, DO NOT ENTER. Surely we can manage that one
+  - "This sign is being pretty clear about not entering. Let\u2019s keep that in
+    mind, shall we"
+  - "DO NOT ENTER, it says. I feel like that\u2019s probably important information
+    to remember"
   canRepeat: 0
   priority: 3

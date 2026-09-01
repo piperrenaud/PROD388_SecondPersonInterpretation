@@ -14,16 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: JumpEventOne
   dialogueLines:
-  - "The player pressed Space. Nothing happened. There\u2019s no jumping here."
-  - "The player has pressed Space. Unfortunately, this game doesn\u2019t have jumping."
-  - Space was pressed. The player remains firmly on the ground.
-  - "The player tried to jump. Sadly, Space isn\u2019t going to help with that."
-  - The player pressed Space. The narrator wonders what they expected to happen.
-  - "Looking for a jump? Sorry. Space doesn\u2019t do anything here."
-  - The player has discovered the Space key. It appears to be completely useless.
-  - The player pressed Space again. Still no jumping. Still nothing.
-  - Space has been pressed. The player is not going anywhere vertically.
-  - "The player tried pressing Space. Nice idea, but jumping isn\u2019t an option
-    here."
+  - "Sorry to break it to you, but there\u2019s no jumping in my universe. Please
+    and thank you"
+  - "Hate to disappoint you, but jumping simply isn\u2019t a thing here. Thank you
+    for understanding"
+  - "Sorry, but you\u2019re going to have to accept that jumping doesn\u2019t exist
+    in this universe"
+  - Unfortunately, there is absolutely no jumping allowed in my universe. Please
+    stop trying
+  - "I\u2019m sorry to be the bearer of bad news, but jumping isn\u2019t available
+    here. Please and thank you"
   canRepeat: 0
   priority: 1

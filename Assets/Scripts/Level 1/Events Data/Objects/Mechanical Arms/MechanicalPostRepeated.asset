@@ -14,17 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MechanicalPostRepeated
   dialogueLines:
-  - "Okay, I\u2019m getting sick of this. Please do something else."
-  - "Alright, that\u2019s enough. Can we move on to something else now?"
-  - "Okay, I\u2019ve had enough of this. Go find something else to do."
-  - Seriously, can we stop doing this now? Please try something else.
-  - "Right, I\u2019m getting rather tired of this. Let\u2019s do something different."
-  - Okay, this is getting old. Please move on to something else.
-  - Enough already. There are other things to do, you know.
-  - "I think we\u2019ve spent quite enough time on this. Let\u2019s move along."
-  - "Alright, I\u2019m officially bored of this. Please find something else to interact
-    with."
-  - "Okay, that\u2019s enough messing around. Do something else before I lose my
-    patience."
+  - "It\u2019s still the same broken robot. I\u2019m bored now, can we do something
+    else"
+  - "Yep, still broken. Nothing\u2019s changed. Can we please move on now"
+  - "The robot is still very much broken. I\u2019m losing interest here"
+  - "Still the same busted robot. I think we\u2019ve seen enough, don\u2019t you?"
+  - "Nothing new has happened. It\u2019s still broken. Let\u2019s go find something
+    else"
+  - "Yes, it\u2019s still broken. I promise staring at it won\u2019t fix it"
+  - "We\u2019re still looking at the same broken robot. Surely there\u2019s something
+    better to do"
+  - It remains completely broken. Riveting stuff. Can we move on now
+  - "Still broken, still useless, still standing here. Let\u2019s go somewhere else"
+  - "Okay, it\u2019s broken. We\u2019ve established that. Can we please do literally
+    anything else now"
   canRepeat: 1
   priority: 3

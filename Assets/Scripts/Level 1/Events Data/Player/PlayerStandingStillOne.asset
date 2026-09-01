@@ -14,23 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: PlayerStandingStillOne
   dialogueLines:
-  - "The player hasn\u2019t moved in a while. Perhaps they\u2019re taking a little
-    rest."
-  - "The player has been standing still for some time. Maybe they\u2019re having
-    a break."
-  - "The player doesn\u2019t seem to be going anywhere. Perhaps they\u2019re taking
-    a moment to relax."
-  - "The player has been stationary for a while. Maybe they\u2019ve decided to take
-    a breather."
-  - "The player hasn\u2019t moved for quite some time. Surely they have a reason
-    for this."
-  - "The player appears to have stopped. Perhaps they\u2019re taking a well-deserved
-    rest."
-  - "The player has been standing in the same spot for a while now. Maybe they\u2019re
-    just enjoying the view."
-  - "No movement from the player. Perhaps they\u2019re taking a moment to themselves."
-  - "The player seems to have taken a break. There\u2019s certainly no hurry."
-  - "The player hasn\u2019t moved in a while. The narrator wonders if they\u2019ve
-    simply decided to stand there."
+  - "You\u2019ve been standing still for a while. Is my game really that boring to
+    you?"
+  - "You\u2019ve been standing there doing absolutely nothing. Am I really that boring?"
+  - "Wow, you\u2019ve been standing still for quite a while. Is the game putting
+    you to sleep?"
+  - "You\u2019ve been completely motionless for a bit. I hope my game isn\u2019t
+    that uninteresting"
+  - Still standing there? Damn, I must be doing a great job of keeping you entertained
   canRepeat: 1
   priority: 1

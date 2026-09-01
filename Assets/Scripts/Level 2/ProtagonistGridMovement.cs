@@ -12,6 +12,9 @@ public class ProtagonistGridMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveDuration = 0.75f;
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+
     [Header("Doors")]
     [SerializeField] private DoorConnection[] doors;
     [SerializeField] private float doorOpenDelay = 1f;
@@ -26,6 +29,8 @@ public class ProtagonistGridMovement : MonoBehaviour
     {
         //assumes protagonist starts in center of room
         gridOrigin = transform.position;
+
+        animator.SetBool("IsRunning", false);
     }
 
     public void MoveForward()
@@ -146,6 +151,9 @@ public class ProtagonistGridMovement : MonoBehaviour
         door.OpenDoor();
         yield return new WaitForSeconds(doorOpenDelay);
 
+        //start running
+        animator.SetBool("IsRunning", true);
+
         //move protagonist
         Vector3 startPositon = transform.position;
         float elapsed = 0f;
@@ -164,6 +172,9 @@ public class ProtagonistGridMovement : MonoBehaviour
 
         transform.position = targetPosition;
         gridPosition = targetGridPosition;
+
+        //stop running
+        animator.SetBool("IsRunning", false);
 
         //close door
         yield return new WaitForSeconds(doorCloseDelay);

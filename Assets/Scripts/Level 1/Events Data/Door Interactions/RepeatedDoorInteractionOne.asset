@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedDoorInteractionOne
   dialogueLines:
-  - The player seems to enjoy opening and closing this door.
+  - Damn, you really seem to enjoy opening and closing this door
+  - You know, most people only need to use a door once or twice
+  - Wow, this door is getting more attention than the rest of the facility combined
+  - "You really have a fascinating relationship with that door, don\u2019t you"
+  - "At this point, I think you\u2019re just opening and closing it for fun"
+  - "I\u2019m starting to wonder if you actually have somewhere to be"
+  - Yes, it opens. Yes, it closes. Incredible stuff
+  - You seem remarkably entertained by the concept of doors
+  - How many times are you planning on doing this exactly
+  - I have to admit, your commitment to this door is impressive
   canRepeat: 0
   priority: 1

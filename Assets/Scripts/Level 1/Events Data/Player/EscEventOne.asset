@@ -14,21 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: EscEventOne
   dialogueLines:
-  - The player pressed Escape. Nothing happened. Interesting.
-  - "The player has pressed Escape. Unfortunately, that doesn\u2019t do anything
-    here."
-  - Escape was pressed. The narrator has no idea what the player expected to happen.
-  - "The player tried pressing Escape. Nice try, but there\u2019s nothing to escape
-    from."
-  - The player pressed Escape. The game remains completely unimpressed.
-  - "The player appears to be looking for a pause menu. They won\u2019t find one
-    here."
-  - "Escape? No. That doesn\u2019t do anything."
-  - "The player has pressed the Escape key. The narrator would like to remind them
-    that this isn\u2019t that kind of game."
-  - The player tried to escape. Unfortunately, pressing Escape is not going to help
-    them.
-  - The player pressed Escape again. The narrator admires their optimism, but nothing
-    is happening.
+  - "I see you just pressed ESC. Unfortunately, that\u2019s not going to get you
+    anywhere here"
+  - "Ah, you pressed ESC. Nice try, but that\u2019s not going to do anything"
+  - "I noticed that little ESC press. Unfortunately, you\u2019re not escaping anything
+    that easily"
+  - "You just pressed ESC, didn\u2019t you? Yeah, I\u2019m afraid that\u2019s not
+    going to help you here"
+  - "Oh, you pressed ESC. Cute. Unfortunately, that\u2019s not getting you anywhere
+    here"
   canRepeat: 0
   priority: 1

@@ -14,19 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: JumpEventRespawn
   dialogueLines:
-  - "Okay, we\u2019re going to reset now. This time, you better stop pressing Space."
-  - "Alright, that\u2019s enough. Let\u2019s reset, and please leave the Space key
-    alone."
-  - "We\u2019re starting over. And this time, no more pressing Space."
-  - Okay, reset time. Surely you can resist the urge to press Space this time.
-  - "Let\u2019s try that again. This time, I\u2019d really appreciate it if you stopped
-    pressing Space."
-  - "Fine, we\u2019ll reset. But this time, keep your fingers away from that Space
-    key."
-  - 'Alright, back to the beginning. And remember: Space still does nothing.'
-  - "We\u2019re going to start over now. Please, for the narrator\u2019s sanity,
-    stop pressing Space."
-  - Okay, everything is being reset. This time, try not to press Space repeatedly.
-  - Time for a fresh start. And this time, you better leave Space alone.
+  - "Jolly little fella, aren\u2019t you? Trying to jump around everywhere. Have
+    fun being reset"
+  - "Look at you, bouncing around like a jolly little fella. Shame you\u2019re about
+    to get reset"
+  - "Aren\u2019t you a cheerful little jumper? Keep it up and enjoy your lovely reset"
+  - "Well, someone\u2019s certainly enthusiastic about jumping. Have fun with the
+    reset"
+  - What a jolly little fella you are, desperately trying to jump around. Alright,
+    reset time
   canRepeat: 1
   priority: 1

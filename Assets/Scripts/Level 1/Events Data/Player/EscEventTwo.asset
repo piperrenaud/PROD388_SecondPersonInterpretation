@@ -14,16 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: EscEventTwo
   dialogueLines:
-  - "Why are you still pressing it? I just told you that doesn\u2019t do anything."
-  - "You\u2019re still pressing Escape? I thought I made myself clear."
-  - "The player pressed Escape again. Didn\u2019t I just say that wouldn\u2019t work?"
-  - Again? Really? Escape still does nothing.
-  - "Why keep pressing it? The narrator already explained that it\u2019s useless."
-  - "The player seems convinced Escape will eventually do something. It won\u2019t."
-  - You pressed it again. For what purpose? Nothing is going to happen.
-  - Still trying Escape? The narrator is starting to think this is deliberate.
-  - "The player has pressed Escape yet again. Apparently, one explanation wasn\u2019t
-    enough."
-  - "Escape does nothing. I\u2019ve said this already. Please stop pressing it."
+  - "Okay, I already told you ESC does nothing. There\u2019s no pause menu here"
+  - "Right, we\u2019ve established that ESC doesn\u2019t do anything. There is no
+    pause menu"
+  - "Okay, you\u2019ve pressed ESC before. It still does nothing. No pause menu,
+    remember?"
+  - "I already explained this. ESC isn\u2019t going to bring up a pause menu, so
+    you can stop trying"
+  - "Yes, I know you\u2019re pressing ESC. No, there isn\u2019t a pause menu. Please
+    move on"
   canRepeat: 1
   priority: 1

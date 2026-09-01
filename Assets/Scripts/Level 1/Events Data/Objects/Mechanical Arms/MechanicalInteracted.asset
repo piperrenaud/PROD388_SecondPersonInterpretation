@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MechanicalInteracted
   dialogueLines:
-  - "Oh, look what you\u2019ve done. You broke it."
-  - Well, there you go. You actually broke the machine.
-  - Oh no. You really did break it.
-  - "And now it\u2019s broken. I told you to be careful."
-  - Great. You managed to break it. Well done.
+  - Aaaaaand you broke it. Well done
+  - And there it goes. You actually broke it. Fantastic job
+  - "Aaaand it\u2019s broken. Congratulations, I suppose"
+  - "Well, you managed to break it. That didn\u2019t take long"
+  - Aaand you broke the robot. Great work, absolutely brilliant
   canRepeat: 0
   priority: 3

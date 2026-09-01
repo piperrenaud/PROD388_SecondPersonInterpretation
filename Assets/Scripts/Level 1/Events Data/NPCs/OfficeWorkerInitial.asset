@@ -14,12 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: OfficeWorkerInitial
   dialogueLines:
-  - This is an office worker. He appears to be busy typing away.
-  - This worker is sitting at his desk, focused on whatever is on his screen.
-  - An office worker. He seems rather occupied with his computer.
-  - This is one of the office workers. He's busy typing at his desk.
-  - The worker sits at his desk, carefully typing away.
-  - Here we have an office worker. He looks focused on his work.
-  - The worker appears to be hard at work, typing away at his computer.
+  - "This is just some office guy. I bet he\u2019s playing games on that thing"
+  - "Ah, just your average office guy. I wouldn\u2019t be surprised if he\u2019s
+    playing games"
+  - "This guy looks like he\u2019s supposed to be working. Bet he\u2019s doing anything
+    but"
+  - "Just an office guy sitting at his desk. I bet that computer isn\u2019t being
+    used for work"
+  - "I\u2019m guessing this guy is meant to be working, but he\u2019s probably playing
+    games"
+  - "This looks like a pretty standard office guy. I bet he\u2019s secretly messing
+    around on his computer"
+  - "There\u2019s always one office guy who looks busy but is probably playing games
+    instead"
+  - "He looks like he\u2019s working hard. By which I mean, probably playing something
+    on that computer"
+  - "Just some guy at his desk pretending to be productive. I bet he\u2019s playing
+    games"
+  - "I have a feeling this guy isn\u2019t doing much actual work on that computer"
   canRepeat: 1
   priority: 3

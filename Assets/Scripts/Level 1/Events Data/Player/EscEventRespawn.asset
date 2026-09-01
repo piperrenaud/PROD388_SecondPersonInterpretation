@@ -14,21 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: EscEventRespawn
   dialogueLines:
-  - "Okay, we\u2019re going to reset now. This time, please stop pressing Escape."
-  - "Alright, that\u2019s enough. Let\u2019s reset. And this time, leave the Escape
-    key alone."
-  - "We\u2019re starting over. Surely you can resist pressing Escape this time."
-  - Okay, reset time. And just to be clear, do not press Escape again.
-  - "Let\u2019s try that again. This time, I\u2019d really appreciate it if you stopped
-    pressing Escape."
-  - "Alright, we\u2019re resetting. Maybe this time the player will listen and leave
-    Escape alone."
-  - "Time for a fresh start. And no, Escape still won\u2019t do anything."
-  - "Okay, back to the beginning. Please, for everyone\u2019s sake, stop pressing
-    Escape."
-  - "We\u2019re going to reset now. Perhaps this time you\u2019ll remember what I
-    told you about Escape."
-  - "Fine. We\u2019ll start over. But if you press Escape again, the narrator is
-    going to be very disappointed."
+  - "I don\u2019t like your attitude. There is no ESC, but I guess resetting you
+    is the next best thing"
+  - "Okay, I\u2019m not really enjoying the attitude here. No ESC for you, but I
+    suppose a reset will do"
+  - "I see you\u2019re still trying ESC. I don\u2019t appreciate the attitude, so
+    I guess I\u2019ll just reset you"
+  - "Alright, I don\u2019t like where this is going. There\u2019s no ESC, so I guess
+    a reset is the next best option"
+  - "You know what? I\u2019m not a fan of this attitude. No ESC, but I can certainly
+    reset you instead"
   canRepeat: 1
   priority: 1

@@ -14,29 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: WorkerRepeated
   dialogueLines:
-  - 'The worker looks busy. Perhaps now isn''t the best time to interrupt him. '
-  - He seems to have a lot on his plate. The player should probably leave him to
-    it.
-  - The worker is clearly in the middle of something. Best not to distract him.
-  - He looks rather occupied. Perhaps the player should come back later.
-  - Whatever he's doing, he seem to be taking it seriously. The player should leave
-    him alone.
-  - "The worker doesn\u2019t appear to have time for interruptions."
-  - "He\u2019s busy working. Surely the player has somewhere else to be."
-  - It seems this worker has enough to worry about without the player bothering him.
-  - "The worker is concentrating. Interrupting him probably wouldn\u2019t be very
-    helpful."
-  - He appears to be quite busy. This might not be the right moment to talk to him.
-  - The worker has work to do. The player should probably let him get on with it.
-  - "He doesn\u2019t look like he\u2019s waiting for company."
-  - The worker seems preoccupied. Perhaps it would be better to leave him alone.
-  - Judging by his expression, he has more important things to worry about.
-  - "He\u2019s clearly got his hands full. The player should probably move along."
-  - Whatever has his attention, it seems rather important.
-  - The worker appears to be deep in thought. Interrupting him might not be wise.
-  - He seems rather engrossed in his work. Best to let him be.
-  - This worker looks like he could use some peace and quiet.
-  - "There\u2019s work to be done, and apparently, the player isn\u2019t part of
-    it."
+  - "This guy\u2019s probably busy. Let\u2019s go look at something else"
+  - "He looks pretty busy. Come on, let\u2019s leave him to it"
+  - "I think this guy has enough going on. Let\u2019s find something else to look
+    at"
+  - "Yeah, he seems occupied. Let\u2019s go bother someone else"
+  - "This guy looks like he\u2019s actually working. Let\u2019s leave him alone and
+    move on"
+  - "He seems pretty busy with whatever that is. Come on, there\u2019s other stuff
+    to see"
+  - "I think we\u2019ve seen enough here. Let\u2019s go find something more interesting"
+  - "Looks like he\u2019s got things under control. Let\u2019s move along"
+  - "He\u2019s clearly got work to do. Let\u2019s not stand here watching him"
+  - "Yeah, I\u2019m pretty sure he doesn\u2019t need us hovering around. Let\u2019s
+    go somewhere else"
+  - "This guy\u2019s got enough on his plate. Come on, let\u2019s keep moving"
+  - "He looks occupied, so let\u2019s give him some space and find something else"
+  - "I think we\u2019re interrupting whatever he\u2019s doing. Let\u2019s go"
+  - "He\u2019s busy. We\u2019ve got better things to do than watch him work"
+  - "Alright, nothing to see here. Let\u2019s find something else to entertain ourselves
+    with"
+  - "This guy seems pretty occupied. Let\u2019s leave him to his mysterious office
+    business"
+  - "I\u2019m sure whatever he\u2019s doing is important. Probably. Let\u2019s move
+    on"
+  - "He looks like he\u2019s got a lot going on. We can go bother someone else later"
+  - "Yeah, he\u2019s clearly busy. Let\u2019s not make ourselves part of his workload"
+  - "Okay, this guy has work to do. Let\u2019s go find something a little more interesting"
   canRepeat: 1
   priority: 3

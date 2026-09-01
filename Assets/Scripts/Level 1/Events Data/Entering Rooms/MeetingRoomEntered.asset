@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MeetingRoomEntered
   dialogueLines:
-  - The player has entered the Meeting Room. Lots of workers come in here to chat.
+  - This is the break room, where everyone comes to have a bit of a yap. No politics,
+    please
+  - "You\u2019ve found the break room. It\u2019s mostly for chatting, complaining,
+    and absolutely no politics"
+  - Ah, the break room. This is where everyone comes to have a little gossip. Keep
+    the politics out of it
+  - Welcome to the break room, where the staff gather to yap about everything except
+    politics
+  - This is the break room. People come in here for a chat, a gossip, and thankfully,
+    no political debates
   canRepeat: 0
   priority: 5

@@ -14,22 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MeetingGroupInitial
   dialogueLines:
-  - "This man looks like he\u2019s in the middle of a meeting. I wonder what it\u2019s
-    about."
-  - "This worker appears to be talking in a meeting. Curious what they\u2019re discussing."
-  - "He seems to be having a rather serious conversation. I wonder what\u2019s being
-    discussed."
-  - "This man looks like he\u2019s in a meeting. Whatever they\u2019re talking about
-    must be important."
-  - It appears this worker is in the middle of a meeting. The narrator wonders what
-    it could be about.
-  - "This looks like some sort of meeting. Perhaps the player shouldn\u2019t interrupt."
-  - The man seems to be discussing something with his coworkers. I wonder what it
-    is.
-  - He looks rather busy talking with the others. This must be some kind of meeting.
-  - "The worker appears to be in a meeting. Whatever they\u2019re discussing, it
-    seems important."
-  - "This man is clearly having a meeting. The narrator is a little curious about
-    what they\u2019re talking about."
+  - "This guy looks like he\u2019s part of some kind of meeting. Wonder what they\u2019re
+    talking about"
+  - "Looks like there\u2019s a meeting going on here. I wonder what they\u2019re
+    discussing"
+  - "Huh, this guy seems to be in the middle of a meeting. Wonder what it\u2019s
+    about"
+  - "Looks like these guys are having some sort of meeting. I wonder what they\u2019re
+    planning"
+  - "Oh, this definitely looks like a meeting. Wonder what they\u2019re all gathered
+    around for"
+  - "This guy looks pretty involved in whatever meeting is happening here. Curious
+    what it\u2019s about"
+  - "I guess this is a meeting of some sort. Wonder what they\u2019re talking about"
+  - "Looks like someone\u2019s having a serious little meeting. I wonder what the
+    topic is"
+  - "Ah, a meeting. I wonder what important things they\u2019re discussing in there"
+  - "These guys look like they\u2019re in the middle of a meeting. I wonder what\u2019s
+    going on"
   canRepeat: 1
   priority: 3

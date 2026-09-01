@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedDoorInteractionThree
   dialogueLines:
-  - The player is now doing this on purpose to be annoying.
+  - "Okay, now you\u2019re just messing with the door to annoy me, aren\u2019t you"
+  - "Right, you\u2019re not actually trying to go anywhere anymore, you\u2019re just
+    doing this for my benefit"
+  - "Oh, I see what this is. You\u2019re deliberately messing with the door now"
+  - "You\u2019re seriously doing this just to get a reaction out of me, aren\u2019t
+    you"
+  - "Okay, we\u2019ve moved past curiosity and into deliberately annoying me"
+  - "Don\u2019t think I haven\u2019t noticed what you\u2019re doing with that door"
+  - "You\u2019re not even pretending you need to use the door anymore, are you"
+  - Ah, so this is your idea of entertainment now. Messing with the door
+  - You really are just standing there opening and closing it to annoy me
+  - "Fine, I get it. You\u2019ve discovered that the door moves, and now you\u2019re
+    going to make that my problem"
   canRepeat: 0
   priority: 1

@@ -14,23 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: DangerSignRepeated
   dialogueLines:
-  - This is still a danger sign. Maybe staring at it will help you remember the rules.
-  - "The player is still looking at the danger sign. Perhaps they\u2019re trying
-    to memorise it."
-  - "It\u2019s the same warning sign. Maybe reading it a few more times will make
-    the message clearer."
-  - The sign still says Do Not Enter. Perhaps the player needs a few more reminders.
-  - "The player seems very interested in this warning sign. Hopefully they\u2019re
-    paying attention to what it says."
-  - "It\u2019s still a sign telling you not to enter. Maybe looking at it repeatedly
-    will help."
-  - "The player has been studying the danger sign. Surely they understand what it\u2019s
-    asking by now."
-  - "The warning hasn\u2019t changed. Perhaps the player is making absolutely certain
-    they\u2019ve read it correctly."
-  - "The player keeps checking the sign. Maybe they\u2019re finally starting to understand
-    the instructions."
-  - "It\u2019s still a danger sign. The narrator hopes all this staring will encourage
-    the player to follow its rules."
+  - The sign still says the exact same thing. Are we having trouble with reading
+    now?
+  - Yep, still says DO NOT ENTER. Do I need to read it out for you?
+  - "In case you missed it, the sign hasn\u2019t changed. Still DO NOT ENTER"
+  - The sign is still pretty clear. Do you need a little help with that?
+  - "Still says DO NOT ENTER. I feel like this one shouldn\u2019t be that difficult"
+  - Fascinating. The sign still says the same thing. Did you forget how words work?
+  - "Just checking, you can still read, right? Because the sign hasn\u2019t changed"
+  - "It still says DO NOT ENTER. I promise the letters haven\u2019t moved around"
+  - The message remains exactly the same. Maybe give reading it another shot
+  - "Still DO NOT ENTER. You\u2019re really making me question your reading comprehension
+    now"
   canRepeat: 1
   priority: 3

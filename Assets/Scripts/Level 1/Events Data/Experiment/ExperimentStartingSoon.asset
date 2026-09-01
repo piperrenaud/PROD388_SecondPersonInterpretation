@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: ExperimentStartingSoon
   dialogueLines:
-  - "Looks like something\u2019s happening in the experiment room. Maybe you should
-    go over there and check it out."
-  - Something seems to be going on in the experiment room. Perhaps the player should
-    take a look.
+  - "Oh my, looks like something\u2019s happening in the experiment room. Maybe you
+    should go over there and check it out."
+  - Something seems to be going on in the experiment room. Perhaps you should take
+    a look.
   - "It sounds like something is happening in the experiment room. Maybe it\u2019s
     worth checking out."
   - "There appears to be some activity in the experiment room. Perhaps you should

@@ -14,24 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: LabDuoInitial
   dialogueLines:
-  - "This man looks like he\u2019s working on something important. Looks like some
-    kind of experiment."
-  - This worker seems to be focused on something important. Is that some kind of
-    experiment?
-  - This man appears to be working on an experiment. Whatever it is, he looks rather
-    serious.
-  - "This worker is busy with something that looks quite complicated. Perhaps it\u2019s
-    an experiment."
-  - "This man seems to be conducting some kind of experiment. I wonder what he\u2019s
-    working on."
-  - "Something important appears to be happening here. The narrator suspects it\u2019s
-    some kind of experiment."
-  - This worker is focused on a rather unusual task. It looks like some sort of experiment.
-  - "This man looks very busy with his work. Whatever he\u2019s doing, it certainly
-    resembles an experiment."
-  - The worker seems to be carefully working on something. Could this be some kind
-    of experiment?
-  - "This man appears to be conducting an experiment. The narrator wonders what he\u2019s
-    trying to discover."
+  - "Okay, this guy actually looks like he\u2019s doing something important. That\u2019s
+    pretty rare around here"
+  - Oh wow, someone who actually looks like they have something important to do.
+    What a novelty
+  - "This guy seems like he\u2019s genuinely busy. I didn\u2019t think I\u2019d see
+    that around here"
+  - "Huh, this guy actually looks like he\u2019s getting some work done. That\u2019s
+    a rare sight"
+  - Well, look at that. Someone who actually appears to be doing something productive
+    around here
   canRepeat: 1
   priority: 5

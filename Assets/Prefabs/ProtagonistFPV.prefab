@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4487816468603528461}
   - component: {fileID: 8553853823143708930}
   m_Layer: 0
-  m_Name: Protagonist
+  m_Name: ProtagonistFPV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

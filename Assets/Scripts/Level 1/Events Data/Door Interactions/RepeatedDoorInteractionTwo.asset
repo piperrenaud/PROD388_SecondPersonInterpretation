@@ -14,6 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RepeatedDoorInteractionTwo
   dialogueLines:
-  - The player surely has something better to do.
+  - There are so many more interesting things you could be doing right now. Please
+    stop
+  - Honestly, I can think of several things that would be more exciting than this
+  - "Come on, there\u2019s an entire facility to explore, and you\u2019ve chosen
+    this"
+  - Surely you can find something more interesting to do than that
+  - There are much cooler things waiting for you. Please, go do literally any of
+    them
+  - You have plenty of options here, and somehow this is what you decided to spend
+    your time on
+  - I promise you, there are more interesting things in this place than repeatedly
+    doing that
+  - Please find something else to entertain yourself with. Anything else, really
+  - You could be doing something genuinely interesting right now, you know
+  - "There\u2019s a whole world of things you could be doing. Please stop messing
+    around with this"
   canRepeat: 0
   priority: 1

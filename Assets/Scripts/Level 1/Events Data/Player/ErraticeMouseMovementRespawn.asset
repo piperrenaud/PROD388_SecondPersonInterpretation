@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: ErraticMouseMovementRespawn
   dialogueLines:
-  - "That\u2019s enough spinning. The narrator has had enough. Time for a reset."
-  - "The player has officially overdone it. Let\u2019s reset and try that again."
-  - Enough with the camera. The narrator is stepping in. Resetting now.
-  - "The player clearly isn\u2019t going to stop. Time for the narrator to intervene."
-  - "That\u2019s quite enough looking around. Back to the beginning we go."
-  - "The narrator\u2019s patience has run out. Let\u2019s reset the player."
-  - The player has pushed the camera too far. A reset seems appropriate.
-  - "Alright, that\u2019s enough. The narrator is taking control of the situation."
-  - The player refuses to slow down. Fine. The narrator will reset them.
-  - No more spinning. The narrator has made a decision. Time to start over.
+  - "Okay, I don\u2019t want to deal with this anymore. I\u2019m resetting you"
+  - "Right, I\u2019ve had enough of this. Time for a reset"
+  - "Okay, this is getting ridiculous. I\u2019m just going to reset you"
+  - "Alright, I\u2019m done dealing with this. Resetting you now"
+  - "Okay, clearly this isn\u2019t stopping, so I\u2019m going to reset you"
+  - "Right, that\u2019s enough. I\u2019m resetting you and we\u2019re moving on"
+  - "Okay, I\u2019ve officially run out of patience. Reset time"
+  - "Fine, you win. I\u2019m resetting you because I\u2019m not dealing with this
+    anymore"
+  - "Alright, I\u2019ve had enough of the chaos. Let\u2019s just reset you"
+  - "Okay, I\u2019m done. I\u2019m resetting you and hopefully we can move on now"
   canRepeat: 1
   priority: 1

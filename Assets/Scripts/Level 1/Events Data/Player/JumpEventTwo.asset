@@ -14,19 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: JumpEventTwo
   dialogueLines:
-  - "Why are you still pressing Space? I just told you it doesn\u2019t do anything."
-  - "You\u2019re still trying to jump? I already explained that Space is useless
-    here."
-  - "The player pressed Space again. Didn\u2019t I just say that wouldn\u2019t work?"
-  - "Again with the Space key? There\u2019s still no jumping. Please stop."
-  - "Why keep pressing it? Space isn\u2019t suddenly going to start working."
-  - "The player seems convinced Space will eventually do something. It won\u2019t."
-  - "You pressed Space again. I\u2019m not sure how many more times I can explain
-    this."
-  - "Still trying to jump? The narrator has already made it quite clear that you
-    can\u2019t."
-  - "The player has pressed Space yet again. Apparently, one explanation wasn\u2019t
-    enough."
-  - "Space does nothing. I\u2019ve said this already. Please stop trying to jump."
+  - "I just told you there\u2019s no jumping. The space bar isn\u2019t needed here.
+    Please stop"
+  - "I already explained that jumping doesn\u2019t exist. You can stop pressing space
+    now"
+  - "No jumping, remember? There\u2019s absolutely no reason to keep pressing that
+    space bar"
+  - "I said there\u2019s no jumping. Please give the space bar a break"
+  - "We\u2019ve established that jumping isn\u2019t a thing here. You can stop trying
+    the space bar now"
   canRepeat: 1
   priority: 1

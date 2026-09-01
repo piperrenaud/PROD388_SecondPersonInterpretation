@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: WorlerPhoneInitial
   dialogueLines:
-  - "This worker is talking on the phone. He seems very passionate about whatever
-    he\u2019s discussing."
-  - This employee is on the phone. Judging by his expression, it must be an important
-    conversation.
-  - "This worker appears to be having a very animated phone call. I wonder what it\u2019s
-    about."
-  - "He\u2019s talking on the phone, and he looks rather invested in the conversation."
-  - This employee is on a phone call. He seems to have a lot to say.
+  - "Whatever this guy\u2019s talking about on the phone must be pretty crazy for
+    him to be doing all that"
+  - "This phone call must be something serious. Look at everything he\u2019s doing
+    while he talks"
+  - "Whatever\u2019s happening on that call, he seems pretty invested in it"
+  - "I have no idea what he\u2019s talking about, but judging by all that, it must
+    be important"
+  - "That must be one hell of a phone call. He\u2019s really going all out over there"
   canRepeat: 0
   priority: 3

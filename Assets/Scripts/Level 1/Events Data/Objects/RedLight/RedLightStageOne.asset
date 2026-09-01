@@ -14,15 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: RedLightStageOne
   dialogueLines:
-  - Surely something will happen if the player keeps pressing it.
-  - The player keeps pressing the button. Something must happen eventually.
-  - Perhaps the button will do something if the player presses it enough times.
-  - "The player seems determined to press it. Surely it can\u2019t stay useless forever."
-  - Nothing has happened yet. Maybe one more press will do the trick.
-  - "The player continues pressing the button. Surely there\u2019s a reason for it."
-  - Still nothing. Perhaps the player just needs to keep trying.
-  - "The button hasn\u2019t done anything so far. But maybe that will change."
-  - The player has pressed it several times now. Something must happen eventually.
-  - Maybe persistence is the key. Keep pressing and see what happens.
+  - Yeah, yeah, just keep pressing it. Something will definitely happen eventually
+  - "Go on, keep pressing it. I\u2019m sure it\u2019s doing something important"
+  - "Yep, just keep mashing that button. I\u2019m certain something exciting is coming"
+  - Keep pressing it. Surely the next one will finally do something
+  - "Yeah, that\u2019s it. Just keep pressing the button like that. It\u2019ll definitely
+    pay off"
+  - "Don\u2019t stop now. I\u2019m sure something is going to happen if you press
+    it enough"
+  - "Yep, keep going. There\u2019s absolutely a reason you\u2019re allowed to press
+    it this many times"
+  - Just keep pressing it. I have complete confidence that something will happen
+    eventually
+  - "Go on, press it again. Maybe this time it\u2019ll actually do something"
+  - Yeah, keep at it. Surely repeatedly pressing the same button is going to achieve
+    something eventually
   canRepeat: 1
   priority: 3

@@ -14,6 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: FacilityExited
   dialogueLines:
-  - The player got bored and left the Experiment room almost immediately.
+  - "Okay, damn, I guess experiments aren\u2019t really your thing. You didn\u2019t
+    have to leave that quickly"
+  - "Wow, you really couldn\u2019t get out of there fast enough, huh? I guess experiments
+    aren\u2019t for everyone"
+  - Oh, okay. I see how it is. You took one look at the experiment and immediately
+    left
+  - "Damn, alright. I guess I overestimated how interested you\u2019d be. You barely
+    even gave it a chance"
+  - "Well, that was quick. I promise you didn\u2019t have to flee the experiment
+    room quite that dramatically"
   canRepeat: 0
   priority: 5

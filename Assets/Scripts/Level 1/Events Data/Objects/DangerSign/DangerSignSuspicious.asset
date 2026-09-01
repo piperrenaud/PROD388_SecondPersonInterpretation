@@ -14,21 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: DangerSignSuspicious
   dialogueLines:
-  - "Okay, now you\u2019re just rereading it to annoy me. Please do something else."
-  - "You\u2019ve already read the sign. There\u2019s really no reason to keep looking
-    at it."
-  - "Alright, I think you\u2019ve memorised the sign by now. Please move on."
-  - "You\u2019re still reading it? I\u2019m starting to think you\u2019re doing this
-    just to bother me."
-  - "The message hasn\u2019t changed. Please find something else to look at."
-  - "Okay, that\u2019s enough reading. The narrator would really like you to move
-    along now."
-  - "You\u2019ve read the warning several times already. Surely there\u2019s something
-    else to do."
-  - The sign has been thoroughly inspected. Please, for my sake, look somewhere else.
-  - "You keep coming back to the same sign. I\u2019m beginning to suspect this is
-    deliberate."
-  - Yes, it still says Do Not Enter. Now please stop reading it and do something
-    else.
+  - "Are you actually still reading it? Because if you are, that\u2019s a little
+    concerning. Let\u2019s move on"
+  - "Wait, are you seriously still standing here reading the sign? Okay, that\u2019s
+    enough. Let\u2019s go"
+  - "You\u2019re still reading it? I\u2019m starting to think we should probably
+    find something else to do"
+  - "Are you genuinely still trying to read that? It hasn\u2019t changed, you know.
+    Let\u2019s move on"
+  - "You\u2019re still staring at the sign? Okay, I\u2019m officially concerned.
+    Come on, let\u2019s go"
+  - "If you\u2019re still reading that sign, we might have a problem. Let\u2019s
+    just move along"
+  - "You\u2019re really still looking at it? I promise there isn\u2019t a secret
+    message hidden in there"
+  - "Are you waiting for the sign to say something different? Because it\u2019s not
+    going to. Let\u2019s move on"
+  - "You\u2019re still here? Seriously? Okay, let\u2019s find something else to look
+    at"
+  - "If you\u2019re actually still reading that sign, I think we\u2019ve spent enough
+    time here. Let\u2019s go"
   canRepeat: 1
   priority: 3

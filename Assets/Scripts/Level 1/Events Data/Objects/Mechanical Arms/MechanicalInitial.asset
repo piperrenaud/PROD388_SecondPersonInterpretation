@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MechanicalInitial
   dialogueLines:
-  - "This appears to be some kind of robot machine. It looks like it\u2019s doing
-    something."
-  - This is some sort of robotic machine. It seems to be busy with something.
-  - "This looks like a robot of some kind. The narrator wonders what it\u2019s working
-    on."
-  - "There\u2019s some kind of machine here. It appears to be doing something important."
-  - "This seems to be a robotic machine. Whatever it\u2019s doing, it looks rather
-    busy."
+  - "This looks like some kind of cool robot. Hopefully there\u2019s no AI involved"
+  - "Oh, this is a pretty cool robot. Let\u2019s just hope it\u2019s not running
+    on AI"
+  - "Huh, that\u2019s a pretty neat robot. Hopefully it\u2019s not secretly intelligent"
+  - "Look at this thing. Pretty cool, as long as there\u2019s no AI hiding in there"
+  - "That\u2019s definitely some kind of robot. Cool, I guess. Hopefully it\u2019s
+    not too smart"
   canRepeat: 0
   priority: 3

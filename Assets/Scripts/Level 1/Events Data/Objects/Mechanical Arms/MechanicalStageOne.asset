@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MechanicalStageOne
   dialogueLines:
-  - "I don\u2019t know what will happen if you keep touching it."
-  - "I\u2019m not sure what will happen if you keep messing with it."
-  - The narrator has no idea what might happen if you keep interacting with it.
-  - "I really don\u2019t know what will happen if you keep pressing things."
-  - "Perhaps you should stop touching it. The narrator isn\u2019t sure what it might
-    do."
-  - I have no idea what this thing will do if you keep interfering with it.
-  - "The narrator can\u2019t say what will happen if you keep messing around with
-    this machine."
-  - Maybe stop touching it before we find out what happens.
-  - "I\u2019m starting to wonder what will happen if you keep poking at it."
-  - "The narrator isn\u2019t entirely sure this machine should be touched. Maybe
-    don\u2019t find out."
+  - "I feel like it\u2019s not exactly strong enough to handle all this touching"
+  - "I\u2019m starting to think this thing wasn\u2019t designed for quite this much
+    attention"
+  - "You\u2019re really putting this thing through its paces with all that touching"
+  - "I don\u2019t think it was built to survive you constantly messing with it"
+  - "At this rate, I\u2019m not sure this thing is going to hold up"
+  - "You might want to ease up a little. I don\u2019t think it\u2019s built for this
+    much interaction"
+  - "I\u2019m beginning to think you\u2019re asking a bit too much of this poor thing"
+  - "This thing really wasn\u2019t designed to be poked and prodded this much, was
+    it?"
+  - "I feel like you\u2019re testing its durability more than anything else"
+  - "Maybe give it a break. I don\u2019t think it can handle much more of your attention"
   canRepeat: 1
   priority: 3

@@ -14,21 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: ErraticMouseMovementTwo
   dialogueLines:
-  - The player is still spinning their view around. Seriously, slow down.
-  - The player seems determined to look everywhere at once. This is getting ridiculous.
-  - The player is whipping the camera around again. The narrator is starting to get
-    annoyed.
-  - Must the player look in every direction simultaneously? Please, just pick one.
-  - The player is still frantically moving the camera. Enough already.
-  - The player appears to be testing the limits of the camera. The narrator is not
-    amused.
-  - "The player is spinning around again. At this point, they\u2019re just making
-    everyone dizzy."
-  - The player really needs to calm down with the camera. This is becoming rather
-    irritating.
-  - The player is looking around wildly again. The narrator would appreciate some
-    stability.
-  - The player refuses to stop spinning the camera. Fine. Keep it up and see what
-    happens.
+  - "Okay, seriously, I\u2019m getting a headache from all this spinning around"
+  - Alright, enough spinning. My head is starting to hurt just watching you
+  - Okay, can we slow down? All this turning around is giving me a headache
+  - "Seriously, how are you not dizzy yet? I\u2019m getting a headache over here"
+  - Please stop spinning around so much. My head is starting to hurt
+  - "Okay, this is officially too much spinning. I\u2019m getting a headache"
+  - "Right, I think we\u2019ve spun around enough for one day. My head hurts"
+  - Seriously, ease up on the turning. I can feel a headache coming on
+  - "Okay, you need to calm down with all the spinning. I\u2019m starting to regret
+    having eyes"
+  - "Oh my god, slow down. I\u2019m getting a headache just trying to keep up with
+    you"
   canRepeat: 1
   priority: 1

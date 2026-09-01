@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: MeetingRoomExited
   dialogueLines:
-  - The player apparently hates chatter, and so left the Meeting Room rather quick.
+  - I guess you hate a bit of chatter, because damn, you left that quickly
+  - "Oh, I see. You\u2019re not a fan of conversation, apparently. You really got
+    out of there fast"
+  - Guess a little bit of yapping was enough to send you running. Damn
+  - "Wow, you really don\u2019t like people talking, huh? You barely lasted in there"
+  - "I guess casual conversation isn\u2019t your thing. You couldn\u2019t leave that
+    room fast enough"
   canRepeat: 0
   priority: 5

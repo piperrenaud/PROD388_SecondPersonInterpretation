@@ -14,20 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: PlayerStandingStillRespawn
   dialogueLines:
-  - "Okay, I think something might be wrong. Let\u2019s reset the player and see
-    if that helps."
-  - "Alright, this doesn\u2019t seem normal. Perhaps a reset will sort things out."
-  - "Something may have gone wrong here. Let\u2019s restart and see if the player
-    moves again."
-  - "Okay, the player still isn\u2019t moving. Time for a reset."
-  - "This has gone on long enough. Let\u2019s reset the player and try again."
-  - "I\u2019m starting to think something is wrong. A quick reset might help."
-  - "The player is still completely still. Let\u2019s send them back and see if that
-    fixes things."
-  - "Something doesn\u2019t seem quite right. Perhaps starting over will do the trick."
-  - "Alright, I\u2019m officially concerned. Let\u2019s reset the player and see
-    what happens."
-  - "The player clearly isn\u2019t responding. Let\u2019s reset things and give them
-    another chance."
+  - "Clearly your computer must have malfunctioned, which is why you\u2019re not
+    doing anything. I\u2019ll be so kind as to reset you"
+  - "I can only assume your computer has stopped working. Don\u2019t worry, I\u2019ll
+    generously reset you"
+  - Clearly something has gone wrong with your computer. How thoughtful of me to
+    reset you and fix the situation
+  - "I\u2019m sure your computer must have malfunctioned. It couldn\u2019t possibly
+    be my game, so I\u2019ll just reset you"
+  - "Your computer has obviously broken down. Luckily for you, I\u2019m feeling generous
+    enough to reset you"
   canRepeat: 1
   priority: 1

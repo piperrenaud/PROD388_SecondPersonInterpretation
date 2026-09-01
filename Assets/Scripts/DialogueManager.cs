@@ -79,4 +79,9 @@ public class DialogueManager : MonoBehaviour
 
         source.PlayOneShot(clip, volume);
     }
+
+    public void SetTimeAfterText(float time)
+    {
+        timeAfterText = time;
+    }
 }

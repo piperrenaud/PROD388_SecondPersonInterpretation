@@ -14,17 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
   eventID: SecondRespawn
   dialogueLines:
-  - "Seriously? You\u2019re back again?! No. Time to reset."
-  - You came back to this? After all that? Absolutely not. Reset.
-  - The player has returned to the same object. Oh, come on. Time to start over.
-  - You again? The narrator remembers what happened last time. Resetting.
-  - "The player really came back for more. No. We\u2019re not doing this again."
-  - Back to the same object? After everything? Fine. Time for another reset.
-  - "The narrator knows exactly what you\u2019re trying to do. Not this time. Reset."
-  - "Seriously, you\u2019re back here again? The narrator has had enough. Back you
-    go."
-  - The player has returned to the scene of their previous mistake. The narrator
-    is not allowing a repeat.
-  - "Oh, you\u2019re back. The narrator knows where this is going. Resetting now."
+  - Did you learn absolutely nothing from the first time? Come on, buddy. Reset
+  - "Seriously? We\u2019re doing this again? Didn\u2019t the first reset teach you
+    anything?"
+  - "Oh, buddy. You really didn\u2019t learn from the first time, did you? Time for
+    another reset"
+  - "We\u2019ve already been through this. How did you not learn? Come on, reset"
+  - Again? Really? I thought we established how this works the first time. Reset
+    time
+  - "Did the first reset somehow not get the message across? Alright, let\u2019s
+    do it again"
+  - Come on, buddy. You already learned this lesson once. Apparently we need a refresher
+  - "I cannot believe we\u2019re back here again. Didn\u2019t you learn anything
+    the first time?"
+  - "You know what happens when you do this. We\u2019ve done this before. Reset"
+  - "Oh dear, you\u2019ve gone and done it again. I guess another reset is in order"
+  - Did we not have this exact conversation already? Come on, buddy. Reset time
+  - You really decided to ignore everything that happened last time, huh? Alright,
+    reset
+  - "First time wasn\u2019t enough, apparently. Fine, let\u2019s reset you again"
+  - Buddy, we literally just went through this. How are we back here already?
+  - 'You had one job: learn from the first reset. Somehow, you failed. Reset time'
+  - "Oh, you\u2019re doing it again. I really thought you\u2019d have learned by
+    now"
+  - Remember the first time this happened? Yeah, neither do you apparently. Reset
+  - "Come on, you can\u2019t seriously be making the same mistake twice. Back to
+    the reset"
+  - "Well, I guess the first reset didn\u2019t stick. Let\u2019s try this lesson
+    one more time"
+  - You really learned nothing from that first reset, did you? Alright, buddy. Reset
+    again
   canRepeat: 1
   priority: 5

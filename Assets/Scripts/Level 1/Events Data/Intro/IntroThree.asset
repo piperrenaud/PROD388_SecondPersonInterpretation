@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4971c5eb32d68c6419c2b82ec69e3fa3, type: 3}
+  m_Name: IntroThree
+  m_EditorClassIdentifier: Assembly-CSharp::NarratorEventData
+  eventID: IntroThree
+  dialogueLines:
+  - "You\u2019re a young girl who\u2019s been brought to work with your dad for Bring
+    Your Kid to Work Day"
+  - "You\u2019re a young girl spending the day at work with your dad for Bring Your
+    Kid to Work Day"
+  - "You\u2019re a young girl, and today you get to tag along with your dad for Bring
+    Your Kid to Work Day"
+  - "You\u2019re a young girl who\u2019s come along to your dad\u2019s workplace
+    for Bring Your Kid to Work Day"
+  - "You\u2019re a young girl spending the day at your dad\u2019s workplace because
+    apparently it\u2019s Bring Your Kid to Work Day"
+  canRepeat: 0
+  priority: 5
