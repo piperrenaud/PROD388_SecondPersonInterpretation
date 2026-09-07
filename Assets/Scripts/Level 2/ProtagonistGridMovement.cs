@@ -1,13 +1,20 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
 
 public class ProtagonistGridMovement : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private DialogueManager dialogueManager;
+
     [Header("Grid Settings")]
     [SerializeField] private int columns = 4;
     [SerializeField] private int rows = 3;
     [SerializeField] private float roomWidth = 7f;
     [SerializeField] private float roomDepth = 7f;
+    [TextArea(2, 4)]
+    [SerializeField] private string outsideGrid = "Theres no door going that way.";
 
     [Header("Movement")]
     [SerializeField] private float moveDuration = 0.75f;
@@ -67,7 +74,7 @@ public class ProtagonistGridMovement : MonoBehaviour
             targetGridPosiion.y < 0 ||
             targetGridPosiion.y >= rows)
         {
-            Debug.Log("Protagonist cant go outside the grid");
+            dialogueManager.SetText(outsideGrid);
             return;
         }
 
@@ -76,10 +83,18 @@ public class ProtagonistGridMovement : MonoBehaviour
 
         if (connectingDoor == null)
         {
-            Debug.LogWarning("No door found between " + gridPosition + " and " + targetGridPosiion);
+            dialogueManager.SetText(outsideGrid);
             return;
         }
 
+        //check if door is blocked
+        if (connectingDoor.IsBlocked)
+        {
+            dialogueManager.SetText(connectingDoor.BlockedDialogue);
+            return;
+        }
+
+        Debug.Log(targetGridPosiion);
 
         StartCoroutine(MoveThroughDoor(targetGridPosiion, connectingDoor));
     }
@@ -110,7 +125,7 @@ public class ProtagonistGridMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveThroughDoor(Vector2Int targetGridPosition, DoorConnection door)
+    public IEnumerator MoveThroughDoor(Vector2Int targetGridPosition, DoorConnection door)
     {
         isMoving = true;
 
@@ -181,5 +196,70 @@ public class ProtagonistGridMovement : MonoBehaviour
         door.CloseDoor();
 
         isMoving = false;
+    }
+
+    public Vector3? GetRandomValidDirection(out string directionName)
+    {
+        Vector3[] directions =
+        {
+            Vector3.forward,
+            Vector3.back,
+            Vector3.left,
+            Vector3.right
+        };
+
+        string[] directionNames =
+        {
+            "forward",
+            "backward",
+            "left",
+            "right"
+        };
+
+        //store possible directions
+        List<int> validDirections = new List<int>();
+
+        for (int i = 0; i < directions.Length; i++)
+        {
+            Vector3 worldDirection = transform.TransformDirection(directions[i]);
+
+            Vector2Int gridDirection = WorldDirectionToGridDirection(worldDirection);
+
+            Vector2Int targetGridPosition = gridPosition + gridDirection;
+
+            //check grid boundaries
+            if (targetGridPosition.x < 0 ||
+                targetGridPosition.x >= columns ||
+                targetGridPosition.y < 0 ||
+                targetGridPosition.y >= rows)
+            {
+                continue;
+            }
+
+            //find door
+            DoorConnection connectingDoor = FindConnectingDoor(gridPosition, targetGridPosition);
+
+            if (connectingDoor == null) continue;
+
+            //check blocked door
+            if (connectingDoor.IsBlocked) continue;
+
+            //this dir is valid
+            validDirections.Add(i);
+        }
+
+        //no valid movement options
+        if (validDirections.Count == 0)
+        {
+            directionName = null;
+            return null;
+        }
+
+        //pick random valid direction
+        int randomIndex = validDirections[Random.Range(0, validDirections.Count)];
+
+        directionName = directionNames[randomIndex];
+
+        return directions[randomIndex];
     }
 }
