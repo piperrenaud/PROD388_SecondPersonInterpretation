@@ -10,6 +10,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float timeAfterText = 2.5f;
     [SerializeField] private float typeSpeed = 0.05f;
 
+    [Header("Dialogue Type 2")]
+    [SerializeField] private GameObject dialogueParent2;
+    [SerializeField] private TMP_Text dialogue2Text;
+
     [Header("Audio")]
     [SerializeField] private AudioClip[] clips;
     [SerializeField][Range(0f, 1f)] private float volume = 1f;
@@ -22,6 +26,8 @@ public class DialogueManager : MonoBehaviour
 
     public void Awake()
     {
+        if (dialogueParent2 != null) dialogueParent2.SetActive(false);
+
         dialogueParent.SetActive(false);
         source = GetComponent<AudioSource>();
     }
@@ -39,18 +45,34 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
 
         //start new dialogue immediately
-        dialogueCoroutine = StartCoroutine(ShowDialogue(text));
+        dialogueCoroutine = StartCoroutine(ShowDialogue(text, dialogueParent, dialogueText));
     }
 
-    private IEnumerator ShowDialogue(string text)
+    public void SetDialogue(string text)
     {
-        dialogueParent.SetActive(true);
-        dialogueText.text = "";
+        //stop whatever dialogue is currently playing
+        if (dialogueCoroutine != null)
+        {
+            StopCoroutine(dialogueCoroutine);
+            dialogueCoroutine = null;
+        }
+
+        //clear old text
+        dialogue2Text.text = "";
+
+        //start new dialogue immediately
+        dialogueCoroutine = StartCoroutine(ShowDialogue(text, dialogueParent2, dialogue2Text));
+    }
+
+    private IEnumerator ShowDialogue(string text, GameObject dialogueParentObject, TMP_Text dialogueTextObject)
+    {
+        dialogueParentObject.SetActive(true);
+        dialogueTextObject.text = "";
 
         //typewriter
         foreach (char letter in text)
         {
-            dialogueText.text += letter;
+            dialogueTextObject.text += letter;
             PlaySound();
 
             yield return new WaitForSeconds(typeSpeed);
@@ -58,8 +80,8 @@ public class DialogueManager : MonoBehaviour
 
         yield return new WaitForSeconds(timeAfterText);
 
-        dialogueText.text = "";
-        dialogueParent.SetActive(false);
+        dialogueTextObject.text = "";
+        dialogueParentObject.SetActive(false);
 
         dialogueCoroutine = null;
     }

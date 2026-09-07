@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NarratorTrigger
   narratorManager: {fileID: 0}
+  levelOneInteractions: {fileID: 0}
   enterTriggerID: Office
   exitTriggerID: 
   dangerSigns: []
@@ -3614,7 +3615,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 120764, guid: be523d7c447344ad7a4b2ee1c2588fb3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be523d7c447344ad7a4b2ee1c2588fb3, type: 3}
