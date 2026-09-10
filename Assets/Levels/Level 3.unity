@@ -487,11 +487,6 @@ MonoBehaviour:
   roomBTarget: {fileID: 704111992}
   navMeshLink: {fileID: 55924372}
   animator: {fileID: 133298743}
-  isLocked: 0
-  requiredItem: 
-  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
-  objectiveDialogue: 
-  objectiveOrders: 
 --- !u!1 &74631745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,7 +3318,7 @@ Transform:
   m_GameObject: {fileID: 371846646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.55, y: 0, z: 4.19}
+  m_LocalPosition: {x: -5.77, y: 0, z: 4.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8717,10 +8712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a6c25d47fe2dd4dbc66ea2135dd728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveManager
-  currentObjectiveIndex: 0
-  currentObjective: 
-  dialogueManager: {fileID: 178777724}
-  objectives: []
 --- !u!1001 &477381511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9077,9 +9068,6 @@ PrefabInstance:
       addedObject: {fileID: 484314522}
     - targetCorrespondingSourceObject: {fileID: 3315489266759930359, guid: f355da60777d10946920a8b633e6b316, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 484314524}
-    - targetCorrespondingSourceObject: {fileID: 3315489266759930359, guid: f355da60777d10946920a8b633e6b316, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 484314523}
   m_SourcePrefab: {fileID: 100100000, guid: f355da60777d10946920a8b633e6b316, type: 3}
 --- !u!4 &484314520 stripped
@@ -9120,30 +9108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Outline
-  outlineMode: 4
+  outlineMode: 0
   outlineColor: {r: 0.3304112, g: 0.9339623, b: 0.8831462, a: 1}
   outlineWidth: 6
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &484314524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484314521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e1c47099e21854dbffe3866269e7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
-  objectiveOrder: 04000000
-  objectiveText: 
-  room: {fileID: 490649649}
-  targetPoint: {fileID: 424895499}
-  outline: {fileID: 484314523}
-  itemToGive: CabinetKey
 --- !u!1001 &490649646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9772,12 +9742,6 @@ PrefabInstance:
       addedObject: {fileID: 585657817}
     - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 585657821}
-    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 585657823}
-    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 585657822}
   m_SourcePrefab: {fileID: 100100000, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
 --- !u!4 &585657815 stripped
@@ -9806,26 +9770,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &585657821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585657816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 312f8ac514bdbfd41a78ede06103c946, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LockedCabinet
-  room: {fileID: 2101081325}
-  targetPoint: {fileID: 1901527947}
-  outline: {fileID: 585657822}
-  isLocked: 1
-  requiredItem: CabinetKey
-  lockedDialogue: This cabinet is locked. I wonder where the key is
-  objectiveOrder: 0
-  objectiveText: I think the key to unlock this cabinet is somewhere in another room.
 --- !u!114 &585657822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9844,24 +9788,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &585657823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585657816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e1c47099e21854dbffe3866269e7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
-  objectiveOrder: 05000000
-  objectiveText: say now
-  room: {fileID: 2101081325}
-  targetPoint: {fileID: 1901527947}
-  outline: {fileID: 585657822}
-  itemToGive: Room6Key
 --- !u!1001 &592477533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10716,8 +10642,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 55924373}
   buttonImage: {fileID: 729112852}
-  characterInventory: {fileID: 844960233}
-  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &729112854
@@ -16618,19 +16542,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &844960233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844960227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e8590363a8905d4fbe059a31a903603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterInventory
-  items: []
 --- !u!1 &859496882
 GameObject:
   m_ObjectHideFlags: 0
@@ -17414,8 +17325,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1104903515}
   buttonImage: {fileID: 915688150}
-  characterInventory: {fileID: 844960233}
-  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &915688152
@@ -17644,8 +17553,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1104903517}
   buttonImage: {fileID: 939701004}
-  characterInventory: {fileID: 844960233}
-  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &939701006
@@ -18074,8 +17981,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1199470965}
   buttonImage: {fileID: 974450408}
-  characterInventory: {fileID: 844960233}
-  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &974450410
@@ -18167,9 +18072,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5052875541734884603, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
       insertIndex: -1
       addedObject: {fileID: 844960232}
-    - targetCorrespondingSourceObject: {fileID: 5052875541734884603, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 844960233}
     - targetCorrespondingSourceObject: {fileID: 3799791237308991828, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
       insertIndex: -1
       addedObject: {fileID: 968497990}
@@ -19015,11 +18917,6 @@ MonoBehaviour:
   roomBTarget: {fileID: 584383060}
   navMeshLink: {fileID: 1104903514}
   animator: {fileID: 291692819}
-  isLocked: 0
-  requiredItem: 
-  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
-  objectiveDialogue: 
-  objectiveOrders: 
 --- !u!114 &1104903516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19063,12 +18960,6 @@ MonoBehaviour:
   roomBTarget: {fileID: 424895499}
   navMeshLink: {fileID: 1104903516}
   animator: {fileID: 1654915188}
-  isLocked: 1
-  requiredItem: Room4Key
-  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
-  objectiveDialogue: That door won't open either. Maybe there's something useful
-    in the cabinets back in the other room.
-  objectiveOrders: 01000000
 --- !u!1001 &1105845079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19842,12 +19733,6 @@ MonoBehaviour:
   roomBTarget: {fileID: 1610351552}
   navMeshLink: {fileID: 1199470964}
   animator: {fileID: 1170792067}
-  isLocked: 1
-  requiredItem: Room6Key
-  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
-  objectiveDialogue: Locked. I'll have to find a way to get that door open. Maybe
-    there's something useful in the cabinets in the first room.
-  objectiveOrders: 0000000006000000
 --- !u!1 &1242268557
 GameObject:
   m_ObjectHideFlags: 0
@@ -23632,11 +23517,6 @@ MonoBehaviour:
   roomBTarget: {fileID: 371846647}
   navMeshLink: {fileID: 1706189706}
   animator: {fileID: 403520229}
-  isLocked: 0
-  requiredItem: 
-  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
-  objectiveDialogue: 
-  objectiveOrders: 
 --- !u!1001 &1727723908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24110,8 +23990,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1706189707}
   buttonImage: {fileID: 1787438874}
-  characterInventory: {fileID: 844960233}
-  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &1787438876
@@ -26336,9 +26214,6 @@ PrefabInstance:
       addedObject: {fileID: 2069169007}
     - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2069169012}
-    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2069169011}
   m_SourcePrefab: {fileID: 100100000, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
 --- !u!4 &2069169005 stripped
@@ -26385,24 +26260,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &2069169012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2069169006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e1c47099e21854dbffe3866269e7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
-  objectiveOrder: 03000000
-  objectiveText: 
-  room: {fileID: 2030752232}
-  targetPoint: {fileID: 1767219743}
-  outline: {fileID: 2069169011}
-  itemToGive: Room4Key
 --- !u!1001 &2100258256
 PrefabInstance:
   m_ObjectHideFlags: 0
