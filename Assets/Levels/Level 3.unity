@@ -487,6 +487,11 @@ MonoBehaviour:
   roomBTarget: {fileID: 704111992}
   navMeshLink: {fileID: 55924372}
   animator: {fileID: 133298743}
+  isLocked: 0
+  requiredItem: 
+  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
+  objectiveDialogue: 
+  objectiveOrders: 
 --- !u!1 &74631745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,6 +2056,37 @@ Transform:
   - {fileID: 1589820519}
   m_Father: {fileID: 1990241611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &241274817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241274818}
+  m_Layer: 0
+  m_Name: TargetSpot 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &241274818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241274817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.38, y: 0, z: 4.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1104903510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &243407730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3235,7 +3271,6 @@ Transform:
   - {fileID: 661376303}
   - {fileID: 2052036274}
   - {fileID: 1940589322}
-  - {fileID: 2069169005}
   - {fileID: 1255335276}
   - {fileID: 1784440372}
   - {fileID: 1627197807}
@@ -3288,7 +3323,7 @@ Transform:
   m_GameObject: {fileID: 371846646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.47, y: 0, z: 4.19}
+  m_LocalPosition: {x: -6.55, y: 0, z: 4.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8515,7 +8550,6 @@ Transform:
   - {fileID: 897790342}
   - {fileID: 190133012}
   - {fileID: 1012676679}
-  - {fileID: 585657815}
   - {fileID: 477381512}
   - {fileID: 2032780029}
   - {fileID: 544721847}
@@ -8639,6 +8673,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2416265841384153443, guid: d9cce20405f4c6843a4907d2bd3d7652, type: 3}
   m_PrefabInstance: {fileID: 445642472}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &474907129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474907130}
+  - component: {fileID: 474907131}
+  m_Layer: 0
+  m_Name: ObjectiveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &474907130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474907129}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1464704566}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474907131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474907129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a6c25d47fe2dd4dbc66ea2135dd728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveManager
+  currentObjectiveIndex: 0
+  currentObjective: 
+  dialogueManager: {fileID: 178777724}
+  objectives: []
 --- !u!1001 &477381511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8896,7 +8978,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 587708748}
+    m_TransformParent: {fileID: 490649647}
     m_Modifications:
     - target: {fileID: 1665783389608545120, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_Layer
@@ -8908,7 +8990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754611878057632740, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3361747
+      value: 3.336175
       objectReference: {fileID: 0}
     - target: {fileID: 1754611878057632740, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_LocalScale.y
@@ -8964,7 +9046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3315489266759930359, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_Name
-      value: Shelf with Crates
+      value: Key for Cabinet
       objectReference: {fileID: 0}
     - target: {fileID: 3315489266759930359, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_Layer
@@ -8993,6 +9075,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3315489266759930359, guid: f355da60777d10946920a8b633e6b316, type: 3}
       insertIndex: -1
       addedObject: {fileID: 484314522}
+    - targetCorrespondingSourceObject: {fileID: 3315489266759930359, guid: f355da60777d10946920a8b633e6b316, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 484314524}
+    - targetCorrespondingSourceObject: {fileID: 3315489266759930359, guid: f355da60777d10946920a8b633e6b316, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 484314523}
   m_SourcePrefab: {fileID: 100100000, guid: f355da60777d10946920a8b633e6b316, type: 3}
 --- !u!4 &484314520 stripped
 Transform:
@@ -9020,6 +9108,42 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &484314523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484314521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 4
+  outlineColor: {r: 0.3304112, g: 0.9339623, b: 0.8831462, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &484314524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484314521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e1c47099e21854dbffe3866269e7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
+  objectiveOrder: 04000000
+  objectiveText: 
+  room: {fileID: 490649649}
+  targetPoint: {fileID: 424895499}
+  outline: {fileID: 484314523}
+  itemToGive: CabinetKey
 --- !u!1001 &490649646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9117,7 +9241,7 @@ PrefabInstance:
       addedObject: {fileID: 424895499}
     - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 587708748}
+      addedObject: {fileID: 484314520}
     - targetCorrespondingSourceObject: {fileID: 5629149620938061677, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: 1
       addedObject: {fileID: 74631746}
@@ -9562,7 +9686,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 435319638}
+    m_TransformParent: {fileID: 1502281655}
     m_Modifications:
     - target: {fileID: 2881172429609072410, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       propertyPath: m_Convex
@@ -9626,7 +9750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       propertyPath: m_Name
-      value: Props_Locker (1)
+      value: Cabinet/Key For Room 6
       objectReference: {fileID: 0}
     - target: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       propertyPath: m_Layer
@@ -9638,11 +9762,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5684521722381483193, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1901527947}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 585657817}
+    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 585657821}
+    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 585657823}
+    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 585657822}
   m_SourcePrefab: {fileID: 100100000, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
 --- !u!4 &585657815 stripped
 Transform:
@@ -9670,38 +9806,62 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!1 &587708747
-GameObject:
+--- !u!114 &585657821
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 587708748}
-  m_Layer: 7
-  m_Name: Furniture
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &587708748
-Transform:
+  m_GameObject: {fileID: 585657816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312f8ac514bdbfd41a78ede06103c946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LockedCabinet
+  room: {fileID: 2101081325}
+  targetPoint: {fileID: 1901527947}
+  outline: {fileID: 585657822}
+  isLocked: 1
+  requiredItem: CabinetKey
+  lockedDialogue: This cabinet is locked. I wonder where the key is
+  objectiveOrder: 0
+  objectiveText: I think the key to unlock this cabinet is somewhere in another room.
+--- !u!114 &585657822
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587708747}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 484314520}
-  m_Father: {fileID: 490649647}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 585657816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 0
+  outlineColor: {r: 0.15566039, g: 1, b: 0.9509471, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &585657823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585657816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e1c47099e21854dbffe3866269e7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
+  objectiveOrder: 05000000
+  objectiveText: say now
+  room: {fileID: 2101081325}
+  targetPoint: {fileID: 1901527947}
+  outline: {fileID: 585657822}
+  itemToGive: Room6Key
 --- !u!1001 &592477533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10556,6 +10716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 55924373}
   buttonImage: {fileID: 729112852}
+  characterInventory: {fileID: 844960233}
+  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &729112854
@@ -10883,6 +11045,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6006482817133594082, guid: fe19f183652f0434dba515f0a67f32fe, type: 3}
   m_PrefabInstance: {fileID: 787506095}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &790616131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790616132}
+  m_Layer: 0
+  m_Name: Target Spot 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &790616132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790616131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.22, y: 0, z: 4.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1990241613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &795472458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16425,6 +16618,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &844960233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844960227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8590363a8905d4fbe059a31a903603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterInventory
+  items: []
 --- !u!1 &859496882
 GameObject:
   m_ObjectHideFlags: 0
@@ -16780,6 +16986,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2467626795304145898, guid: d381f9aa2ffa5b14e8cccf3520a34b3d, type: 3}
   m_PrefabInstance: {fileID: 865768879}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &883405962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 883405963}
+  m_Layer: 0
+  m_Name: TargetSpot 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &883405963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883405962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.77, y: 0, z: 6.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1104903510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &884460245
 GameObject:
   m_ObjectHideFlags: 0
@@ -17177,6 +17414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1104903515}
   buttonImage: {fileID: 915688150}
+  characterInventory: {fileID: 844960233}
+  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &915688152
@@ -17405,6 +17644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1104903517}
   buttonImage: {fileID: 939701004}
+  characterInventory: {fileID: 844960233}
+  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &939701006
@@ -17833,6 +18074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1199470965}
   buttonImage: {fileID: 974450408}
+  characterInventory: {fileID: 844960233}
+  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &974450410
@@ -17924,6 +18167,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5052875541734884603, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
       insertIndex: -1
       addedObject: {fileID: 844960232}
+    - targetCorrespondingSourceObject: {fileID: 5052875541734884603, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 844960233}
     - targetCorrespondingSourceObject: {fileID: 3799791237308991828, guid: e95c2ce5d2eda7844991e4765ca30724, type: 3}
       insertIndex: -1
       addedObject: {fileID: 968497990}
@@ -18686,6 +18932,12 @@ PrefabInstance:
       insertIndex: 0
       addedObject: {fileID: 371846647}
     - targetCorrespondingSourceObject: {fileID: 8012695535908248047, guid: 634abc46713050745acf16afa07a2cc1, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 241274818}
+    - targetCorrespondingSourceObject: {fileID: 8012695535908248047, guid: 634abc46713050745acf16afa07a2cc1, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 883405963}
+    - targetCorrespondingSourceObject: {fileID: 8012695535908248047, guid: 634abc46713050745acf16afa07a2cc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1036759843}
     m_AddedComponents:
@@ -18759,10 +19011,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MehcnaicalDoors
   roomA: {fileID: 300984547}
   roomB: {fileID: 2030752232}
-  roomATarget: {fileID: 371846647}
+  roomATarget: {fileID: 883405963}
   roomBTarget: {fileID: 584383060}
   navMeshLink: {fileID: 1104903514}
   animator: {fileID: 291692819}
+  isLocked: 0
+  requiredItem: 
+  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
+  objectiveDialogue: 
+  objectiveOrders: 
 --- !u!114 &1104903516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18802,10 +19059,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MehcnaicalDoors
   roomA: {fileID: 300984547}
   roomB: {fileID: 490649649}
-  roomATarget: {fileID: 371846647}
+  roomATarget: {fileID: 241274818}
   roomBTarget: {fileID: 424895499}
   navMeshLink: {fileID: 1104903516}
   animator: {fileID: 1654915188}
+  isLocked: 1
+  requiredItem: Room4Key
+  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
+  objectiveDialogue: That door won't open either. Maybe there's something useful
+    in the cabinets back in the other room.
+  objectiveOrders: 01000000
 --- !u!1001 &1105845079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19579,6 +19842,12 @@ MonoBehaviour:
   roomBTarget: {fileID: 1610351552}
   navMeshLink: {fileID: 1199470964}
   animator: {fileID: 1170792067}
+  isLocked: 1
+  requiredItem: Room6Key
+  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
+  objectiveDialogue: Locked. I'll have to find a way to get that door open. Maybe
+    there's something useful in the cabinets in the first room.
+  objectiveOrders: 0000000006000000
 --- !u!1 &1242268557
 GameObject:
   m_ObjectHideFlags: 0
@@ -21318,6 +21587,7 @@ Transform:
   m_Children:
   - {fileID: 1850484538}
   - {fileID: 178777723}
+  - {fileID: 474907130}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477382929
@@ -21469,6 +21739,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: -1
       addedObject: {fileID: 754226297}
+    - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 585657815}
     - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: -1
       addedObject: {fileID: 435319638}
@@ -22818,11 +23091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1754611878057632740, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2121
+      value: 1.0920051
       objectReference: {fileID: 0}
     - target: {fileID: 1754611878057632740, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.41
+      value: -29.75
       objectReference: {fileID: 0}
     - target: {fileID: 1754611878057632740, guid: f355da60777d10946920a8b633e6b316, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22916,7 +23189,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.225, y: 0.5, z: 1.205}
+  m_Extents: {x: 0.11, y: 0.5, z: 1.025}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -23355,10 +23628,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MehcnaicalDoors
   roomA: {fileID: 1990241615}
   roomB: {fileID: 300984547}
-  roomATarget: {fileID: 704111992}
+  roomATarget: {fileID: 790616132}
   roomBTarget: {fileID: 371846647}
   navMeshLink: {fileID: 1706189706}
   animator: {fileID: 403520229}
+  isLocked: 0
+  requiredItem: 
+  lockedDialogue: This door is locked. I wonder if there's a key somewhere.
+  objectiveDialogue: 
+  objectiveOrders: 
 --- !u!1001 &1727723908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23551,6 +23829,37 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1767219742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767219743}
+  m_Layer: 7
+  m_Name: TargetPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767219743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767219742}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.168, y: -0.96, z: 1.132}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2069169005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1784440371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23801,6 +24110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButton
   door: {fileID: 1706189707}
   buttonImage: {fileID: 1787438874}
+  characterInventory: {fileID: 844960233}
+  characterDoorController: {fileID: 844960228}
   openColour: {r: 0.29156283, g: 0.9811321, b: 0.29156283, a: 1}
   closeColour: {r: 0.98823535, g: 0.43921572, b: 0.32941177, a: 1}
 --- !u!222 &1787438876
@@ -24608,6 +24919,37 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1901527946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901527947}
+  m_Layer: 7
+  m_Name: TargetPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1901527947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901527946}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.242, y: -0.976, z: 1.062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 585657815}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1921460632
 GameObject:
   m_ObjectHideFlags: 0
@@ -25274,6 +25616,9 @@ PrefabInstance:
       addedObject: {fileID: 704111992}
     - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 790616132}
+    - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 162001149}
     - targetCorrespondingSourceObject: {fileID: 5629149620938061677, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: -1
@@ -25633,6 +25978,9 @@ PrefabInstance:
       addedObject: {fileID: 584383060}
     - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2069169005}
+    - targetCorrespondingSourceObject: {fileID: 5433739482369302974, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 370404328}
     - targetCorrespondingSourceObject: {fileID: 5629149620938061677, guid: e16f938b7cf9b2f449760b5954106360, type: 3}
       insertIndex: -1
@@ -25906,7 +26254,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 370404328}
+    m_TransformParent: {fileID: 2030752230}
     m_Modifications:
     - target: {fileID: 3579617770444105433, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       propertyPath: m_Layer
@@ -25966,7 +26314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       propertyPath: m_Name
-      value: Props_Locker (2)
+      value: Key for Room4
       objectReference: {fileID: 0}
     - target: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       propertyPath: m_Layer
@@ -25978,11 +26326,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5684521722381483193, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1767219743}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2069169007}
+    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2069169012}
+    - targetCorrespondingSourceObject: {fileID: 6228298977937042409, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2069169011}
   m_SourcePrefab: {fileID: 100100000, guid: 4c5e2ed93e1657e48987e24141fce4d9, type: 3}
 --- !u!4 &2069169005 stripped
 Transform:
@@ -26010,6 +26367,42 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &2069169011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069169006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 0
+  outlineColor: {r: 0.30709326, g: 0.9716981, b: 0.83795935, a: 1}
+  outlineWidth: 6
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &2069169012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069169006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e1c47099e21854dbffe3866269e7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyObject
+  objectiveOrder: 03000000
+  objectiveText: 
+  room: {fileID: 2030752232}
+  targetPoint: {fileID: 1767219743}
+  outline: {fileID: 2069169011}
+  itemToGive: Room4Key
 --- !u!1001 &2100258256
 PrefabInstance:
   m_ObjectHideFlags: 0
