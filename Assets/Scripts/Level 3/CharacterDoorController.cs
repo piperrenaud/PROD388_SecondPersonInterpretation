@@ -24,10 +24,14 @@ public class CharacterDoorController : MonoBehaviour
     private MehcnaicalDoors targetDoor;
     private Room targetRoom;
 
+    private MehcnaicalDoors lockedDoorTarget;
+
     private Vector3 targetPosition;
 
     private float footstepTimer;
     private AudioSource source;
+
+    private bool goingToObjective;
 
     public Room CurrentRoom => currentRoom;
 
@@ -100,6 +104,46 @@ public class CharacterDoorController : MonoBehaviour
 
     private void Update()
     {  
+        //going to objective targetpoint logic
+        if (goingToObjective)
+        {
+            if (agent.pathPending) return;
+
+            UpdateMovementAnimation();
+
+            float distanceToObjective = Vector3.Distance(transform.position, targetPosition);
+
+            if (distanceToObjective <= roomDetectionDistance)
+            {
+                goingToObjective = false;
+                StopMoving() ;
+            }
+
+            return;
+        }
+
+        //going to locked door logic
+        if (lockedDoorTarget != null)
+        {
+            if (agent.pathPending) return;
+
+            UpdateMovementAnimation();
+
+            float distanceToDoor = Vector3.Distance(transform.position, targetPosition);
+
+            if (distanceToDoor <= roomDetectionDistance)
+            {
+                MehcnaicalDoors door = lockedDoorTarget;
+
+                lockedDoorTarget = null;
+
+                StopMoving() ;
+                door.OnLockedDoorReached();
+            }
+
+            return;
+        }
+
         //not travelling through a door
         if (targetDoor == null)
         {
@@ -146,6 +190,8 @@ public class CharacterDoorController : MonoBehaviour
         {
             doorToClose.CloseDoor(true);
         }
+
+        TryToGoToObjectiveTarget();
     }
 
     private void StopMoving()
@@ -191,5 +237,56 @@ public class CharacterDoorController : MonoBehaviour
         {
             footstepTimer = 0f;
         }
+    }
+
+    public void GoToLockedDoor(MehcnaicalDoors door)
+    {
+        if (door == null) return;
+
+        //dont start same approach again
+        if (lockedDoorTarget == door) return;
+
+        lockedDoorTarget = door;
+
+        Transform destination = door.GetLockedDoorTarget();
+
+        if (destination == null)
+        {
+            lockedDoorTarget = null;
+            return;
+        }
+
+        targetPosition = destination.position;
+
+        agent.isStopped = false;
+        agent.SetDestination(targetPosition);
+
+        animator.SetBool("IsRunning", true);
+    }
+
+    private bool TryToGoToObjectiveTarget()
+    {
+        if (ObjectiveManager.Instance == null) return false;
+
+        ObjectiveArea objective = ObjectiveManager.Instance.CurrentObjective();
+
+        if (objective == null) return false;
+
+        //objective in current room?
+        if (objective.Room != currentRoom) return false;
+
+        //objective has target point?
+        if (objective.TargetPoint == null) return false;
+
+        goingToObjective = true;
+
+        targetPosition = objective.TargetPoint.position;
+
+        agent.isStopped = false;
+        agent.SetDestination(targetPosition);
+
+        animator.SetBool("IsRunning", true);
+
+        return true;
     }
 }

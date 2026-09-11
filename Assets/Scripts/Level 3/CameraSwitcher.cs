@@ -9,9 +9,12 @@ public class CameraSwitcher : MonoBehaviour
     [SerializeField] private TMP_Text cameraText;
 
     private int currentCameraIndex = 0;
+    private AudioSource audioSource;
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         if (cameras == null || cameras.Length == 0)
         {
             Debug.LogWarning("CameraSwitcher: no cameras assigned");
@@ -44,6 +47,7 @@ public class CameraSwitcher : MonoBehaviour
         if (currentCameraIndex < 0) currentCameraIndex = cameras.Length - 1;
         if (currentCameraIndex >= cameras.Length) currentCameraIndex = 0;
 
+        audioSource.Play();
         SetActiveCamera(currentCameraIndex);
     }
 

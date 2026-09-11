@@ -15,14 +15,60 @@ public class MehcnaicalDoors : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
+    [Header("Locked?")]
+    [SerializeField] private bool isLocked = false;
+    [SerializeField] private bool isDoor3 = false;
+    [SerializeField] private bool isDoor5 = false;
+    [SerializeField] private string requiredItem;
+    [SerializeField] private string lockedDoorText = "Hmm this door is locked.";
+    [SerializeField] private Room beforeLockedRoom;
+    [SerializeField] private ObjectiveArea doorsObjective;
+
+    [Header("Character")]
+    [SerializeField] private CharacterDoorController character;
+    [SerializeField] private DialogueManager dialogueManager;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip openAudio;
+    [SerializeField] private AudioSource audioSource;
+
     public Room RoomA => roomA;
     public Room RoomB => roomB;
 
     public bool IsOpen { get; private set; }
+    public bool IsLocked => isLocked;
+
+    private Inventory inventory;
+
+    private void Start()
+    {
+        inventory = character.GetComponent<Inventory>();
+    }
+    private void Update()
+    {
+        if (inventory != null)
+        {
+            if (inventory.HasItem(requiredItem))
+            {
+                isLocked = false;
+            }
+        }
+    }
 
     public void OpenDoor()
     {
         if (IsOpen) return;
+
+        //Locked door
+        if (isLocked)
+        {
+            if ((isDoor3 || isDoor5) && character != null && character.CurrentRoom == beforeLockedRoom)
+            {
+                character.GoToLockedDoor(this);
+            }
+
+            return;
+        }
 
         IsOpen = true;
 
@@ -32,6 +78,7 @@ public class MehcnaicalDoors : MonoBehaviour
         }
 
         animator.SetTrigger("Open");
+        audioSource.PlayOneShot(openAudio);
 
         DoorManager.Instance.SetOpenDoor(this);
     }
@@ -80,5 +127,21 @@ public class MehcnaicalDoors : MonoBehaviour
     {
         if (IsOpen) CloseDoor();
         else OpenDoor();
+    }
+
+    public void OnLockedDoorReached()
+    {
+        if (doorsObjective != null && doorsObjective.ObjectiveActive)
+            return;
+
+        //shelf objective is active, don't want door dialogue being triggered over it
+        if (isDoor3 && ObjectiveManager.Instance.CurrentObjectiveIndex == 2) return;
+
+        dialogueManager.SetText(lockedDoorText);
+    }
+
+    public Transform GetLockedDoorTarget()
+    {
+        return roomATarget;
     }
 }

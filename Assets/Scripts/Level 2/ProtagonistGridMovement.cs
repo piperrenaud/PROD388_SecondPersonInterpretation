@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
 
 public class ProtagonistGridMovement : MonoBehaviour
 {
@@ -22,6 +21,13 @@ public class ProtagonistGridMovement : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] footstepSounds;
+    [SerializeField, Range(0f, 1f)] private float volume = 1f;
+    [SerializeField] private float minPitch = 0.95f;
+    [SerializeField] private float maxPitch = 1.05f;
+    [SerializeField] private float footstepInterval = 0.4f;
+
     [Header("Doors")]
     [SerializeField] private DoorConnection[] doors;
     [SerializeField] private float doorOpenDelay = 1f;
@@ -32,12 +38,23 @@ public class ProtagonistGridMovement : MonoBehaviour
     private bool isMoving = false;
     private Vector3 gridOrigin;
 
+    private float footstepTimer;
+    private AudioSource source;
+    private bool isRunning = false;
+
     private void Start()
     {
         //assumes protagonist starts in center of room
         gridOrigin = transform.position;
 
         animator.SetBool("IsRunning", false);
+
+        source = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        HandleFootsteps();
     }
 
     public void MoveForward()
@@ -168,6 +185,8 @@ public class ProtagonistGridMovement : MonoBehaviour
 
         //start running
         animator.SetBool("IsRunning", true);
+        isRunning = true;
+        footstepTimer = 0f;
 
         //move protagonist
         Vector3 startPositon = transform.position;
@@ -190,6 +209,7 @@ public class ProtagonistGridMovement : MonoBehaviour
 
         //stop running
         animator.SetBool("IsRunning", false);
+        isRunning = false;
 
         //close door
         yield return new WaitForSeconds(doorCloseDelay);
@@ -261,5 +281,35 @@ public class ProtagonistGridMovement : MonoBehaviour
         directionName = directionNames[randomIndex];
 
         return directions[randomIndex];
+    }
+
+    private void PlayFootstep()
+    {
+        if (footstepSounds == null || footstepSounds.Length == 0 || source == null) return;
+
+        AudioClip clip = footstepSounds[Random.Range(0, footstepSounds.Length)];
+
+        if (clip == null) return;
+
+        source.pitch = Random.Range(minPitch, maxPitch);
+
+        source.PlayOneShot(clip, volume);
+    }
+
+    private void HandleFootsteps()
+    {
+        if (!isMoving)
+        {
+            footstepTimer = 0f;
+            return;
+        }
+
+        footstepTimer -= Time.deltaTime;
+
+        if (isRunning && footstepTimer <= 0f)
+        {
+            PlayFootstep();
+            footstepTimer = footstepInterval;
+        }
     }
 }

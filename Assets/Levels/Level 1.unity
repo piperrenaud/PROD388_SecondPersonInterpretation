@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3706,7 +3706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 813458967551533558, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 936459307532799533, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: narratorManager
@@ -3970,7 +3970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9827,7 +9827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10179,7 +10179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11675,7 +11675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13734,7 +13734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14155,7 +14155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14271,7 +14271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15882,7 +15882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 813458967551533558, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 936459307532799533, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: narratorManager
@@ -16137,7 +16137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 813458967551533558, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 936459307532799533, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: enterTriggerID
@@ -25219,7 +25219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26708,6 +26708,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005642837}
     m_Modifications:
+    - target: {fileID: 813458967551533558, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: m_Volume
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 936459307532799533, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: narratorManager
       value: 
@@ -27426,7 +27430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28468,7 +28472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29687,7 +29691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31160,7 +31164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31600,7 +31604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33209,7 +33213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33339,7 +33343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34232,7 +34236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34353,7 +34357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6186583397427644780, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36640,6 +36644,10 @@ PrefabInstance:
       propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 813458967551533558, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
+      propertyPath: m_Volume
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 936459307532799533, guid: edb9bd3cd78c2e44ea7ba013a4166252, type: 3}
       propertyPath: narratorManager
       value: 
@@ -36968,7 +36976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1266251923264108239, guid: df608f12c52f14b4893aa583747aac69, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1689787682215728744, guid: df608f12c52f14b4893aa583747aac69, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -37020,7 +37028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2487070769809403878, guid: df608f12c52f14b4893aa583747aac69, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2552651496656085352, guid: df608f12c52f14b4893aa583747aac69, type: 3}
       propertyPath: m_Intensity
@@ -37375,7 +37383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 812664742952437801, guid: 0a268b029c7e0c24292bfeffa5214a42, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 961529380283774816, guid: 0a268b029c7e0c24292bfeffa5214a42, type: 3}
       propertyPath: m_Layer
@@ -37407,7 +37415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3029954820257851891, guid: 0a268b029c7e0c24292bfeffa5214a42, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3033486088112179904, guid: 0a268b029c7e0c24292bfeffa5214a42, type: 3}
       propertyPath: m_Layer
@@ -37539,7 +37547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7338938461344273510, guid: 0a268b029c7e0c24292bfeffa5214a42, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7511103580337544487, guid: 0a268b029c7e0c24292bfeffa5214a42, type: 3}
       propertyPath: m_Layer
