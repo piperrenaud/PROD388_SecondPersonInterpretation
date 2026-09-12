@@ -137,7 +137,7 @@ public class MehcnaicalDoors : MonoBehaviour
         //shelf objective is active, don't want door dialogue being triggered over it
         if (isDoor3 && ObjectiveManager.Instance.CurrentObjectiveIndex == 2) return;
 
-        dialogueManager.SetText(lockedDoorText);
+        dialogueManager.SetProtagText(lockedDoorText);
     }
 
     public Transform GetLockedDoorTarget()

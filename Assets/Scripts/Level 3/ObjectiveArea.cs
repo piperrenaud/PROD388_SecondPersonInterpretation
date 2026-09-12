@@ -45,7 +45,7 @@ public class ObjectiveArea : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        dialogueManager.SetText(objectiveDialogue);
+        dialogueManager.SetProtagText(objectiveDialogue);
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
 
         //if objective results in item (e.g. key)

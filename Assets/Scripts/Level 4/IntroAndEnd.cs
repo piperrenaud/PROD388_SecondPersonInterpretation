@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class IntroAndEnding : MonoBehaviour
+public class IntroAndEnd : MonoBehaviour
 {
     [Header("Fade to/from Black")]
     [SerializeField] private Animator animator;
@@ -10,10 +10,10 @@ public class IntroAndEnding : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private DialogueManager dialogueManager;
-    [SerializeField] private CharacterDoorController character;
-    [SerializeField] private ObjectiveManager objectiveManager;
-    [SerializeField] private CameraSwitcher cameraSwitcher;
-    [SerializeField] private RandomDialogue randomDialogue;
+    [SerializeField] private SpiritController playerMovement;
+    [SerializeField] private ObjectPossession objectPosession;
+    [SerializeField] private ProtagonistWander protagWander;
+    [SerializeField] private LinearDialogueLines linearDialogueLines;
 
     [Header("Intro Dialogue")]
     [SerializeField] private string[] introLines;
@@ -26,10 +26,10 @@ public class IntroAndEnding : MonoBehaviour
 
     private void Awake()
     {
-        character.enabled = false;
-        objectiveManager.enabled = false;
-        cameraSwitcher.enabled = false;
-        randomDialogue.enabled = false;
+        playerMovement.enabled = false;
+        objectPosession.enabled = false;
+        linearDialogueLines.enabled = false;
+        protagWander.enabled = false;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -62,9 +62,9 @@ public class IntroAndEnding : MonoBehaviour
 
     private void StartLevel()
     {
-        character.enabled = true;
-        objectiveManager.enabled = true;
-        cameraSwitcher.enabled = true;
+        objectPosession.enabled = true;
+        playerMovement.enabled = true;
+        protagWander.enabled = true;
 
         fadeParent.SetActive(false);
 
@@ -82,12 +82,7 @@ public class IntroAndEnding : MonoBehaviour
             yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
         }
 
-        randomDialogue.enabled = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        EndLevel();
+        linearDialogueLines.enabled = true;
     }
 
     private IEnumerator EndDialogue()
@@ -105,15 +100,15 @@ public class IntroAndEnding : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene("Level 4");
+        SceneManager.LoadScene("Level 5");
     }
 
-    private void EndLevel()
+    public void EndLevel()
     {
-        character.enabled = false;
-        objectiveManager.enabled = false;
-        cameraSwitcher.enabled = false;
-        randomDialogue.enabled= false;
+        objectPosession.enabled = false;
+        playerMovement.enabled = false;
+        linearDialogueLines.enabled = false;
+        protagWander.enabled = false;
 
         fadeParent.SetActive(true);
 

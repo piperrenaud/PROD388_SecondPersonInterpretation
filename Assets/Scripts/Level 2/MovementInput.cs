@@ -74,7 +74,7 @@ public class MovementInput : MonoBehaviour
         {
             if (commandDialogue.word.Trim().ToLower() == command)
             {
-                dialogueManager.SetText(commandDialogue.dialogue);
+                dialogueManager.SetProtagText(commandDialogue.dialogue);
 
                 movementInput.text = "";
                 movementInput.ActivateInputField();
@@ -104,7 +104,7 @@ public class MovementInput : MonoBehaviour
                 break;
 
             default:
-                dialogueManager.SetText(invalidCommandText); 
+                dialogueManager.SetProtagText(invalidCommandText); 
                 break;
         }
 
@@ -130,7 +130,7 @@ public class MovementInput : MonoBehaviour
             yield break;
         }
 
-        dialogueManager.SetText("I'm going to try going " + directionName);
+        dialogueManager.SetProtagText("I'm going to try going " + directionName);
 
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
 

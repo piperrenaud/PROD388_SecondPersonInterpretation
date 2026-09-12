@@ -81,7 +81,7 @@ public class FailedExperiment : MonoBehaviour
 
         foreach (var line in lines)
         {
-            dialogueManager.SetDialogue(line);
+            dialogueManager.SetNarratorText(line);
             yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
         }
 

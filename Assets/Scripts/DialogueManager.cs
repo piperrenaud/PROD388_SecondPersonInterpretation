@@ -10,9 +10,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float timeAfterText = 2.5f;
     [SerializeField] private float typeSpeed = 0.05f;
 
-    [Header("Dialogue Type 2")]
-    [SerializeField] private GameObject dialogueParent2;
-    [SerializeField] private TMP_Text dialogue2Text;
+    [Header("Narration Dialogue")]
+    [SerializeField] private GameObject narrationDialogueParent;
+    [SerializeField] private TMP_Text narrationDialogueText;
+
+    [Header("Player Dialogue")]
+    [SerializeField] private GameObject playerDialogueParent;
+    [SerializeField] private TMP_Text playerDialogueText;
 
     [Header("Audio")]
     [SerializeField] private AudioClip[] clips;
@@ -26,13 +30,14 @@ public class DialogueManager : MonoBehaviour
 
     public void Awake()
     {
-        if (dialogueParent2 != null) dialogueParent2.SetActive(false);
+        if (narrationDialogueParent != null) narrationDialogueParent.SetActive(false);
+        if (playerDialogueParent != null) playerDialogueParent.SetActive(false);
 
         dialogueParent.SetActive(false);
         source = GetComponent<AudioSource>();
     }
 
-    public void SetText(string text)
+    public void SetProtagText(string text)
     {
         //stop whatever dialogue is currently playing
         if (dialogueCoroutine != null)
@@ -48,7 +53,7 @@ public class DialogueManager : MonoBehaviour
         dialogueCoroutine = StartCoroutine(ShowDialogue(text, dialogueParent, dialogueText));
     }
 
-    public void SetDialogue(string text)
+    public void SetNarratorText(string text)
     {
         //stop whatever dialogue is currently playing
         if (dialogueCoroutine != null)
@@ -58,10 +63,26 @@ public class DialogueManager : MonoBehaviour
         }
 
         //clear old text
-        dialogue2Text.text = "";
+        narrationDialogueText.text = "";
 
         //start new dialogue immediately
-        dialogueCoroutine = StartCoroutine(ShowDialogue(text, dialogueParent2, dialogue2Text));
+        dialogueCoroutine = StartCoroutine(ShowDialogue(text, narrationDialogueParent, narrationDialogueText));
+    }
+
+    public void SetPlayerText(string text)
+    {
+        //stop whatever dialogue is currently playing
+        if (dialogueCoroutine != null)
+        {
+            StopCoroutine(dialogueCoroutine);
+            dialogueCoroutine = null;
+        }
+
+        //clear old text
+        playerDialogueText.text = "";
+
+        //start new dialogue immediately
+        dialogueCoroutine = StartCoroutine(ShowDialogue(text, playerDialogueParent, playerDialogueText));
     }
 
     private IEnumerator ShowDialogue(string text, GameObject dialogueParentObject, TMP_Text dialogueTextObject)

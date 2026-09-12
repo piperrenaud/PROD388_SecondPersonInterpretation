@@ -137,7 +137,7 @@ public class NarratorManager : MonoBehaviour
         currentPriority = eventData.priority;
 
         //interrupt current dialogue
-        dialogueManager.SetText(dialogue);
+        dialogueManager.SetProtagText(dialogue);
 
         //respawn events wait for this dialogue to finish
         if (eventID.Contains("Respawn"))

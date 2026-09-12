@@ -91,7 +91,7 @@ public class ProtagonistGridMovement : MonoBehaviour
             targetGridPosiion.y < 0 ||
             targetGridPosiion.y >= rows)
         {
-            dialogueManager.SetText(outsideGrid);
+            dialogueManager.SetProtagText(outsideGrid);
             return;
         }
 
@@ -100,14 +100,14 @@ public class ProtagonistGridMovement : MonoBehaviour
 
         if (connectingDoor == null)
         {
-            dialogueManager.SetText(outsideGrid);
+            dialogueManager.SetProtagText(outsideGrid);
             return;
         }
 
         //check if door is blocked
         if (connectingDoor.IsBlocked)
         {
-            dialogueManager.SetText(connectingDoor.BlockedDialogue);
+            dialogueManager.SetProtagText(connectingDoor.BlockedDialogue);
             return;
         }
 

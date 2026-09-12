@@ -4,12 +4,18 @@ using UnityEngine.InputSystem;
 public class ObjectPossession : MonoBehaviour
 {
     [Header("Player")]
-    [SerializeField] private GameObject playerBody;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private MonoBehaviour playerMovement;
 
     [Header("Object Camera")]
     [SerializeField] private string objectCameraTag = "ObjectCamera";
+
+    [Header("Possessed Object Movement")]
+    [SerializeField] private float objectMoveSpeed = 5f;
+
+    [Header("Dragging Audio")]
+    [SerializeField] private AudioSource draggingAudioSource;
+    [SerializeField] private AudioClip[] draggingClip;
 
     private HoverOutline hoverOutline;
 
@@ -24,6 +30,12 @@ public class ObjectPossession : MonoBehaviour
 
         if (playerCamera == null)
             playerCamera = Camera.main;
+
+        if (draggingAudioSource != null)
+        {
+            draggingAudioSource.loop = true;
+            draggingAudioSource.playOnAwake = false;
+        }
     }
 
     private void Update()
@@ -37,10 +49,16 @@ public class ObjectPossession : MonoBehaviour
             TryPossess();
         }
 
-        //exit possession
-        if (isPossessing && Keyboard.current.leftShiftKey.wasPressedThisFrame)
+        //while possessing
+        if (isPossessing)
         {
-            ExitPossession();
+            HandleObjectMovement();
+
+            //exit possession
+            if (Keyboard.current.leftShiftKey.wasPressedThisFrame)
+            {
+                ExitPossession();
+            }
         }
     }
 
@@ -70,10 +88,7 @@ public class ObjectPossession : MonoBehaviour
             return;
         }
 
-        //disable player
-        if (playerBody != null)
-            playerBody.SetActive(false);
-
+        //disable player object movement/camera
         if (playerMovement != null)
             playerMovement.enabled = false;
 
@@ -83,7 +98,77 @@ public class ObjectPossession : MonoBehaviour
         //enable object camera
         objectCamera.gameObject.SetActive(true);
 
+        possessedObject.GetComponent<Rigidbody>().isKinematic = false;
+
         isPossessing = true;
+    }
+
+    private void HandleObjectMovement()
+    {
+        if (possessedObject == null || objectCamera == null)
+        {
+            StopDraggingSound();
+            return;
+        }
+
+        Vector2 input = Vector2.zero;
+
+        //WASD
+        if (Keyboard.current.wKey.isPressed) input.y += 1f;
+        if (Keyboard.current.sKey.isPressed) input.y -= 1f;
+        if (Keyboard.current.dKey.isPressed) input.x += 1f;
+        if (Keyboard.current.aKey.isPressed) input.x -= 1f;
+
+        //stop diag movement from being faster
+        if (input.sqrMagnitude > 1f) input.Normalize();
+
+        bool isMoving = input.sqrMagnitude > 0f;
+
+        if (!isMoving)
+        {
+            StopDraggingSound();
+            return;
+        }
+
+        //camera dir
+        Vector3 forward = objectCamera.transform.forward;
+        Vector3 right = objectCamera.transform.right;
+
+        forward.y = 0f;
+        right.y = 0f;
+
+        forward.Normalize();
+        right.Normalize();
+
+        //camera relative movement
+        Vector3 movement = forward * input.y + right * input.x;
+
+        possessedObject.transform.position += movement * objectMoveSpeed * Time.deltaTime;
+
+        StartDraggingSound();
+    }
+
+    private void StartDraggingSound()
+    {
+        if (draggingAudioSource == null) return;
+        if (draggingAudioSource.isPlaying) return;
+        if (draggingClip == null || draggingClip.Length == 0) return;
+
+        AudioClip clip = draggingClip[Random.Range(0, draggingClip.Length)];
+
+        draggingAudioSource.clip = clip;
+        draggingAudioSource.loop = true;
+        draggingAudioSource.Play();
+    }
+
+    private void StopDraggingSound()
+    {
+        if (draggingAudioSource == null) return;
+
+        if (draggingAudioSource.isPlaying)
+        {
+            draggingAudioSource.Stop();
+        }
     }
 
     private void ExitPossession()
@@ -91,14 +176,15 @@ public class ObjectPossession : MonoBehaviour
         if (!isPossessing)
             return;
 
+        StopDraggingSound();
+
         //disable object camera
         if (objectCamera != null)
             objectCamera.gameObject.SetActive(false);
 
-        //give player control back
-        if (playerBody != null)
-            playerBody.SetActive(true);
+        possessedObject.GetComponent<Rigidbody>().isKinematic = true;
 
+        //enable player object movement/camera
         if (playerMovement != null)
             playerMovement.enabled = true;
 

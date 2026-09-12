@@ -14,8 +14,8 @@ public class SpiritController : MonoBehaviour
 
     [Header("Camera")]
     [SerializeField] private Camera playerCam;
-    [SerializeField] private float cameraDistance = 6f;
-    [SerializeField] private float cameraHeight = 2f;
+    [SerializeField] private float cameraDistance = 0f;
+    [SerializeField] private float cameraHeight = 0f;
     [SerializeField] private float mouseSensitivity = 0.1f;
     [SerializeField] private float maxLookAngle = 80f;
     [SerializeField] private float minLookAngle = -30f;

@@ -15,6 +15,9 @@ public class IntroDialogue : MonoBehaviour
     [TextArea(2, 4)]
     [SerializeField] private string[] lines;
 
+    [Header("Instructions")]
+    [SerializeField] private string[] instructions;
+
     private void Awake()
     {
         inputTextBox.SetActive(false);
@@ -41,7 +44,7 @@ public class IntroDialogue : MonoBehaviour
 
         foreach (var line in lines)
         {
-            dialogueManager.SetText(line);
+            dialogueManager.SetProtagText(line);
             yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
         }
 
@@ -52,7 +55,19 @@ public class IntroDialogue : MonoBehaviour
     {
         inputTextBox.SetActive(true);
         fadeFromBlackAnimator.gameObject.SetActive(false);
-        randomDialogue.enabled = true;
         movementInput.enabled = true;
+
+        StartCoroutine(Instructions());
+    }
+
+    private IEnumerator Instructions()
+    {
+        foreach (var line in instructions)
+        {
+            dialogueManager.SetPlayerText(line);
+            yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
+        }
+
+        randomDialogue.enabled = true;
     }
 }

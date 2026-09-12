@@ -1,12 +1,12 @@
 using System.Collections;
 using UnityEngine;
 
-public class RandomDialogue : MonoBehaviour
+public class LinearDialogueLines : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private DialogueManager dialogueManager;
 
-    [Header("Random Dialogue")]
+    [Header("Dialogue")]
     [TextArea(2, 4)]
     [SerializeField] private string[] dialogueLines;
 
@@ -14,45 +14,39 @@ public class RandomDialogue : MonoBehaviour
     [SerializeField] private float maximumDelay = 30f;
 
     private bool isRunning = false;
-    private int lastDialogueIndex = -1;
+    private int currentIndex = 0;
 
     private void Start()
     {
-        StartCoroutine(RandomDialogueLoop());
+        StartCoroutine(DialogueLoop());
     }
 
-    private IEnumerator RandomDialogueLoop()
+    private IEnumerator DialogueLoop()
     {
         isRunning = true;
 
         while (isRunning)
         {
+            if (dialogueLines == null || dialogueLines.Length == 0)
+            {
+                yield return null;
+                continue;
+            }
+
             //wait random amt of time
             float delay = Random.Range(minimumDelay, maximumDelay);
             yield return new WaitForSeconds(delay);
-
-            if (dialogueLines.Length == null || dialogueLines.Length == 0) continue;
 
             if (dialogueManager.IsDialogueRunning)
             {
                 yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
             }
 
-            //pick random line
-            int randomIndex;
+            string currentLine = dialogueLines[currentIndex];
 
-            do
-            {
-                randomIndex = Random.Range(0, dialogueLines.Length);
-            }
-            while (dialogueLines.Length > 1 && randomIndex == lastDialogueIndex);
+            dialogueManager.SetProtagText(currentLine);
 
-            lastDialogueIndex = randomIndex;
-
-            string randomLine = dialogueLines[randomIndex];
-
-
-            dialogueManager.SetProtagText(randomLine);
+            currentIndex++;
 
             yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
         }

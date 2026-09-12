@@ -40,7 +40,7 @@ public class EndTrigger : MonoBehaviour
 
         foreach (var line in lines)
         {
-            dialogueManager.SetText(line);
+            dialogueManager.SetProtagText(line);
             yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
         }
 
