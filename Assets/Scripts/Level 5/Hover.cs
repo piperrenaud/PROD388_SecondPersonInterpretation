@@ -60,10 +60,21 @@ public class Hover : MonoBehaviour
         if (!Keyboard.current.eKey.wasPressedThisFrame) return;
 
         OpenDoor door = currentOutline.GetComponentInParent<OpenDoor>();
-
         if (door != null)
         {
             door.Interact();
+        }
+
+        LeverSwitch lever = currentOutline.GetComponentInParent<LeverSwitch>();
+        if (lever != null)
+        {
+            lever.ToggleLever();
+        }
+
+        Key key = currentOutline.GetComponentInParent<Key>();
+        if (key != null)
+        {
+            key.PickUp();
         }
     }
 

@@ -8,6 +8,8 @@ public class OpenDoor : MonoBehaviour
 
     [Header("Locked?")]
     [SerializeField] private bool isLocked = false;
+    [SerializeField] private bool needsKey = false;
+    [SerializeField] private bool hasKey = false;
 
     [Header("Character")]
     [SerializeField] private PlayerMovement character;
@@ -42,6 +44,8 @@ public class OpenDoor : MonoBehaviour
 
     private void ToggleDoor()
     {
+        if (needsKey && !hasKey) return;
+
         if (animator == null)
         {
             Debug.LogError("No animator on door");
@@ -98,5 +102,23 @@ public class OpenDoor : MonoBehaviour
         isOpen = true;
 
         dialogueManager.SetProtagText("Hey my door just opened! We did it!");
+    }
+
+    public void KeyPickedUp()
+    {
+        isLocked = false;
+        hasKey = true;
+    }
+
+    public void Open()
+    {
+        isLocked = false;
+        needsKey = false;
+
+        AudioSource source = GetComponent<AudioSource>();
+
+        PlaySound(openDoorSounds, source);
+        animator.SetTrigger("Open");
+        isOpen = true;
     }
 }
