@@ -10,6 +10,7 @@ TagManager:
   - NPC
   - Object
   - DangerSign
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
@@ -19,10 +20,10 @@ TagManager:
   - UI
   - Wall
   - Obstacle
-  - 
-  - 
-  - 
-  - 
+  - ProtagBlockedWall
+  - PlayerBlockedWall
+  - Player
+  - Protag
   - 
   - 
   - 
