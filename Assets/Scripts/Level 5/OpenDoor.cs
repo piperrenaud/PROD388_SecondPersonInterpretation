@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class OpenDoor : MonoBehaviour
 {
@@ -7,7 +8,6 @@ public class OpenDoor : MonoBehaviour
 
     [Header("Locked?")]
     [SerializeField] private bool isLocked = false;
-    [SerializeField] private string lockedDoorText = "I think that door is locked.";
 
     [Header("Character")]
     [SerializeField] private PlayerMovement character;
@@ -34,11 +34,6 @@ public class OpenDoor : MonoBehaviour
 
         if (isLocked)
         {
-            if (dialogueManager != null)
-            {
-                dialogueManager.SetProtagText(lockedDoorText);
-            }
-
             return;
         }
 
@@ -86,4 +81,22 @@ public class OpenDoor : MonoBehaviour
 
         source.PlayOneShot(clip, volume);
     }  
+
+    public void UnlockPlayerDoor()
+    {
+        isLocked = false;
+    }
+
+    public void OpenProtagDoor()
+    {
+        isLocked = false;
+
+        AudioSource source = GetComponent<AudioSource>();
+
+        PlaySound(openDoorSounds, source);
+        animator.SetTrigger("Open");
+        isOpen = true;
+
+        dialogueManager.SetProtagText("Hey my door just opened! We did it!");
+    }
 }
