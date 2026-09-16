@@ -10,6 +10,10 @@ public class Key : MonoBehaviour
     [SerializeField] private GameObject[] blockers;
     [SerializeField] private GameObject switchSidesTrigger;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
+
     public void PickUp()
     {
         body.SetActive(false);
@@ -27,5 +31,7 @@ public class Key : MonoBehaviour
         switchSidesTrigger.SetActive(true);
 
         door.KeyPickedUp();
+
+        source.PlayOneShot(clip);
     }
 }

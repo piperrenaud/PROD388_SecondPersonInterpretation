@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private float cameraPitch;
     private float verticalVelocity;
     private float stepTimer;
+    private bool movementEnabled = true;
 
     private void Awake()
     {
@@ -54,9 +55,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector3 movement = transform.right * moveInput.x +
+        Vector3 movement = Vector3.zero;
+
+        if (movementEnabled)
+        {
+            movement = transform.right * moveInput.x +
                             transform.forward * moveInput.y;
-        movement *= moveSpeed;
+            movement *= moveSpeed;
+        }
 
         //gravity
         if (controller.isGrounded && verticalVelocity < 0)
@@ -147,5 +153,16 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void DisableMovement()
+    {
+        movementEnabled = false;
+        moveInput = Vector2.zero;
+    }
+
+    public void EnableMovement()
+    {
+        movementEnabled = true;
     }
 }

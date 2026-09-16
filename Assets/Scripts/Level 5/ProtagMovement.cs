@@ -102,6 +102,11 @@ public class ProtagMovement : MonoBehaviour
     {
         if (point == null) return;
 
+        if (currentPointIndex == 4)
+        {
+            transform.position = movementPoints[currentPointIndex].position;
+        }
+
         agent.isStopped = false;
         agent.SetDestination(point.position);
 
@@ -110,18 +115,13 @@ public class ProtagMovement : MonoBehaviour
             firstDoorTime = true;
             lastDoorTime = false;
             OpenFirstLastDoor();
-            StartCoroutine(RoomOneRoutine());
         }
 
-        if (currentPointIndex == 1) StartCoroutine(RoomTwoRoutine());
-        if (currentPointIndex == 2) StartCoroutine(RoomThreeRoutine());
-        if (currentPointIndex == 3) StartCoroutine(SwitchRoutine());
         if (currentPointIndex == 4)
         {
             lastDoorTime = true;
             firstDoorTime = false;
             OpenFirstLastDoor();
-            StartCoroutine(EndRoutine());
         }
     }
 
@@ -156,41 +156,12 @@ public class ProtagMovement : MonoBehaviour
         if (lastDoor != null && lastDoorTime)
         {
             lastDoor.Open();
+
+            ProtagDialogue protagDialogue = GetComponent<ProtagDialogue>();
+            if (protagDialogue != null)
+            {
+                protagDialogue.PlayDoorLine();
+            }
         }
-    }
-
-    private IEnumerator RoomOneRoutine()
-    {
-        yield return new WaitForSeconds(1f);
-
-        dialogueManager.SetProtagText("Im in room 1");
-    }
-
-    private IEnumerator RoomTwoRoutine()
-    {
-        yield return new WaitForSeconds(1f);
-
-        dialogueManager.SetProtagText("Im in room 2");
-    }
-
-    private IEnumerator RoomThreeRoutine()
-    {
-        yield return new WaitForSeconds(1f);
-
-        dialogueManager.SetProtagText("Im in room 3");
-    }
-
-    private IEnumerator SwitchRoutine()
-    {
-        yield return new WaitForSeconds(1f);
-
-        dialogueManager.SetProtagText("Im switching sides");
-    }
-
-    private IEnumerator EndRoutine()
-    {
-        yield return new WaitForSeconds(1f);
-
-        dialogueManager.SetProtagText("Im in the end room");
     }
 }

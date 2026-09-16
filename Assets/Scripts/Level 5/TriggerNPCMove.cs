@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriggerNPCMove : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private ProtagMovement protagMovement;
+    [SerializeField] private UnityEvent onTriggered;
 
     private bool hasTriggered = false;
     private void OnTriggerEnter(Collider other)
@@ -12,8 +13,7 @@ public class TriggerNPCMove : MonoBehaviour
         {
             if (other.CompareTag("Player"))
             {
-                protagMovement.MoveToNextPoint();
-                Debug.Log("Moving Protag to next point");
+                onTriggered.Invoke();
                 hasTriggered = true;
             }
         }

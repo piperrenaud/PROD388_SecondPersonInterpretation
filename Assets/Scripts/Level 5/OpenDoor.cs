@@ -18,6 +18,8 @@ public class OpenDoor : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip[] openDoorSounds;
     [SerializeField] private AudioClip[] closeDoorSounds;
+    [SerializeField] private AudioClip[] unlockDoorSounds;
+    [SerializeField] private AudioClip[] lockedDoorSounds;
     [SerializeField][Range(0f, 1f)] private float volume = 1f;
     [SerializeField] private float minPitch = 0.95f;
     [SerializeField] private float maxPitch = 1.05f;
@@ -36,7 +38,11 @@ public class OpenDoor : MonoBehaviour
 
         if (isLocked)
         {
+            AudioSource source = GetComponent<AudioSource>();
+            PlaySound(lockedDoorSounds, source);
+
             return;
+            
         }
 
         ToggleDoor();
@@ -89,6 +95,9 @@ public class OpenDoor : MonoBehaviour
     public void UnlockPlayerDoor()
     {
         isLocked = false;
+
+        AudioSource source = GetComponent<AudioSource>();
+        PlaySound(unlockDoorSounds, source);
     }
 
     public void OpenProtagDoor()
@@ -100,14 +109,15 @@ public class OpenDoor : MonoBehaviour
         PlaySound(openDoorSounds, source);
         animator.SetTrigger("Open");
         isOpen = true;
-
-        dialogueManager.SetProtagText("Hey my door just opened! We did it!");
     }
 
     public void KeyPickedUp()
     {
         isLocked = false;
         hasKey = true;
+
+        AudioSource source = GetComponent<AudioSource>();
+        PlaySound(unlockDoorSounds, source);
     }
 
     public void Open()
@@ -120,5 +130,18 @@ public class OpenDoor : MonoBehaviour
         PlaySound(openDoorSounds, source);
         animator.SetTrigger("Open");
         isOpen = true;
+    }
+
+    public void LockedEndDoor()
+    {
+        AudioSource source = GetComponent<AudioSource>();
+        PlaySound(lockedDoorSounds, source);
+
+        ProtagDialogue protagDialogue = FindFirstObjectByType<ProtagDialogue>();
+
+        if (protagDialogue != null )
+        {
+            protagDialogue.PlayNestPuzzleLine();
+        }
     }
 }

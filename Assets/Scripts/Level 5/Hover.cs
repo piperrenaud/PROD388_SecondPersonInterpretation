@@ -9,6 +9,8 @@ public class Hover : MonoBehaviour
 
     private Outline currentOutline;
 
+    private bool hasKey = false;
+
     private void Awake()
     {
         if (playerCam == null) playerCam = Camera.main;
@@ -62,7 +64,8 @@ public class Hover : MonoBehaviour
         OpenDoor door = currentOutline.GetComponentInParent<OpenDoor>();
         if (door != null)
         {
-            door.Interact();
+            if (!hasKey) door.Interact();
+            else door.LockedEndDoor();
         }
 
         LeverSwitch lever = currentOutline.GetComponentInParent<LeverSwitch>();
@@ -75,6 +78,7 @@ public class Hover : MonoBehaviour
         if (key != null)
         {
             key.PickUp();
+            hasKey = true;
         }
     }
 
