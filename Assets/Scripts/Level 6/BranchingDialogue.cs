@@ -58,6 +58,9 @@ public class BranchingDialogue : MonoBehaviour
     [SerializeField] private DialogueNode[] dialogueNodes;
     [SerializeField] private string startingNodeID;
 
+    [Header("Talking Characters")]
+    [SerializeField] private ExpressionController protagExpression;
+
     [Header("Typewriter")]
     [SerializeField] private float typeSpeed = 0.03f;
     [SerializeField] private float timeAfterText = 2.5f;
@@ -153,6 +156,8 @@ public class BranchingDialogue : MonoBehaviour
             StopCoroutine(advanceCoroutine);
         }
 
+        StartcharacterTalking();
+
         typewriterCoroutie = StartCoroutine(TypeLine(line));
 
         if (line.onLineStart != null)
@@ -178,6 +183,7 @@ public class BranchingDialogue : MonoBehaviour
         }
 
         typewriterCoroutie = null;
+        StopAllCharacterTalking();
         advanceCoroutine = StartCoroutine(WaitAndAdvance());
     }
 
@@ -331,6 +337,24 @@ public class BranchingDialogue : MonoBehaviour
             {
                 choiceButtons[i].gameObject.SetActive(false);
             }
+        }
+    }
+
+    private void StartcharacterTalking()
+    {
+        StopAllCharacterTalking();
+
+        if (protagExpression != null)
+        {
+            protagExpression.StartTalking();
+        }
+    }
+
+    private void StopAllCharacterTalking()
+    {
+        if (protagExpression != null)
+        {
+            protagExpression.StopTalking();
         }
     }
 
