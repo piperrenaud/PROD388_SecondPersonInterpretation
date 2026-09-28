@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private float verticalVelocity;
     private float stepTimer;
     private bool movementEnabled = true;
+    private bool mouseLookEnabled = true;
 
     private void Awake()
     {
@@ -81,6 +82,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMouseLook()
     {
+        if (!mouseLookEnabled) return;
+
         //horizontal
         float mouseX = lookInput.x * mouseSensitivity;
         transform.Rotate(Vector3.up * mouseX);
@@ -143,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
 
         source.PlayOneShot(clip, volume);
     }
-    
+
 
     public void OnLook(InputAction.CallbackContext context)
     {
@@ -165,4 +168,27 @@ public class PlayerMovement : MonoBehaviour
     {
         movementEnabled = true;
     }
+
+    public void SlowMovementSpeed()
+    {
+        moveSpeed = 0.5f;
+    }
+
+    public void RestoreMovementSpeed()
+    {
+        moveSpeed = 5f;
+    }
+
+    public void DisableMouseLook()
+    {
+        mouseLookEnabled = false;
+        lookInput = Vector2.zero;
+    }
+
+    public void EnableMouseLook()
+    {
+        mouseLookEnabled = true;
+        lookInput = Vector2.zero;
+    }
+
 }

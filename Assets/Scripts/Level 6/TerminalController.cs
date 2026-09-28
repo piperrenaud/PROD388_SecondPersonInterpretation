@@ -37,11 +37,15 @@ public class TerminalController : MonoBehaviour
 
     public void TurnOffTerminal()
     {
+        PlaySound();
+
         terminalParent.SetActive(false);
     }
 
     public void TurnOnTerminal()
     {
+        PlaySound();
+
         terminalParent.SetActive(true);
     }
 }

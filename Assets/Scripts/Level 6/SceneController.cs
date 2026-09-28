@@ -4,12 +4,6 @@ using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
-    [Header("Unity Error Popups")]
-    [SerializeField] private Image errorImage;
-    [SerializeField] private Texture awarenessError;
-    [SerializeField] private Texture missingObjectError;
-    [SerializeField] private Texture invalidObjectError;
-
     [Header("Objects to be deleted/disabled")]
     [SerializeField] private GameObject debrisParent;
     [SerializeField] private GameObject experimentParent;
@@ -18,41 +12,109 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject officeAreaParent;
     [SerializeField] private GameObject facilityWallsParent;
     [SerializeField] private GameObject facilitySetupParent;
+    [SerializeField] private GameObject wholeFacilityParent;
     [SerializeField] private GameObject playerBody;
 
-    [Header("Scripts to Manipulate")]
+    [Header("Objects to Manipulate")]
     [SerializeField] private PlayerMovement playerMovement;
-    
+    [SerializeField] private ProtagonistMovement protagonistMovement;
+    [SerializeField] private GameObject screenGlitch;
+    [SerializeField] private GameObject errorImage;
+    [SerializeField] private GameObject finalChoicesParent;
+
+    [Header("New Room")]
+    [SerializeField] private GameObject structureParent;
+    [SerializeField] private GameObject baseParent;
+    [SerializeField] private GameObject extraParent;
+
+    [Header("References")]
+    [SerializeField] private Transform terminalToFace;
+
+    [Header("Audio")]
+    [SerializeField] private float glitchVolumne = 1f;
+    [SerializeField] private AudioClip[] glitchClips;
+    [SerializeField] private float disableVolume = 1f;
+    [SerializeField] private AudioClip[] disableBeep;
+    [SerializeField] private float disappearVolume = 1f;
+    [SerializeField] private AudioClip[] disappearBeep;
+    [SerializeField] private float restoredVolume = 1f;
+    [SerializeField] private AudioClip[] restoredBeep;
 
 
-    public void ShowAwarenessError()
+    private AudioSource source;
+
+    public void Awake()
     {
-       //set error image to awarenesserror
+        source = GetComponent<AudioSource>();
+
+        errorImage.SetActive(false);
+        screenGlitch.SetActive(false);
+        finalChoicesParent.SetActive(false);
+
+        structureParent.SetActive(false);
+        baseParent.SetActive(false);
+        extraParent.SetActive(false);
+    }
+
+    public void ScreenFlicker()
+    {
+        screenGlitch.SetActive(true);
+        StartCoroutine(GlitchingScreen());
+    }
+
+    private IEnumerator GlitchingScreen()
+    {
+        Animator animator = screenGlitch.GetComponent<Animator>();
+        animator.SetTrigger("Glitch");
+
+        PlaySound(glitchClips, glitchVolumne);
+
+        yield return new WaitForSeconds(0.35f);
+        screenGlitch.SetActive(false);
     }
 
     public void ShowMissingObjectError()
     {
+        errorImage.SetActive(true);
 
+        StartCoroutine(ErrorPopup());
     }
 
-    public void ShowInvalidObjectError()
+    private IEnumerator ErrorPopup()
     {
+        Animator animator = errorImage.GetComponent<Animator>();
+        animator.SetTrigger("In");
 
+        yield return new WaitForSeconds(5f);
+
+        animator.SetTrigger("Out");
+        yield return new WaitForSeconds(0.2f);
+        errorImage.SetActive(false);
     }
+
 
     public void DisableFirstObject()
     {
+        protagonistMovement.TurnTo(terminalToFace);
         debrisParent.SetActive(false);
+
+        PlaySound(disappearBeep, disappearVolume);
     }
 
     public void DisableSecondObject()
     {
+        protagonistMovement.TurnTo(terminalToFace);
         experimentParent.SetActive(false);
+
+        PlaySound(disappearBeep, disappearVolume);
     }
 
     public void DisableThridObject()
     {
+        protagonistMovement.TurnTo(terminalToFace);
         facilityScifiWallsParent.SetActive(false);
+
+        PlaySound(disappearBeep, disappearVolume);
     }
 
     public void EnableInitialObjects()
@@ -60,97 +122,168 @@ public class SceneController : MonoBehaviour
         debrisParent.SetActive(true);
         experimentParent.SetActive(true);
         facilityScifiWallsParent.SetActive(true);
+        PlaySound(restoredBeep, restoredVolume);
     }
 
     public void DisableWholeScene()
     {
+        protagonistMovement.TurnTo(terminalToFace);
         StartCoroutine(SceneDisable());
     }
 
     private IEnumerator SceneDisable()
     {
         facilityFurnitureParent.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        PlaySound(disappearBeep, disappearVolume);
+        yield return new WaitForSeconds(1f);
 
         debrisParent.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        PlaySound(disappearBeep, disappearVolume);
+        yield return new WaitForSeconds(1f);
 
         experimentParent.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        PlaySound(disappearBeep, disappearVolume);
+        yield return new WaitForSeconds(1f);
 
         facilityScifiWallsParent.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        PlaySound(disappearBeep, disappearVolume);
+        yield return new WaitForSeconds(1f);
 
         officeAreaParent.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
-
         facilityWallsParent.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        PlaySound(disappearBeep, disappearVolume);
+        yield return new WaitForSeconds(1f);
 
         facilitySetupParent.SetActive(false);
+        PlaySound(disappearBeep, disappearVolume);
     }
 
     public void SlowPlayerMovement()
     {
+        //turns to look at terminal
+        protagonistMovement.TurnTo(terminalToFace);
+        playerMovement.SlowMovementSpeed();
+        PlaySound(disableBeep, disableVolume);
+    }
 
+    public void RestorePlayerMovementSpeed()
+    {
+        playerMovement.RestoreMovementSpeed();
     }
 
     public void DisablePlayerWASDMovement()
     {
-
+        protagonistMovement.TurnTo(terminalToFace);
+        playerMovement.DisableMovement();
+        PlaySound(disableBeep, disableVolume);
     }
 
     public void EnablePlayerWASDMovement()
     {
-
+        protagonistMovement.TurnTo(terminalToFace);
+        playerMovement.EnableMovement();
+        PlaySound(restoredBeep, restoredVolume);
     }
 
     public void DisablePlayerMouseLook()
     {
-
+        protagonistMovement.TurnTo(terminalToFace);
+        playerMovement.DisableMouseLook();
+        PlaySound(disableBeep, disableVolume);
     }
 
     public void EnablePlayerMouseLook()
     {
-
+        playerMovement.EnableMouseLook();
+        PlaySound(restoredBeep, restoredVolume);
     }    
 
     public void DisablePlayerBody()
     {
-
+        protagonistMovement.TurnTo(terminalToFace);
+        playerBody.SetActive(false);
+        PlaySound(disappearBeep, disappearVolume);
     }
 
     public void EnablePlayerBody()
     {
-
+        playerBody.SetActive(true);
+        PlaySound(restoredBeep, restoredVolume);
     }
 
     public void RemoveFacilityCompletely()
     {
-        facilitySetupParent.SetActive(false);
-    }
-
-    public void LeaveEnding()
-    {
-        //screen goes black
-        //"APPLICATION EXITING..."
-        //game 'closes'
-        //terminal window appears and displays "SEONCD_PERSON_STUDY, SUBJECT STATUS: ACTIVE"
-        //terminal closes
-        //game quits
+        protagonistMovement.TurnTo(terminalToFace);
+        wholeFacilityParent.SetActive(false);
+        PlaySound(disappearBeep, disappearVolume);
     }
 
     public void RebuildNewWorld()
     {
-        //start enabled parent objects of new world one by one
+        StartCoroutine(Rebuild());
     }
 
-    public void StayEnding()
+    private IEnumerator Rebuild()
     {
-        //fade to black
-        //terminal appears and shows "BUILDING..." 
-        //then "BUILD FAILED"
-        //protag says "oh."
-        //exit to main menu
+        yield return new WaitForSeconds(1f);
+
+        structureParent.SetActive(true);
+        PlaySound(restoredBeep, restoredVolume);
+        yield return new WaitForSeconds(0.5f);
+
+        baseParent.SetActive(true);
+        PlaySound(restoredBeep, restoredVolume);
+        yield return new WaitForSeconds(0.5f);
+
+        extraParent.SetActive(true);
+        PlaySound(restoredBeep, restoredVolume);
+    }
+
+    public void ShowFinalChoices()
+    {
+        finalChoicesParent.SetActive(true);
+
+        Button[] buttons = finalChoicesParent.GetComponentsInChildren<Button>();
+
+        foreach (Button button in buttons)
+        {
+            button.interactable = false;
+        }
+    }
+
+    public void EnableFinalChoices()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        playerMovement.DisableMouseLook();
+
+        Button[] buttons = finalChoicesParent.GetComponentsInChildren<Button>();
+
+        foreach (Button button in buttons)
+        {
+            button.interactable = true;
+        }
+    }
+
+    public void PrintDebug(string message)
+    {
+        Debug.Log(message);
+    }
+
+    private void PlaySound(AudioClip[] clips, float volume)
+    {
+        if (clips == null || clips.Length == 0 || source == null) return;
+
+        AudioClip clip = clips[Random.Range(0, clips.Length)];
+
+        if (clip == null) return;
+
+        source.pitch = Random.Range(0.95f, 1.05f);
+        source.spatialBlend = 0f;
+        source.rolloffMode = AudioRolloffMode.Logarithmic;
+        source.dopplerLevel = 0f;
+
+        source.PlayOneShot(clip, volume);
     }
 }

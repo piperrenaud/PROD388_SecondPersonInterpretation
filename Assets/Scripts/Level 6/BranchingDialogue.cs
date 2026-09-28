@@ -11,6 +11,9 @@ public class DialogueLine
 {
     [TextArea(2, 5)] public string text;
 
+    [Header("Time after Text")]
+    public float pauseDuration = 0f;
+
     [Header("Optional")]
     public UnityEvent onLineStart;
 }
@@ -68,6 +71,9 @@ public class BranchingDialogue : MonoBehaviour
     [SerializeField] private AudioClip[] clips;
     [SerializeField] private float typingVolume = 1f;
 
+    [Header("Other")]
+    [SerializeField] private PlayerMovement playerMovement;
+
     private DialogueNode currentNode;
     private int currentLineIndex;
 
@@ -82,11 +88,6 @@ public class BranchingDialogue : MonoBehaviour
         HideChoices();
 
         if (dialoguePanel != null ) dialoguePanel.SetActive(false);
-    }
-
-    private void Start()
-    {
-        StartDialogue();
     }
 
     private void Update()
@@ -124,6 +125,8 @@ public class BranchingDialogue : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        playerMovement.EnableMouseLook();
 
         dialoguePanel.SetActive(true);
 
@@ -182,8 +185,17 @@ public class BranchingDialogue : MonoBehaviour
             yield return new WaitForSeconds(typeSpeed);
         }
 
+        yield return new WaitForSeconds(1f);
+
         typewriterCoroutie = null;
         StopAllCharacterTalking();
+
+        //time after text
+        if (line.pauseDuration > 0f)
+        {
+            yield return new WaitForSeconds(line.pauseDuration);
+        }
+
         advanceCoroutine = StartCoroutine(WaitAndAdvance());
     }
 
@@ -234,6 +246,8 @@ public class BranchingDialogue : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        playerMovement.DisableMouseLook();
 
         displayingChoices = true;
 
@@ -308,8 +322,9 @@ public class BranchingDialogue : MonoBehaviour
 
     private void EndDialogue()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        playerMovement.DisableMouseLook();
 
         dialogueRunning = false;
         displayingChoices = false;
