@@ -65,7 +65,7 @@ public class BranchingDialogue : MonoBehaviour
     [SerializeField] private ExpressionController protagExpression;
 
     [Header("Typewriter")]
-    [SerializeField] private float typeSpeed = 0.03f;
+    [SerializeField] private float wordSpeed = 0.1f;
     [SerializeField] private float timeAfterText = 2.5f;
     [SerializeField] private AudioSource typingAudioSource;
     [SerializeField] private AudioClip[] clips;
@@ -173,19 +173,21 @@ public class BranchingDialogue : MonoBehaviour
     {
         dialogueText.text = "";
 
-        foreach (char letter in line.text)
-        {
-            dialogueText.text += letter;
+        string[] words = line.text.Split(' ');
 
-            if (letter != ' ' && typingAudioSource != null && clips != null)
+        foreach (string word in words)
+        {
+            dialogueText.text += word + " ";
+
+            if (typingAudioSource != null && clips != null)
             {
                 PlaySound();
             }
 
-            yield return new WaitForSeconds(typeSpeed);
+            yield return new WaitForSeconds(wordSpeed);
         }
 
-        yield return new WaitForSeconds(1f);
+     //   yield return new WaitForSeconds(1f);
 
         typewriterCoroutie = null;
         StopAllCharacterTalking();

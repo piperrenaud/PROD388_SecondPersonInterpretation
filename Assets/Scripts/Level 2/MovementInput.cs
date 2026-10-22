@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class CommandDialogue
@@ -16,6 +17,9 @@ public class MovementInput : MonoBehaviour
     [SerializeField] private TMP_InputField movementInput;
     [SerializeField] private string invalidCommandText = "I don't know what that says";
 
+    [Header("Command List Dictionary")]
+    [SerializeField] private TMP_Text commandListText;
+
     [Header("Reference")]
     [SerializeField] private ProtagonistGridMovement protagGridMovement;
     [SerializeField] private DialogueManager dialogueManager;
@@ -29,11 +33,18 @@ public class MovementInput : MonoBehaviour
     private float commandTimer;
     private bool automaticMovementRunning = false;
 
+    private HashSet<string> usedCommands = new HashSet<string>();
+
     private void Start()
     {
         ResetCommandTimer();
 
         movementInput.ActivateInputField();
+
+        if (commandListText != null)
+        {
+            commandListText.text = "";
+        }
     }
 
     private void Update()
@@ -74,6 +85,8 @@ public class MovementInput : MonoBehaviour
         {
             if (commandDialogue.word.Trim().ToLower() == command)
             {
+                AddCommandToList(command);
+
                 dialogueManager.SetProtagText(commandDialogue.dialogue);
 
                 movementInput.text = "";
@@ -87,19 +100,23 @@ public class MovementInput : MonoBehaviour
         {
             case "forward":
             case "front":
+                AddCommandToList(command);
                 protagGridMovement.MoveForward();
                 break;
 
             case "backward":
             case "back":
+                AddCommandToList(command);
                 protagGridMovement.MoveBackwards();
                 break;
 
             case "left":
+                AddCommandToList(command);
                 protagGridMovement.MoveLeft();
                 break;
 
             case "right":
+                AddCommandToList(command);
                 protagGridMovement.MoveRight();
                 break;
 
@@ -113,6 +130,28 @@ public class MovementInput : MonoBehaviour
         movementInput.ActivateInputField();
 
         ResetCommandTimer();
+    }
+
+    private void AddCommandToList(string command)
+    {
+        command = command.Trim().ToLower();
+
+        if (usedCommands.Contains(command))
+        {
+            return;
+        }
+
+        usedCommands.Add(command);
+        string displayCommand = char.ToUpper(command[0]) + command.Substring(1);
+
+        if (string.IsNullOrEmpty(commandListText.text))
+        {
+            commandListText.text = displayCommand;
+        }
+        else
+        {
+            commandListText.text += "\n" + displayCommand;
+        }
     }
 
     private IEnumerator AutomaticMove()

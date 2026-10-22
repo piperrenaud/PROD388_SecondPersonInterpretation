@@ -19,7 +19,7 @@ public class ObjectInteraction : MonoBehaviour
 
     [Header("Suspicious Behaviour")]
     [SerializeField] private int interactionsBeforeNextStage = 3;
-    [SerializeField] private float maxTimeBetweenInteractions = 5f;
+    [SerializeField] private float maxTimeBetweenInteractions = 8f;
 
     [Header("Respawn Behaviour")]
     [SerializeField] private int interactionsBeforeRespawn = 3;

@@ -14,6 +14,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject facilitySetupParent;
     [SerializeField] private GameObject wholeFacilityParent;
     [SerializeField] private GameObject playerBody;
+    [SerializeField] private GameObject objectsThatStay;
 
     [Header("Objects to Manipulate")]
     [SerializeField] private PlayerMovement playerMovement;
@@ -54,6 +55,8 @@ public class SceneController : MonoBehaviour
         structureParent.SetActive(false);
         baseParent.SetActive(false);
         extraParent.SetActive(false);
+
+        objectsThatStay.SetActive(true);
     }
 
     public void ScreenFlicker()
@@ -227,13 +230,14 @@ public class SceneController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
+        objectsThatStay.SetActive(false);
         structureParent.SetActive(true);
         PlaySound(restoredBeep, restoredVolume);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
 
         baseParent.SetActive(true);
         PlaySound(restoredBeep, restoredVolume);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
 
         extraParent.SetActive(true);
         PlaySound(restoredBeep, restoredVolume);

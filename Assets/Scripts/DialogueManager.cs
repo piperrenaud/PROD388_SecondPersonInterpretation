@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueParent;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float timeAfterText = 2.5f;
-    [SerializeField] private float typeSpeed = 0.05f;
+    [SerializeField] private float wordSpeed = 0.1f;
 
     [Header("Narration Dialogue")]
     [SerializeField] private GameObject narrationDialogueParent;
@@ -90,13 +90,14 @@ public class DialogueManager : MonoBehaviour
         dialogueParentObject.SetActive(true);
         dialogueTextObject.text = "";
 
-        //typewriter
-        foreach (char letter in text)
+        //typewriter word by word
+        string[] words = text.Split(' ');
+        foreach (string word in words)
         {
-            dialogueTextObject.text += letter;
+            dialogueTextObject.text += word + " ";
             PlaySound();
 
-            yield return new WaitForSeconds(typeSpeed);
+            yield return new WaitForSeconds(wordSpeed);
         }
 
         yield return new WaitForSeconds(timeAfterText);

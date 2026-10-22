@@ -76,26 +76,35 @@ public class LeaveOrStayEndings : MonoBehaviour
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
         
         protagonistMovement.TurnTo(terminalToFace);
+        yield return new WaitForSeconds(1f);
 
         dialogueManager.SetProtagText("You should go");
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
+        yield return new WaitForSeconds(1f);
 
         sceneController.ScreenFlicker();
         sceneController.RemoveFacilityCompletely();
+        yield return new WaitForSeconds(2f);
+
         protagonistMovement.TurnTo(playerMovement.gameObject.transform);
+        yield return new WaitForSeconds(1f);
 
         dialogueManager.SetProtagText("Thank you for staying as long as you did");
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
+        yield return new WaitForSeconds(2f);
         //
 
-
+        fadeToBlack.SetActive(true);
         fadeToBlackAnim.SetTrigger("End");
+        yield return new WaitForSeconds(5f);
 
-        ShowPopup(applicationPopup);
-        yield return new WaitForSeconds(1f);
+        ShowApplicationPopup(true);
+        yield return new WaitForSeconds(3f);
+        ShowApplicationPopup(false);
 
-        ShowPopup(statusPopup);
-        yield return new WaitForSeconds(1f);
+        ShowStatusPopup(true);
+        yield return new WaitForSeconds(3f);
+        ShowStatusPopup(false);
 
         Application.Quit();
     }
@@ -128,20 +137,28 @@ public class LeaveOrStayEndings : MonoBehaviour
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
 
         sceneController.RebuildNewWorld();
+        yield return new WaitForSeconds(1f);
 
         dialogueManager.SetProtagText("If we're going to stay...");
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
+        yield return new WaitForSeconds(1f);
+
         dialogueManager.SetProtagText("...I think we should make it more fun");
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
+        yield return new WaitForSeconds(1f);
         //
 
-
+        fadeToBlack.SetActive(true);
         fadeToBlackAnim.SetTrigger("End");
-        
-        ShowPopup(buildingPopup);
-        yield return new WaitForSeconds (1f);
+        yield return new WaitForSeconds(5f);
 
-        ShowPopup(failedPopup);
+        ShowBuildingPopup(true);
+        yield return new WaitForSeconds (3f);
+        ShowBuildingPopup(false);
+
+        ShowFailedPopup(true);
+        yield return new WaitForSeconds(3f);
+        ShowFailedPopup(false);
 
         dialogueManager.SetProtagText("Oh.");
         yield return new WaitUntil(() => !dialogueManager.IsDialogueRunning);
@@ -151,12 +168,23 @@ public class LeaveOrStayEndings : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    private IEnumerator ShowPopup(GameObject popup)
+    private void ShowBuildingPopup(bool enabled)
     {
-        popup.SetActive(true);
+        buildingPopup.SetActive(enabled);
+    }
 
-        yield return new WaitForSeconds(3f);
+    private void ShowFailedPopup(bool enabled)
+    {
+        failedPopup.SetActive(enabled);
+    }
 
-        popup.SetActive(false);
+    private void ShowStatusPopup(bool enabled)
+    {
+        statusPopup.SetActive(enabled);
+    }
+
+    private void ShowApplicationPopup(bool enabled)
+    {
+        applicationPopup.SetActive(enabled);
     }
 }
