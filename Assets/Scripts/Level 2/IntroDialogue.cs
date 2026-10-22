@@ -57,6 +57,9 @@ public class IntroDialogue : MonoBehaviour
         fadeFromBlackAnimator.gameObject.SetActive(false);
         movementInput.enabled = true;
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         StartCoroutine(Instructions());
     }
 
